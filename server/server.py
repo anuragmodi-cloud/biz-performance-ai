@@ -56,9 +56,11 @@ try:
         SmallWebRTCPatchRequest, SmallWebRTCRequest, SmallWebRTCRequestHandler,
     )
 
+    import aioice_turn_patch
     from bot import bot as run_voice_bot
     from turn_credentials import fetch_ice_servers
 
+    aioice_turn_patch.apply()
     _webrtc_handler = SmallWebRTCRequestHandler()
     _VOICE_AVAILABLE = True
 except ImportError:
