@@ -37,6 +37,8 @@ from pipecat.services.sarvam.stt import SarvamSTTService
 from pipecat.services.sarvam.tts import SarvamTTSService
 from pipecat.transcriptions.language import Language
 from pipecat.transports.base_transport import BaseTransport, TransportParams
+from pipecat.turns.user_stop import SpeechTimeoutUserTurnStopStrategy
+from pipecat.turns.user_turn_strategies import UserTurnStrategies
 from pipecat.workers.runner import WorkerRunner
 
 import pipeline_registry
@@ -110,6 +112,14 @@ async def run_bot(transport: BaseTransport, runner_args: RunnerArguments) -> Non
         user_params=LLMUserAggregatorParams(
             vad_analyzer=SileroVADAnalyzer(),
             user_idle_timeout=USER_IDLE_TIMEOUT_SECS,
+            # Pipecat's default end-of-turn detector is a local ONNX model
+            # (LocalSmartTurnAnalyzerV3) run in-process on every frame -- real
+            # CPU competition against STT/LLM/TTS/audio-codec work on Render's
+            # free tier, which was causing audio to stutter roughly every few
+            # seconds. Silero VAD (already configured above) is lightweight
+            # and this swaps end-of-turn detection to a plain VAD-plus-timer
+            # strategy instead of a second local model.
+            user_turn_strategies=UserTurnStrategies(stop=[SpeechTimeoutUserTurnStopStrategy()]),
         ),
     )
 
