@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+**/__pycache__/
+.env
+query_log.db
+.ruff_cache/
+data/*
+!data/baseline_seed42/

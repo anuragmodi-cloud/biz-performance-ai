@@ -1,0 +1,68 @@
+# session_store.py
+"""In-memory per-session state, same pattern as kyc-voice-agent's
+session_store.py: access only through get_session/update_session/
+list_sessions, so this can be swapped for Redis later without touching call
+sites.
+
+query_cache is what satisfies "within a session, a repeated ask should not
+re-trigger the calculation engine" -- keyed by QueryIntent.cache_key(), same
+lifetime as the rest of session state (cleared when the session/call ends).
+"""
+from __future__ import annotations
+
+import time
+from dataclasses import dataclass, field
+
+
+@dataclass
+class CachedAnswer:
+    result: dict
+    trace: dict  # StepTrace.to_dict(): {tables_queried, computations, steps}
+    computed_at: float = field(default_factory=time.time)
+
+
+@dataclass
+class SessionData:
+    query_cache: dict[str, CachedAnswer] = field(default_factory=dict)
+    connected_at: float | None = None
+    disconnected_at: float | None = None
+    # [{"role": "user"|"bot", "text": str, "at": float}] -- same shape as
+    # kyc-voice-agent's transcript capture.
+    transcript: list = field(default_factory=list)
+    # log_ids produced by ask_calculation_engine calls since the last turn
+    # was finalized (grounding.py's finalize_turn) -- appended to by
+    # tools/ask_calculation_engine.py's handle() regardless of transport, so
+    # both the text /ask path (dev_llm_client.py) and the voice path
+    # (bot.py's turn-completion observer) can find "what tool calls happened
+    # this turn" the same way, without threading state through closures.
+    pending_log_ids: list = field(default_factory=list)
+    # Updated by POST /session/{id}/typing, pinged by the client while the
+    # user has text in the type-to-ask box (see voiceClient.js's
+    # sendTypingPing). bot.py's on_user_turn_idle handler checks how recent
+    # this is before treating silence as a dropped call/mic problem -- the
+    # user is just composing, not gone.
+    last_typing_at: float | None = None
+
+
+_sessions: dict[str, SessionData] = {}
+
+
+def list_sessions() -> dict[str, SessionData]:
+    return _sessions
+
+
+def get_session(session_id: str) -> SessionData:
+    if session_id not in _sessions:
+        _sessions[session_id] = SessionData()
+    return _sessions[session_id]
+
+
+def set_session(session_id: str, data: SessionData) -> None:
+    _sessions[session_id] = data
+
+
+def update_session(session_id: str, **fields) -> SessionData:
+    session = get_session(session_id)
+    for key, value in fields.items():
+        setattr(session, key, value)
+    return session

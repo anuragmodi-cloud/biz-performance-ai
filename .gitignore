@@ -1,0 +1,12 @@
+server/data/*
+!server/data/baseline_seed42/
+eval/*/
+!eval/score_report.py
+server/.env
+server/query_log.db
+.venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+client/node_modules/
+client/dist/

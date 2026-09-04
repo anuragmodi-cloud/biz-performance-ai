@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Munshi — Eval Trace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="stylesheet" href="/src/admin.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">म</span>
+      <div class="brand-text">
+        <span class="brand-name">Munshi</span>
+        <span class="brand-tagline">eval trace &amp; judge verdicts</span>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <a href="/" class="admin-back-link">&larr; Back to voice app</a>
+    </div>
+  </header>
+
+  <main class="admin-layout">
+    <!-- ===================== Admin key gate ===================== -->
+    <section id="key-gate" class="panel admin-key-gate">
+      <div class="panel-header">
+        <h2>Admin Key</h2>
+        <p class="panel-subtitle">Saved locally in this browser only. Found in server/.env as ADMIN_KEY.</p>
+      </div>
+      <form id="key-form" class="admin-key-form">
+        <input id="admin-key-input" class="text-ask-input" type="password" placeholder="X-Admin-Key" autocomplete="off" />
+        <button class="btn btn-primary btn-pill" type="submit">Connect</button>
+      </form>
+      <div id="key-error" class="admin-key-error"></div>
+    </section>
+
+    <!-- ===================== Dashboard (hidden until key is set) ===================== -->
+    <div id="dashboard" class="admin-dashboard" hidden>
+      <section class="panel admin-summary-panel">
+        <div class="panel-header admin-summary-header">
+          <div>
+            <h2>Overview</h2>
+            <p class="panel-subtitle">Auto-refreshes every few seconds.</p>
+          </div>
+          <div class="admin-controls">
+            <button id="refresh-btn" class="btn btn-outline btn-pill" type="button">Refresh</button>
+            <button id="change-key-btn" class="btn btn-outline btn-pill" type="button">Change Key</button>
+          </div>
+        </div>
+        <div id="summary-cards" class="summary-cards"></div>
+        <div id="summary-stages" class="summary-stages"></div>
+      </section>
+
+      <section class="panel admin-log-panel">
+        <div class="panel-header admin-log-header">
+          <div>
+            <h2>Query Log</h2>
+            <p class="panel-subtitle">Every ask, with grounding status and judge verdict. Click a row for the full trace.</p>
+          </div>
+          <div class="admin-filters">
+            <select id="status-filter" class="admin-select">
+              <option value="">All statuses</option>
+              <option value="answered">answered</option>
+              <option value="possible_hallucination">possible_hallucination</option>
+              <option value="unfulfilled">unfulfilled</option>
+              <option value="answered_without_engine">answered_without_engine</option>
+              <option value="ambiguous_entity">ambiguous_entity</option>
+            </select>
+            <select id="judge-filter" class="admin-select">
+              <option value="">All judge verdicts</option>
+              <option value="pass">judge: pass</option>
+              <option value="fail">judge: fail</option>
+              <option value="pending">judge: pending</option>
+              <option value="error">judge: error</option>
+            </select>
+            <input id="session-filter" class="admin-select admin-session-input" type="text" placeholder="Filter by session_id..." />
+          </div>
+        </div>
+        <div id="log-list" class="log-list">
+          <div class="answers-empty">
+            <p>Koi query log entry nahi mili.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="/src/admin.js"></script>
+</body>
+
+</html>

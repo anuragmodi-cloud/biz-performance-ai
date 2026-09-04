@@ -1,0 +1,16 @@
+# Synced by hand from pyproject.toml's [project.dependencies] + the "voice"
+# optional-dependency group (same convention as costguard/requirements.txt).
+# Kept separate from pyproject.toml's build so the Docker image never has to
+# resolve/build this project's own flat-module layout as an installable
+# package -- only its third-party dependencies.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pandas>=2.0
+numpy>=1.26
+python-dotenv>=1.0
+pydantic>=2.0
+loguru>=0.7
+openai>=1.40
+anthropic>=0.34
+requests>=2.32
+pipecat-ai[deepseek,runner,sarvam,silero,webrtc]>=1.4.0

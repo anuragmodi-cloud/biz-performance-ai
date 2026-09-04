@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Munshi — Business Voice Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">म</span>
+      <div class="brand-text">
+        <span class="brand-name">Munshi</span>
+        <span class="brand-tagline">aapka business, ek awaaz mein</span>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <span id="session-pill" class="pill pill-muted">Not connected</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- ===================== Call panel ===================== -->
+    <section class="panel call-panel">
+      <div class="panel-header">
+        <h2>Baat Karein</h2>
+        <p class="panel-subtitle">Apne business ke numbers ke baare mein poochiye — Hindi ya Hinglish mein.</p>
+      </div>
+
+      <div class="call-stage">
+        <div id="orb" class="orb orb-idle">
+          <div class="orb-ring"></div>
+          <div class="orb-core"></div>
+        </div>
+        <div id="orb-status" class="orb-status">Baat shuru karne ke liye connect karein</div>
+      </div>
+
+      <div class="call-controls">
+        <button id="connect-btn" class="btn btn-primary btn-pill" type="button">Connect Karein</button>
+        <button id="mic-btn" class="btn btn-outline btn-pill btn-icon" type="button" disabled>
+          <span id="mic-icon">🎤</span>
+          <span id="mic-label">Mic</span>
+        </button>
+      </div>
+
+      <div class="mic-meter-wrap">
+        <div class="mic-meter-track"><div id="mic-meter-fill" class="mic-meter-fill"></div></div>
+        <span id="mic-status" class="mic-status-label">Mic is Off</span>
+      </div>
+
+      <form id="text-ask-form" class="text-ask-form">
+        <input
+          id="text-ask-input"
+          class="text-ask-input"
+          type="text"
+          placeholder="Ya yahan type karke poochiye..."
+          disabled
+          autocomplete="off"
+        />
+        <button id="text-ask-send" class="btn btn-primary btn-icon text-ask-send" type="submit" disabled>Bhejein</button>
+      </form>
+
+      <div class="transcript-wrap">
+        <div class="transcript-header">Conversation</div>
+        <div id="conversation-log" class="conversation-log">
+          <div class="transcript-empty">Aapki conversation yahan dikhegi.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Calculation engine output panel ===================== -->
+    <section class="panel output-panel">
+      <div class="panel-header">
+        <h2>Calculation Engine Output</h2>
+        <p class="panel-subtitle">Har jawab ka asli data — kaunsi tables use hui, kya calculate hua.</p>
+      </div>
+      <div id="answers-list" class="answers-list">
+        <div class="answers-empty">
+          <div class="answers-empty-icon">📊</div>
+          <p>Jab aap koi sawaal poochenge, uska structured result yahan dikhega.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footnote">
+    Voice: Sarvam (Hindi/Hinglish) &middot; Session data is held in memory for this demo deployment.
+  </footer>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+
+</html>

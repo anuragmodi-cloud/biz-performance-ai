@@ -1,0 +1,19 @@
+{
+  "business_id": "BIZ0001",
+  "business_name": "Andheri ElectroMart Pvt. Ltd.",
+  "business_type": "Electronics Retailer & Distributor",
+  "city": "Mumbai",
+  "locality": "Andheri West",
+  "state": "Maharashtra",
+  "gst_status": "Registered",
+  "gstin": "27ABCDE1234F1Z5",
+  "operating_days": "Monday-Sunday (weekly off: 2nd & 4th Tuesday)",
+  "opening_time": "10:00",
+  "closing_time": "21:30",
+  "warehouse_location": "Andheri East MIDC, Mumbai",
+  "business_start_date": "2021-07-01",
+  "simulation_start_date": "2024-07-01",
+  "simulation_end_date": "2026-06-30",
+  "simulation_months": 24,
+  "currency": "INR"
+}

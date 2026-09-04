@@ -1,0 +1,1001 @@
+customer_id,customer_name,customer_type,locality,city,state,industry,acquisition_date,preferred_categories,average_order_value,purchase_frequency_per_month,payment_preference,credit_limit,agreed_credit_days,payment_reliability,payer_class,return_probability,discount_sensitivity,churn_probability,is_interstate
+CUS000001,Ramesh Kumar,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2023-02-14,chargers,2012.98,0.233,debit_card,0.0,0,0.6446,normal,0.1636,0.381,0.1393,False
+CUS000002,Elite Electronics Corp.,corporate,Santacruz,Mumbai,Maharashtra,Education,2022-11-27,monitors,25000.0,0.05,credit,150000.0,15,0.6099,normal,0.1268,0.613,0.3229,False
+CUS000003,Sagar Electronics,small_business,Bandra East,Mumbai,Maharashtra,Retail Trade,2026-04-10,accessories|headphones|monitors|earbuds,10967.7,0.1,bank_transfer,27000.0,15,0.4329,late,0.02,0.39,0.0836,False
+CUS000004,Neha Mehta,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-04-28,accessories,1847.41,0.05,UPI,0.0,0,0.5132,normal,0.0973,0.262,0.3192,False
+CUS000005,Manoj Kumar,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2024-10-13,cables|ups_devices|printers,1724.71,0.573,UPI,0.0,0,0.0969,late,0.1598,0.349,0.5009,False
+CUS000006,Golden Traders,small_business,Ghatkopar,Mumbai,Maharashtra,Education,2024-03-18,power_banks|chargers|webcams|headphones,14767.16,2.153,UPI,28000.0,0,0.7571,normal,0.1249,0.522,0.0536,False
+CUS000007,Karan Pandey,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2026-01-21,headphones|webcams|power_banks|mice,2361.54,0.516,UPI,0.0,0,0.5211,normal,0.2017,0.431,0.199,False
+CUS000008,Elite Gadget Hub,small_business,Andheri East,Mumbai,Maharashtra,Media,2025-05-12,keyboards|webcams|speakers|headphones,9462.91,0.287,UPI,50000.0,30,0.2585,normal,0.1027,0.146,0.0971,False
+CUS000009,Anil Mishra,retail,Pune,Pune,Maharashtra,N/A (individual),2023-11-16,laptops,3527.82,0.583,UPI,0.0,0,0.5774,normal,0.25,0.286,0.1579,False
+CUS000010,Vinod Shah,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2023-04-07,chargers|smartphones|mice|webcams,949.77,0.622,cash,0.0,0,0.9741,excellent,0.1397,0.403,0.2511,False
+CUS000011,Kavya Nair,retail,Nashik,Nashik,Maharashtra,N/A (individual),2026-01-29,chargers|printers|laptops,1747.49,0.472,debit_card,0.0,0,0.0898,late,0.1972,0.067,0.2127,False
+CUS000012,Saanvi Reddy,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2026-05-23,earbuds|routers|tablets,2609.38,0.052,UPI,0.0,0,0.9,normal,0.25,0.41,0.258,False
+CUS000013,Shree Solutions,small_business,Powai,Mumbai,Maharashtra,Finance,2026-04-08,televisions|feature_phones|headphones,16291.07,0.341,UPI,29000.0,30,0.7333,normal,0.0432,0.128,0.1636,False
+CUS000014,Myra Khan,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2024-05-12,headphones,2290.23,0.33,UPI,0.0,0,0.5789,normal,0.25,0.165,0.0924,False
+CUS000015,Aditya Fernandes,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2025-09-26,speakers|monitors,2222.84,0.402,cash,0.0,0,0.5575,normal,0.0904,0.727,0.2012,False
+CUS000016,Elite Electronics,small_business,Ahmedabad,Ahmedabad,Gujarat,Media,2025-12-02,storage_devices|smartphones,20018.99,0.268,UPI,25000.0,15,0.4357,normal,0.1065,0.369,0.2125,True
+CUS000017,Vinod Rao,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2025-04-11,televisions,2565.84,0.488,UPI,0.0,0,0.55,late,0.1651,0.269,0.3373,False
+CUS000018,Pankaj Shaikh,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2023-01-29,monitors|webcams,1964.05,0.054,cash,0.0,0,0.4759,normal,0.2446,0.423,0.1695,False
+CUS000019,Meera Tiwari,retail,Surat,Surat,Gujarat,N/A (individual),2025-11-21,storage_devices|routers|feature_phones|headphones,1496.07,0.409,cash,0.0,0,0.901,excellent,0.0114,0.321,0.2123,True
+CUS000020,Ananya Khan,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2025-01-25,monitors|tablets|accessories,1380.94,0.497,cash,0.0,0,0.6859,normal,0.0265,0.655,0.1251,False
+CUS000021,Ramesh Reddy,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2022-07-22,routers|smartphones,3850.93,0.286,UPI,0.0,0,0.7422,normal,0.1271,0.707,0.2658,False
+CUS000022,Vasant Trading Co. Pvt. Ltd.,corporate,Santacruz,Mumbai,Maharashtra,Logistics,2023-06-21,chargers|headphones,72121.78,0.12,bank_transfer,283000.0,30,0.1056,late,0.2319,0.333,0.1679,False
+CUS000023,Sai Technologies,small_business,Ahmedabad,Ahmedabad,Gujarat,Retail Trade,2023-12-06,keyboards,10553.35,0.891,bank_transfer,72000.0,15,0.9873,excellent,0.2004,0.581,0.251,True
+CUS000024,Sai Tiwari,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-04-05,smartwatches|cables,1957.6,0.211,UPI,0.0,0,0.8105,normal,0.0837,0.64,0.1078,False
+CUS000025,Suraj Electronics,small_business,Vashi,Mumbai,Maharashtra,Hospitality,2023-04-23,tablets|headphones|webcams|cables,8556.13,1.088,credit,75000.0,15,0.0947,late,0.1166,0.128,0.0757,False
+CUS000026,Pankaj Agarwal,retail,Khar,Mumbai,Maharashtra,N/A (individual),2025-05-27,storage_devices|laptops|mice,2033.01,0.085,UPI,0.0,0,0.6215,normal,0.25,0.096,0.1758,False
+CUS000027,Saanvi Desai,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2025-10-15,accessories,1815.12,0.311,credit_card,0.0,0,0.7074,normal,0.0737,0.271,0.1243,False
+CUS000028,Silver Electronics,small_business,Bengaluru,Bengaluru,Karnataka,Healthcare,2023-03-19,tablets|printers|power_banks,26514.22,0.683,bank_transfer,20000.0,30,0.5277,normal,0.1353,0.628,0.2056,True
+CUS000029,Rajesh Khan,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-05-17,printers|feature_phones,4484.42,0.313,UPI,0.0,0,0.3309,normal,0.25,0.471,0.1153,False
+CUS000030,Nikhil Joshi,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2026-04-25,televisions|laptops|routers,1669.74,0.05,UPI,0.0,0,0.4563,normal,0.0607,0.368,0.3862,False
+CUS000031,Ayesha Kumar,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2025-03-22,earbuds,1537.35,0.238,UPI,0.0,0,0.0294,late,0.0561,0.103,0.1839,False
+CUS000032,Rajesh D'Souza,retail,Malad,Mumbai,Maharashtra,N/A (individual),2022-07-09,headphones,1973.14,0.404,credit_card,0.0,0,0.744,normal,0.0471,0.712,0.3122,False
+CUS000033,Imran Fernandes,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-12-02,chargers|televisions|accessories,1367.09,1.04,credit_card,0.0,0,0.8881,excellent,0.1721,0.449,0.1348,False
+CUS000034,Krishna Vora,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2025-04-06,ups_devices|laptops|webcams|mice,5052.06,0.05,credit_card,0.0,0,0.6694,normal,0.2197,0.683,0.1241,True
+CUS000035,Dev Bhatia,retail,Malad,Mumbai,Maharashtra,N/A (individual),2024-09-16,headphones,1903.33,0.051,UPI,0.0,0,0.6439,normal,0.1622,0.209,0.036,False
+CUS000036,Manoj Jain,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2023-10-05,mice|keyboards|printers,1456.26,0.647,debit_card,0.0,0,0.2,normal,0.0272,0.138,0.0572,False
+CUS000037,Vinod Menon,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2024-01-12,chargers|ups_devices|speakers,4426.98,1.073,UPI,0.0,0,0.9626,excellent,0.0475,0.18,0.1866,False
+CUS000038,Ganesh Systems,small_business,Jogeshwari,Mumbai,Maharashtra,Healthcare,2026-06-07,smartwatches|routers|power_banks|televisions,26370.12,0.736,credit,129000.0,15,0.6245,normal,0.1787,0.663,0.1953,False
+CUS000039,Sanjay D'Souza,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2022-12-12,monitors,1366.98,0.695,cash,0.0,0,0.99,excellent,0.0471,0.412,0.0826,False
+CUS000040,Anika Deshmukh,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-06-23,mice|laptops,796.97,0.05,UPI,0.0,0,0.5644,normal,0.0894,0.454,0.0574,False
+CUS000041,Kavya Bose,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2022-08-12,earbuds|headphones,611.11,0.376,UPI,0.0,0,0.4,normal,0.2215,0.106,0.0842,False
+CUS000042,Shree Infotech Corp.,corporate,Delhi,Delhi,Delhi,Healthcare,2023-11-14,cables|ups_devices|webcams|mice,25000.0,0.928,UPI,183000.0,60,0.6249,normal,0.0631,0.5,0.2587,True
+CUS000043,Vasant Retail,small_business,Andheri West,Mumbai,Maharashtra,Media,2024-05-17,tablets|earbuds|accessories,16929.88,2.149,bank_transfer,27000.0,45,0.9,normal,0.1087,0.33,0.2109,False
+CUS000044,Star Communications Pvt. Ltd.,corporate,Nagpur,Nagpur,Maharashtra,Media,2024-01-25,routers,25000.0,0.385,bank_transfer,165000.0,30,0.6316,normal,0.1097,0.204,0.3015,False
+CUS000045,Kavita Agarwal,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-03-26,televisions,1946.65,1.067,debit_card,0.0,0,0.0758,late,0.1561,0.754,0.2356,False
+CUS000046,Skyline Retail,small_business,Jogeshwari,Mumbai,Maharashtra,Healthcare,2025-04-07,smartphones|webcams|feature_phones,6516.54,1.167,bank_transfer,36000.0,30,0.376,normal,0.0153,0.368,0.0645,False
+CUS000047,Karan D'Souza,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-03-03,storage_devices|laptops|headphones|tablets,2231.55,0.341,cash,0.0,0,0.0642,late,0.25,0.183,0.1563,False
+CUS000048,Ganesh Mobile Point,small_business,Bandra East,Mumbai,Maharashtra,Real Estate,2023-06-26,earbuds|webcams|power_banks|chargers,7600.9,0.312,credit,25000.0,15,0.2801,normal,0.0474,0.397,0.2137,False
+CUS000049,Rahul Pandey,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2023-03-17,routers|mice,3870.41,0.05,cash,0.0,0,0.6587,normal,0.0861,0.292,0.1219,False
+CUS000050,Aditya Desai,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2026-06-11,power_banks|storage_devices|printers|routers,710.96,0.633,UPI,0.0,0,0.2165,normal,0.1851,0.306,0.5991,False
+CUS000051,Royal Distributors,small_business,Jogeshwari,Mumbai,Maharashtra,Real Estate,2024-10-28,printers|earbuds|keyboards|monitors,10748.65,0.331,UPI,30000.0,45,0.5435,normal,0.0533,0.711,0.1396,False
+CUS000052,Kirti Trading Co. Pvt. Ltd.,corporate,Ahmedabad,Ahmedabad,Gujarat,Finance,2024-06-27,mice|smartphones,38703.82,0.101,bank_transfer,206000.0,45,0.7423,normal,0.1645,0.107,0.312,True
+CUS000053,Nisha Chauhan,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2025-03-13,tablets|mice|accessories,1542.08,0.684,cash,0.0,0,0.9582,excellent,0.112,0.226,0.182,False
+CUS000054,Ganesh Distributors,small_business,Andheri East,Mumbai,Maharashtra,Finance,2025-08-03,ups_devices,8593.56,5.719,bank_transfer,20000.0,0,0.3814,normal,0.2445,0.833,0.1976,False
+CUS000055,Siddharth Kulkarni,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2023-01-22,tablets|feature_phones,2470.21,0.282,debit_card,0.0,0,0.6687,normal,0.2415,0.799,0.0585,False
+CUS000056,Ayesha Pereira,retail,Pune,Pune,Maharashtra,N/A (individual),2026-01-06,tablets,6136.32,0.08,UPI,0.0,0,0.6356,normal,0.124,0.61,0.0919,False
+CUS000057,Priya Kumar,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2024-09-18,televisions|accessories|monitors,3449.76,0.379,credit_card,0.0,0,0.7467,excellent,0.0743,0.417,0.3128,True
+CUS000058,Sagar Digital World,small_business,Bengaluru,Bengaluru,Karnataka,Finance,2023-05-13,power_banks|feature_phones,10810.87,0.148,credit,20000.0,0,0.7365,normal,0.1047,0.459,0.1532,True
+CUS000059,Sai Chopra,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2023-03-15,televisions|power_banks|tablets|earbuds,1742.73,0.072,cash,0.0,0,0.6509,normal,0.0565,0.466,0.0947,False
+CUS000060,Royal Mobile Point,small_business,Khar,Mumbai,Maharashtra,Finance,2023-07-01,keyboards|ups_devices|televisions|webcams,5347.41,1.006,credit,20000.0,30,0.877,excellent,0.063,0.178,0.4917,False
+CUS000061,Deepak Mukherjee,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-09-06,printers|smartphones,472.52,0.345,UPI,0.0,0,0.7771,normal,0.0193,0.308,0.3776,False
+CUS000062,Sanjay Trivedi,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-06-19,ups_devices,3602.99,0.284,UPI,0.0,0,0.1081,late,0.1464,0.484,0.1765,False
+CUS000063,Ananya Malhotra,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2022-07-20,speakers|earbuds,3069.61,1.156,UPI,0.0,0,0.5628,normal,0.25,0.481,0.1424,False
+CUS000064,Farhan Gupta,retail,Pune,Pune,Maharashtra,N/A (individual),2025-03-11,accessories|earbuds|tablets,2672.07,0.307,UPI,0.0,0,0.0908,late,0.1203,0.334,0.1768,False
+CUS000065,Vikram Bhatia,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2026-06-30,cables|smartphones|routers,1478.95,0.401,cash,0.0,0,0.55,late,0.1411,0.237,0.0596,False
+CUS000066,Neha Chopra,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2022-12-12,ups_devices,2810.71,0.452,credit_card,0.0,0,0.5857,normal,0.1559,0.228,0.1007,False
+CUS000067,Pankaj Sharma,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2025-08-10,keyboards,4184.91,0.107,cash,0.0,0,0.2,normal,0.1311,0.167,0.1931,False
+CUS000068,Kavya Tiwari,retail,Malad,Mumbai,Maharashtra,N/A (individual),2024-09-23,printers|smartwatches|mice,812.93,0.11,UPI,0.0,0,0.874,excellent,0.25,0.758,0.0137,False
+CUS000069,Nisha Nair,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2026-06-18,storage_devices|ups_devices,1773.3,0.389,UPI,0.0,0,0.3318,normal,0.114,0.778,0.1194,False
+CUS000070,Rajesh Trivedi,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2023-11-08,mice,955.68,0.448,debit_card,0.0,0,0.027,late,0.1218,0.398,0.1379,False
+CUS000071,Prakash Kumar,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2023-09-09,tablets|storage_devices,10781.64,0.05,UPI,0.0,0,0.6036,normal,0.0819,0.272,0.2373,False
+CUS000072,Krishna Banerjee,retail,Pune,Pune,Maharashtra,N/A (individual),2023-09-17,ups_devices,1465.25,0.526,UPI,0.0,0,0.6033,normal,0.1672,0.774,0.1942,False
+CUS000073,Vasant Enterprises,small_business,Ghatkopar,Mumbai,Maharashtra,Education,2024-01-03,accessories|feature_phones,7055.46,2.57,UPI,42000.0,15,0.2,normal,0.0662,0.2,0.0342,False
+CUS000074,Aditya Ansari,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-05-26,smartphones,3937.24,0.053,cash,0.0,0,0.2044,late,0.0958,0.609,0.167,False
+CUS000075,Sunil Vora,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2025-02-20,mice|smartwatches|earbuds|feature_phones,2580.22,0.387,cash,0.0,0,0.4708,normal,0.0093,0.259,0.005,False
+CUS000076,Aarav Pillai,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2023-07-13,smartphones|accessories|feature_phones|mice,2862.68,0.806,credit_card,0.0,0,0.4026,normal,0.0835,0.111,0.1153,False
+CUS000077,Prime Technologies,small_business,Mulund,Mumbai,Maharashtra,Media,2023-12-08,feature_phones|webcams|routers,4014.54,0.479,credit,25000.0,15,0.6789,normal,0.1461,0.064,0.2335,False
+CUS000078,Suraj Solutions,small_business,Goregaon,Mumbai,Maharashtra,Hospitality,2023-06-05,keyboards,10734.64,0.646,UPI,36000.0,45,0.2109,late,0.2109,0.32,0.2544,False
+CUS000079,Diya Tiwari,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2025-06-15,webcams|smartwatches|feature_phones|headphones,1319.16,0.506,credit_card,0.0,0,0.5746,normal,0.25,0.101,0.035,False
+CUS000080,Anika Bose,retail,Malad,Mumbai,Maharashtra,N/A (individual),2023-05-15,printers|webcams|monitors,502.2,1.288,UPI,0.0,0,0.2,normal,0.1522,0.438,0.1708,False
+CUS000081,Prime Systems Corp.,corporate,Khar,Mumbai,Maharashtra,Manufacturing,2023-06-03,routers|ups_devices,25000.0,0.316,bank_transfer,238000.0,60,0.8059,normal,0.078,0.228,0.0375,False
+CUS000082,Andheri Retail Pvt. Ltd.,corporate,Dadar,Mumbai,Maharashtra,Real Estate,2025-12-02,chargers,25000.0,0.054,credit,233000.0,15,0.5874,normal,0.1688,0.485,0.2955,False
+CUS000083,Sagar Impex LLP,corporate,Ghatkopar,Mumbai,Maharashtra,Education,2026-05-17,feature_phones|smartphones|ups_devices,63270.69,0.058,bank_transfer,197000.0,45,0.6905,normal,0.0346,0.523,0.0537,False
+CUS000084,Alok Deshmukh,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2025-11-20,cables,1310.99,0.51,UPI,0.0,0,0.3174,normal,0.25,0.571,0.1207,False
+CUS000085,Kavita Joshi,retail,Delhi,Delhi,Delhi,N/A (individual),2025-07-26,smartphones,5916.58,0.306,UPI,0.0,0,0.8068,normal,0.2212,0.404,0.2278,True
+CUS000086,Arjun Iyer,retail,Khar,Mumbai,Maharashtra,N/A (individual),2022-09-15,webcams|routers|power_banks|cables,2032.04,0.278,debit_card,0.0,0,0.3926,normal,0.0599,0.157,0.1637,False
+CUS000087,Metro Enterprises,small_business,Kurla,Mumbai,Maharashtra,Healthcare,2023-11-16,storage_devices|chargers|laptops,27541.96,3.043,UPI,20000.0,15,0.3295,normal,0.1397,0.477,0.0651,False
+CUS000088,Rohan Agarwal,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2023-05-28,cables|keyboards|webcams|laptops,3093.61,0.162,debit_card,0.0,0,0.9003,excellent,0.1757,0.759,0.1199,False
+CUS000089,Saanvi Yadav,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2025-01-21,accessories,2157.97,0.152,UPI,0.0,0,0.4519,normal,0.0833,0.739,0.106,False
+CUS000090,Kirti Technologies,small_business,Nashik,Nashik,Maharashtra,Healthcare,2023-05-26,earbuds,22396.0,2.761,credit,22000.0,45,0.7623,normal,0.0826,0.657,0.0538,False
+CUS000091,Rajesh Rathod,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2023-10-13,accessories|smartwatches|cables|routers,2085.82,0.359,debit_card,0.0,0,0.2405,late,0.0315,0.18,0.2946,False
+CUS000092,Ishaan Pillai,retail,Powai,Mumbai,Maharashtra,N/A (individual),2025-07-11,smartwatches|ups_devices|power_banks,776.82,0.209,cash,0.0,0,0.3532,normal,0.1429,0.836,0.106,False
+CUS000093,Sagar Trading Co.,small_business,Delhi,Delhi,Delhi,Media,2026-06-02,tablets|cables|power_banks|headphones,7518.58,1.543,credit,24000.0,15,0.1046,late,0.1301,0.662,0.1269,True
+CUS000094,Farhan Verma,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2025-12-20,accessories|monitors|keyboards,1669.42,0.159,credit_card,0.0,0,0.2667,late,0.2184,0.54,0.3522,False
+CUS000095,Alok Mukherjee,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2022-09-04,monitors|storage_devices,2976.45,0.368,credit_card,0.0,0,0.4323,normal,0.1176,0.762,0.3153,False
+CUS000096,Dev Kapoor,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2026-03-15,tablets|smartphones|ups_devices|televisions,5159.17,0.05,UPI,0.0,0,0.4464,late,0.0828,0.318,0.043,False
+CUS000097,Pooja Rao,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2025-04-25,televisions,1473.81,0.368,UPI,0.0,0,0.8649,normal,0.0349,0.576,0.2989,False
+CUS000098,Isha Menon,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2024-12-04,monitors,4647.55,0.966,UPI,0.0,0,0.8155,normal,0.0686,0.321,0.1738,False
+CUS000099,Priya Kumar,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2024-07-04,speakers|tablets|printers,1880.87,0.228,cash,0.0,0,0.8102,normal,0.25,0.738,0.1467,False
+CUS000100,Ishaan Singh,retail,Surat,Surat,Gujarat,N/A (individual),2026-03-18,storage_devices|smartphones,1328.65,0.079,credit_card,0.0,0,0.7342,normal,0.1258,0.569,0.1982,True
+CUS000101,Krishna Pereira,retail,Nashik,Nashik,Maharashtra,N/A (individual),2023-01-21,televisions|printers|ups_devices,3380.57,0.311,cash,0.0,0,0.7592,normal,0.1677,0.589,0.2472,False
+CUS000102,City Traders LLP,corporate,Surat,Surat,Gujarat,Finance,2023-03-31,headphones|monitors,92456.71,0.223,UPI,287000.0,45,0.1779,late,0.0758,0.248,0.1442,True
+CUS000103,Ganesh Deshmukh,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-02-04,headphones|storage_devices,2512.06,0.085,UPI,0.0,0,0.7389,normal,0.25,0.258,0.1083,False
+CUS000104,Skyline Technologies,small_business,Indore,Indore,Madhya Pradesh,Real Estate,2025-11-22,storage_devices|speakers|keyboards,4917.8,1.412,credit,20000.0,45,0.08,late,0.0447,0.491,0.2217,True
+CUS000105,Horizon Gadget Hub Corp.,corporate,Jogeshwari,Mumbai,Maharashtra,Education,2025-03-07,laptops|speakers|earbuds,35835.24,0.05,bank_transfer,449000.0,60,0.5769,normal,0.25,0.195,0.1159,False
+CUS000106,Anil Menon,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2025-07-05,webcams|feature_phones|mice|smartwatches,2280.02,0.156,debit_card,0.0,0,0.9433,excellent,0.2199,0.448,0.1159,False
+CUS000107,Vihaan Pandey,retail,Surat,Surat,Gujarat,N/A (individual),2023-12-11,webcams|monitors|keyboards,1552.77,0.233,UPI,0.0,0,0.3728,normal,0.1685,0.372,0.1763,True
+CUS000108,Sunil Kapoor,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2025-12-10,monitors|storage_devices,410.42,0.578,credit_card,0.0,0,0.8367,normal,0.1843,0.551,0.1213,False
+CUS000109,Ishaan Pillai,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2023-07-01,headphones,2007.97,0.818,debit_card,0.0,0,0.0698,late,0.1485,0.41,0.2721,False
+CUS000110,Nisha Deshmukh,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2022-12-19,earbuds|routers|monitors|keyboards,2990.89,0.402,cash,0.0,0,0.342,late,0.0661,0.265,0.0224,False
+CUS000111,Kavya Colaco,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2025-07-28,ups_devices|keyboards|earbuds,688.45,0.328,credit_card,0.0,0,0.5032,normal,0.0246,0.443,0.0652,False
+CUS000112,Star Electronics,small_business,Vashi,Mumbai,Maharashtra,Real Estate,2023-04-19,feature_phones|webcams|mice|speakers,3478.03,0.838,UPI,33000.0,30,0.76,normal,0.1191,0.33,0.1646,False
+CUS000113,Saanvi Kulkarni,retail,Malad,Mumbai,Maharashtra,N/A (individual),2025-03-17,televisions|accessories|cables|feature_phones,2374.27,0.461,UPI,0.0,0,0.9216,excellent,0.25,0.153,0.1111,False
+CUS000114,Royal Technologies,small_business,Pune,Pune,Maharashtra,Education,2026-01-04,storage_devices|earbuds|smartphones|routers,11248.7,0.819,credit,44000.0,30,0.5274,normal,0.2466,0.242,0.5665,False
+CUS000115,Sunil Fernandes,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-10-20,power_banks|televisions|keyboards,2416.43,0.193,UPI,0.0,0,0.6347,excellent,0.0851,0.156,0.1117,True
+CUS000116,Vinod Menon,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-01-08,keyboards,5495.39,1.111,credit_card,0.0,0,0.4657,normal,0.1627,0.321,0.2291,False
+CUS000117,Priya Menon,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2025-03-20,webcams|ups_devices,2057.53,0.45,UPI,0.0,0,0.7351,normal,0.25,0.482,0.3979,False
+CUS000118,Rohan Kulkarni,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2022-12-02,storage_devices,3607.49,0.166,cash,0.0,0,0.659,normal,0.146,0.266,0.1144,False
+CUS000119,Vikram Yadav,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2023-07-09,printers,2058.27,0.558,UPI,0.0,0,0.503,normal,0.2123,0.02,0.1086,False
+CUS000120,Suresh Pandey,retail,Powai,Mumbai,Maharashtra,N/A (individual),2025-12-04,earbuds|feature_phones|monitors|smartphones,3662.79,0.184,credit_card,0.0,0,0.5105,normal,0.1541,0.758,0.4444,False
+CUS000121,Vivaan Pereira,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2024-12-12,webcams,868.86,0.104,debit_card,0.0,0,0.6177,normal,0.1973,0.738,0.0669,False
+CUS000122,Pooja Shah,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2022-09-11,mice|power_banks,2484.63,0.05,credit_card,0.0,0,0.4767,normal,0.25,0.397,0.0653,False
+CUS000123,Anil Kumar,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-11-13,televisions|smartwatches,1611.6,0.263,cash,0.0,0,0.7753,excellent,0.0318,0.58,0.2108,False
+CUS000124,Karan Vora,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2026-05-21,tablets,1089.23,0.729,cash,0.0,0,0.62,normal,0.1643,0.395,0.1133,True
+CUS000125,Horizon Impex,small_business,Vile Parle,Mumbai,Maharashtra,IT Services,2025-08-10,printers,10627.15,0.1,bank_transfer,75000.0,30,0.8704,excellent,0.1033,0.533,0.2459,False
+CUS000126,Kirti Solutions LLP,corporate,Thane West,Mumbai,Maharashtra,Hospitality,2024-11-09,monitors|feature_phones|speakers,42332.98,0.05,credit,150000.0,45,0.7088,normal,0.0878,0.774,0.2202,False
+CUS000127,Prakash Trivedi,retail,Nashik,Nashik,Maharashtra,N/A (individual),2022-12-28,speakers|tablets,1234.7,0.383,cash,0.0,0,0.6216,normal,0.25,0.82,0.1379,False
+CUS000128,Kirti Trading Co.,small_business,Malad,Mumbai,Maharashtra,Media,2025-01-11,accessories|webcams,31163.97,1.311,bank_transfer,91000.0,0,0.5378,normal,0.1808,0.265,0.0077,False
+CUS000129,Vasant Systems,small_business,Nagpur,Nagpur,Maharashtra,Hospitality,2024-01-03,laptops|tablets|mice,8592.56,3.611,bank_transfer,23000.0,30,0.7844,excellent,0.0201,0.296,0.1138,False
+CUS000130,Shree Infotech,small_business,Dombivli,Mumbai,Maharashtra,Manufacturing,2025-05-30,power_banks,14305.06,0.913,credit,63000.0,30,0.7878,normal,0.1981,0.535,0.3209,False
+CUS000131,Vivaan Khan,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2025-01-09,smartphones,5504.04,0.64,UPI,0.0,0,0.6945,normal,0.055,0.284,0.1984,False
+CUS000132,Saanvi Vora,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2024-06-10,ups_devices|webcams|laptops,4159.77,0.534,cash,0.0,0,0.2477,normal,0.1549,0.131,0.1425,True
+CUS000133,Sai Verma,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2026-02-24,power_banks,1428.57,0.939,UPI,0.0,0,0.1404,late,0.1768,0.717,0.1098,False
+CUS000134,Vasant Technologies,small_business,Malad,Mumbai,Maharashtra,Logistics,2023-03-09,printers,17738.16,0.1,UPI,84000.0,45,0.641,normal,0.0341,0.596,0.1077,False
+CUS000135,Zara Nair,retail,Nashik,Nashik,Maharashtra,N/A (individual),2026-01-27,cables|headphones,1697.4,1.399,credit_card,0.0,0,0.9418,excellent,0.0295,0.524,0.1389,False
+CUS000136,Om Trading Co.,small_business,Ahmedabad,Ahmedabad,Gujarat,Logistics,2022-10-24,headphones|keyboards|smartwatches|earbuds,4006.82,1.486,bank_transfer,47000.0,45,0.4242,normal,0.0723,0.432,0.0599,True
+CUS000137,Aryan Singh,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-04-30,laptops|feature_phones|monitors,1691.15,0.805,UPI,0.0,0,0.5023,late,0.217,0.489,0.1516,False
+CUS000138,Mumbai Impex Pvt. Ltd.,corporate,Andheri East,Mumbai,Maharashtra,Finance,2025-09-22,tablets|power_banks|storage_devices,25889.49,0.454,bank_transfer,245000.0,45,0.3488,normal,0.0674,0.58,0.0326,False
+CUS000139,Sai Communications Pvt. Ltd.,corporate,Goregaon,Mumbai,Maharashtra,Real Estate,2025-02-28,power_banks|monitors|speakers|headphones,33741.42,0.207,credit,468000.0,15,0.7519,excellent,0.0335,0.421,0.1306,False
+CUS000140,Sneha Menon,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-07-07,earbuds,3407.04,0.111,UPI,0.0,0,0.2924,normal,0.126,0.18,0.1075,False
+CUS000141,Star Retail,small_business,Santacruz,Mumbai,Maharashtra,Retail Trade,2023-01-01,tablets,4290.55,2.497,bank_transfer,22000.0,0,0.7671,excellent,0.2156,0.329,0.037,False
+CUS000142,Anil Kapoor,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2026-06-06,power_banks,2223.31,0.282,credit_card,0.0,0,0.6574,normal,0.051,0.87,0.1417,False
+CUS000143,Isha Kumar,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2023-04-23,webcams,2177.53,1.065,cash,0.0,0,0.9042,excellent,0.1452,0.377,0.1489,False
+CUS000144,Om Retail,small_business,Thane West,Mumbai,Maharashtra,Education,2026-03-15,chargers,14020.76,0.603,bank_transfer,29000.0,30,0.8869,normal,0.0152,0.698,0.4242,False
+CUS000145,Prakash Rathod,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2022-12-17,tablets|laptops,2076.27,0.824,debit_card,0.0,0,0.8019,normal,0.1636,0.052,0.1381,False
+CUS000146,Kavya Desai,retail,Surat,Surat,Gujarat,N/A (individual),2023-11-14,webcams|tablets|feature_phones,1823.63,1.974,UPI,0.0,0,0.4246,normal,0.018,0.56,0.1382,True
+CUS000147,Kabir Mukherjee,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2025-10-14,printers,2679.56,0.459,UPI,0.0,0,0.0881,late,0.0407,0.358,0.1489,True
+CUS000148,Vasant Solutions,small_business,Dadar,Mumbai,Maharashtra,Healthcare,2025-06-09,tablets|ups_devices|televisions|speakers,19001.41,0.1,bank_transfer,63000.0,30,0.4802,normal,0.0855,0.755,0.2265,False
+CUS000149,Kirti Solutions Pvt. Ltd.,corporate,Malad,Mumbai,Maharashtra,Finance,2024-01-02,speakers|routers|smartwatches,75538.4,0.238,bank_transfer,198000.0,60,0.8342,normal,0.1888,0.82,0.1924,False
+CUS000150,Aarav Shah,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2022-11-26,tablets|chargers,652.99,0.395,cash,0.0,0,0.6315,normal,0.0197,0.605,0.1611,False
+CUS000151,Alok Rao,retail,Pune,Pune,Maharashtra,N/A (individual),2023-09-22,monitors|storage_devices,3842.12,0.285,cash,0.0,0,0.2544,normal,0.1445,0.265,0.125,False
+CUS000152,Aryan Mehta,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2025-06-07,tablets|televisions,827.1,0.377,credit_card,0.0,0,0.7379,normal,0.1167,0.481,0.4838,False
+CUS000153,Nisha D'Souza,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2026-03-27,chargers,778.67,0.204,cash,0.0,0,0.5303,normal,0.1338,0.377,0.0675,False
+CUS000154,Metro Gadget Hub Pvt. Ltd.,corporate,Dombivli,Mumbai,Maharashtra,Manufacturing,2025-03-01,monitors|laptops|cables|mice,61408.2,0.05,bank_transfer,213000.0,15,0.5229,normal,0.1915,0.377,0.1749,False
+CUS000155,Mahesh Mehta,retail,Powai,Mumbai,Maharashtra,N/A (individual),2023-05-23,smartphones|earbuds|routers|storage_devices,1119.93,0.397,UPI,0.0,0,0.8627,normal,0.1249,0.09,0.2,False
+CUS000156,Meera Kapoor,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2024-02-14,televisions,744.53,0.221,UPI,0.0,0,0.7768,normal,0.0764,0.276,0.1652,False
+CUS000157,Ira Shah,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2024-10-12,cables|power_banks|tablets,1321.27,0.188,debit_card,0.0,0,0.3956,normal,0.1325,0.399,0.1766,False
+CUS000158,Myra Shaikh,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2024-07-10,cables|feature_phones|headphones|storage_devices,2421.0,1.428,cash,0.0,0,0.7126,normal,0.1969,0.578,0.3342,True
+CUS000159,Diya Kumar,retail,Khar,Mumbai,Maharashtra,N/A (individual),2024-02-25,headphones,1339.54,0.05,UPI,0.0,0,0.6711,normal,0.1946,0.506,0.3256,False
+CUS000160,Sunil Fernandes,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2026-05-03,ups_devices|tablets|smartwatches|laptops,3909.68,0.133,credit_card,0.0,0,0.3925,normal,0.1484,0.478,0.2147,False
+CUS000161,Farhan Menon,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2024-11-30,accessories|mice|routers,927.86,0.643,UPI,0.0,0,0.6647,normal,0.0853,0.446,0.0084,False
+CUS000162,Anika D'Souza,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-11-15,speakers,3009.5,0.05,cash,0.0,0,0.3228,normal,0.1036,0.186,0.5106,False
+CUS000163,Reyansh Patel,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2023-11-01,webcams|feature_phones|keyboards,1218.57,0.05,UPI,0.0,0,0.892,normal,0.1496,0.262,0.0188,False
+CUS000164,Mahesh Banerjee,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2026-03-27,webcams|accessories|smartphones,2103.49,0.134,cash,0.0,0,0.6525,normal,0.25,0.147,0.1657,False
+CUS000165,Karan Khan,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-10-25,tablets|ups_devices,2262.6,0.05,credit_card,0.0,0,0.9756,excellent,0.089,0.591,0.2528,False
+CUS000166,Meera Menon,retail,Powai,Mumbai,Maharashtra,N/A (individual),2024-08-02,keyboards|chargers,1812.7,0.086,cash,0.0,0,0.8182,excellent,0.0429,0.232,0.1797,False
+CUS000167,Amit Bose,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-08-19,ups_devices|monitors,3640.15,0.534,debit_card,0.0,0,0.3415,normal,0.1146,0.639,0.0639,False
+CUS000168,Meera Banerjee,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2025-01-12,ups_devices|tablets,2569.94,0.795,UPI,0.0,0,0.5287,normal,0.1631,0.762,0.1439,False
+CUS000169,Nisha Tiwari,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2026-01-30,routers,3704.96,0.196,debit_card,0.0,0,0.6913,normal,0.0693,0.396,0.185,False
+CUS000170,Ritesh Solanki,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2024-03-15,headphones,3238.88,0.244,UPI,0.0,0,0.7214,normal,0.0694,0.38,0.0803,False
+CUS000171,Skyline Infotech,small_business,Nashik,Nashik,Maharashtra,Logistics,2024-11-18,mice,13453.37,1.044,credit,20000.0,0,0.5235,normal,0.0806,0.531,0.1101,False
+CUS000172,Aadhya Mukherjee,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2024-05-25,feature_phones|televisions|webcams,6406.93,0.447,UPI,0.0,0,0.3177,normal,0.097,0.603,0.2202,False
+CUS000173,Shree Mobile Point LLP,corporate,Nashik,Nashik,Maharashtra,Education,2023-02-19,webcams|smartphones|ups_devices|feature_phones,43905.22,0.165,bank_transfer,190000.0,30,0.6837,normal,0.1307,0.083,0.1368,False
+CUS000174,Aryan Desai,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2024-03-13,webcams|printers|power_banks|speakers,2025.18,0.271,credit_card,0.0,0,0.6445,normal,0.1613,0.387,0.0543,False
+CUS000175,National Retail,small_business,Mulund,Mumbai,Maharashtra,Logistics,2025-04-13,printers,21990.83,0.502,bank_transfer,20000.0,0,0.9318,excellent,0.0549,0.177,0.08,False
+CUS000176,Rajesh Vora,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2022-08-07,monitors|webcams|routers|accessories,1870.03,0.34,UPI,0.0,0,0.9279,excellent,0.1601,0.237,0.1299,False
+CUS000177,Golden Systems,small_business,Pune,Pune,Maharashtra,IT Services,2023-01-21,speakers|smartwatches|routers|headphones,18641.43,0.445,bank_transfer,54000.0,30,0.9,normal,0.0692,0.699,0.2954,False
+CUS000178,Vihaan Khanna,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2026-03-26,printers,1172.01,0.212,cash,0.0,0,0.5914,normal,0.0497,0.096,0.1046,False
+CUS000179,Siddharth Nair,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-02-01,cables|tablets|earbuds,1940.75,0.16,UPI,0.0,0,0.8051,excellent,0.1508,0.486,0.3147,False
+CUS000180,Rajesh Mehta,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2026-05-02,televisions|monitors,852.27,1.519,credit_card,0.0,0,0.5719,normal,0.0606,0.685,0.0586,False
+CUS000181,Deepak Solanki,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2026-01-24,headphones|storage_devices|speakers,4355.52,1.452,UPI,0.0,0,0.5937,normal,0.0818,0.55,0.118,False
+CUS000182,Sunita Rao,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2025-02-08,keyboards,1616.37,0.865,cash,0.0,0,0.2,normal,0.0064,0.158,0.0159,False
+CUS000183,Silver Retail Pvt. Ltd.,corporate,Kandivali,Mumbai,Maharashtra,Education,2025-03-02,monitors|tablets|printers,38254.96,0.179,bank_transfer,150000.0,45,0.6951,normal,0.0925,0.569,0.0704,False
+CUS000184,Ganesh Trading Co. Pvt. Ltd.,corporate,Bandra East,Mumbai,Maharashtra,Manufacturing,2025-09-11,storage_devices|smartphones,39329.29,0.705,credit,184000.0,60,0.2017,late,0.1064,0.422,0.2482,False
+CUS000185,Anjali Malhotra,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-08-11,feature_phones,3236.31,0.154,UPI,0.0,0,0.7295,normal,0.0564,0.38,0.0984,False
+CUS000186,Ashok Sharma,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2025-06-13,power_banks|monitors|storage_devices,1162.83,0.852,UPI,0.0,0,0.7502,excellent,0.0669,0.354,0.3222,False
+CUS000187,Sai Mobile Point LLP,corporate,Mulund,Mumbai,Maharashtra,Logistics,2024-03-18,webcams,29070.19,0.1,bank_transfer,245000.0,45,0.7245,normal,0.0951,0.278,0.1143,False
+CUS000188,Ishaan Kapoor,retail,Pune,Pune,Maharashtra,N/A (individual),2022-12-17,power_banks|headphones,5697.78,0.05,UPI,0.0,0,0.7439,normal,0.1676,0.383,0.1745,False
+CUS000189,Ganesh Systems,small_business,Nashik,Nashik,Maharashtra,Healthcare,2023-09-14,chargers|headphones,4060.87,1.454,UPI,61000.0,45,0.9,normal,0.1939,0.188,0.1687,False
+CUS000190,Aadhya Patel,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2025-03-14,laptops|routers|cables|tablets,2626.25,0.05,UPI,0.0,0,0.8064,normal,0.25,0.579,0.25,False
+CUS000191,Isha Khan,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-04-29,accessories|speakers|televisions,1731.28,0.353,debit_card,0.0,0,0.7347,normal,0.0642,0.68,0.174,False
+CUS000192,Sanjay Khanna,retail,Pune,Pune,Maharashtra,N/A (individual),2024-11-26,storage_devices|monitors|televisions,1364.91,0.053,UPI,0.0,0,0.595,normal,0.25,0.275,0.2876,False
+CUS000193,Horizon Impex,small_business,Chembur,Mumbai,Maharashtra,Education,2025-12-14,storage_devices|printers,18905.96,0.583,bank_transfer,25000.0,45,0.4968,normal,0.1042,0.434,0.0936,False
+CUS000194,Vikram Gupta,retail,Pune,Pune,Maharashtra,N/A (individual),2023-08-07,earbuds,1374.22,0.486,credit_card,0.0,0,0.3787,normal,0.0877,0.121,0.1661,False
+CUS000195,Vasant Systems,small_business,Dombivli,Mumbai,Maharashtra,Education,2025-12-25,monitors|power_banks|storage_devices|keyboards,8830.59,1.567,credit,20000.0,0,0.8097,excellent,0.2387,0.098,0.0676,False
+CUS000196,Royal Infotech,small_business,Jogeshwari,Mumbai,Maharashtra,Education,2024-04-14,speakers,19986.05,1.602,bank_transfer,36000.0,0,0.3084,normal,0.25,0.117,0.0459,False
+CUS000197,National Enterprises Pvt. Ltd.,corporate,Dombivli,Mumbai,Maharashtra,Education,2023-02-20,power_banks|ups_devices,25000.0,0.439,bank_transfer,172000.0,45,0.2535,normal,0.1162,0.383,0.2059,False
+CUS000198,Manoj Patel,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2025-12-23,accessories|feature_phones,2107.11,1.015,UPI,0.0,0,0.5217,normal,0.0716,0.304,0.0725,False
+CUS000199,Rohan Patel,retail,Khar,Mumbai,Maharashtra,N/A (individual),2024-12-16,cables|smartphones|feature_phones,2038.97,0.072,cash,0.0,0,0.7271,normal,0.0768,0.564,0.0321,False
+CUS000200,Star Technologies,small_business,Delhi,Delhi,Delhi,Hospitality,2024-04-27,chargers,19603.05,2.337,bank_transfer,30000.0,0,0.2007,late,0.1244,0.311,0.2214,True
+CUS000201,Sai Systems,small_business,Kandivali,Mumbai,Maharashtra,Real Estate,2023-09-08,tablets,24171.84,0.725,credit,32000.0,45,0.6827,excellent,0.185,0.167,0.2311,False
+CUS000202,Riya Kumar,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2026-05-13,webcams,2757.91,0.42,debit_card,0.0,0,0.8012,excellent,0.1171,0.258,0.2485,False
+CUS000203,Diya Solanki,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2025-07-17,smartwatches|mice|smartphones|routers,2980.07,0.15,UPI,0.0,0,0.8992,normal,0.1805,0.02,0.077,False
+CUS000204,Horizon Infotech,small_business,Vile Parle,Mumbai,Maharashtra,Retail Trade,2023-08-09,routers|earbuds,7943.45,0.536,bank_transfer,20000.0,30,0.026,late,0.0619,0.258,0.2582,False
+CUS000205,Neha Ansari,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-09-26,cables,1866.82,0.8,credit_card,0.0,0,0.8151,normal,0.106,0.117,0.1693,False
+CUS000206,Aarav D'Souza,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2026-04-01,routers|power_banks,2038.25,0.316,debit_card,0.0,0,0.5298,normal,0.1794,0.342,0.2188,False
+CUS000207,Varun Solanki,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2023-10-19,ups_devices|monitors|earbuds|accessories,1516.69,0.176,debit_card,0.0,0,0.4847,normal,0.25,0.54,0.0829,True
+CUS000208,Ashok Vora,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2025-01-26,headphones|keyboards|feature_phones|laptops,1810.01,0.83,debit_card,0.0,0,0.4262,normal,0.0311,0.347,0.0304,False
+CUS000209,Om Verma,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-07-25,televisions|mice|headphones|routers,6458.17,0.125,credit_card,0.0,0,0.6019,normal,0.1894,0.671,0.2601,False
+CUS000210,Nikhil Nair,retail,Delhi,Delhi,Delhi,N/A (individual),2025-08-31,smartwatches|keyboards|printers,6358.5,0.121,credit_card,0.0,0,0.3425,normal,0.2141,0.596,0.2875,True
+CUS000211,Suresh Chopra,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2026-06-22,speakers,3978.05,0.329,cash,0.0,0,0.7746,normal,0.2467,0.219,0.124,False
+CUS000212,Rajesh Jain,retail,Khar,Mumbai,Maharashtra,N/A (individual),2024-11-17,monitors|mice,1563.69,0.471,UPI,0.0,0,0.6503,normal,0.2445,0.28,0.3675,False
+CUS000213,Horizon Solutions,small_business,Dombivli,Mumbai,Maharashtra,Logistics,2023-06-07,printers|laptops,10302.1,0.387,credit,30000.0,15,0.0673,late,0.1139,0.036,0.264,False
+CUS000214,Golden Technologies,small_business,Khar,Mumbai,Maharashtra,Retail Trade,2025-11-20,laptops|mice|keyboards,17019.76,0.675,bank_transfer,21000.0,0,0.2377,normal,0.0831,0.107,0.2894,False
+CUS000215,Prakash Malhotra,retail,Delhi,Delhi,Delhi,N/A (individual),2024-07-12,cables|keyboards,2212.52,0.079,debit_card,0.0,0,0.6908,normal,0.1901,0.472,0.0459,True
+CUS000216,Golden Gadget Hub Pvt. Ltd.,corporate,Thane West,Mumbai,Maharashtra,Media,2026-05-22,accessories|storage_devices|webcams|monitors,32489.67,0.131,credit,154000.0,30,0.6418,normal,0.1884,0.66,0.0523,False
+CUS000217,Ganesh Rao,retail,Pune,Pune,Maharashtra,N/A (individual),2025-09-23,smartphones|storage_devices|accessories,2975.05,0.05,UPI,0.0,0,0.6719,excellent,0.25,0.711,0.2204,False
+CUS000218,Ganesh Solanki,retail,Pune,Pune,Maharashtra,N/A (individual),2025-04-16,tablets,1845.9,0.058,cash,0.0,0,0.4557,normal,0.0942,0.192,0.0478,False
+CUS000219,Nikhil Shah,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2023-06-18,printers|cables|storage_devices|earbuds,2568.42,0.128,cash,0.0,0,0.4855,normal,0.0648,0.169,0.1746,False
+CUS000220,Sanjay Desai,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2022-12-20,storage_devices|smartwatches|earbuds,4038.36,0.396,cash,0.0,0,0.956,excellent,0.159,0.391,0.4032,False
+CUS000221,Riya Rathod,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2026-05-06,ups_devices|smartphones|cables,1585.64,0.702,UPI,0.0,0,0.4923,normal,0.1192,0.858,0.3345,True
+CUS000222,Kavya Shah,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2024-11-06,chargers|webcams|smartwatches,2684.53,0.236,UPI,0.0,0,0.7128,normal,0.1729,0.272,0.135,False
+CUS000223,Ishaan Sharma,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2026-06-15,speakers|chargers|mice,3844.28,0.416,cash,0.0,0,0.55,late,0.0101,0.477,0.117,False
+CUS000224,Silver Distributors,small_business,Santacruz,Mumbai,Maharashtra,Hospitality,2024-12-22,smartwatches|mice|speakers,12118.58,1.219,credit,20000.0,30,0.5572,normal,0.068,0.569,0.1168,False
+CUS000225,Andheri Communications Pvt. Ltd.,corporate,Vashi,Mumbai,Maharashtra,Real Estate,2023-11-13,mice,51391.83,0.147,bank_transfer,288000.0,60,0.3562,normal,0.2271,0.479,0.2,False
+CUS000226,Reyansh Khanna,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-09-15,smartphones|chargers|ups_devices|laptops,694.01,0.231,cash,0.0,0,0.7031,normal,0.2362,0.156,0.1981,False
+CUS000227,Shree Digital World,small_business,Ghatkopar,Mumbai,Maharashtra,Media,2024-11-24,storage_devices,6368.65,1.039,bank_transfer,24000.0,30,0.1208,late,0.1856,0.617,0.1863,False
+CUS000228,Diya Joshi,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2026-05-03,televisions,1805.59,0.367,debit_card,0.0,0,0.3997,normal,0.063,0.078,0.2892,True
+CUS000229,Aadhya Rathod,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2025-01-03,laptops|feature_phones,2685.18,0.095,cash,0.0,0,0.5443,normal,0.25,0.781,0.0483,False
+CUS000230,Vasant Trading Co. LLP,corporate,Santacruz,Mumbai,Maharashtra,Real Estate,2023-03-30,accessories|printers,46613.73,0.653,bank_transfer,150000.0,45,0.8657,normal,0.1831,0.704,0.1244,False
+CUS000231,Mumbai Solutions,small_business,Chembur,Mumbai,Maharashtra,Healthcare,2026-06-29,smartphones|webcams|feature_phones|routers,15387.32,2.114,UPI,23000.0,15,0.1304,late,0.25,0.484,0.2146,False
+CUS000232,Priya Nair,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-01-27,smartwatches|keyboards,3135.26,0.685,cash,0.0,0,0.6717,normal,0.2102,0.379,0.0919,False
+CUS000233,Ganesh Solutions,small_business,Vile Parle,Mumbai,Maharashtra,Real Estate,2022-09-05,tablets|cables|printers|televisions,10015.93,0.473,bank_transfer,59000.0,0,0.5219,normal,0.0304,0.073,0.0428,False
+CUS000234,Zara Deshmukh,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2025-11-25,mice,1784.14,0.064,UPI,0.0,0,0.698,normal,0.0695,0.18,0.1675,False
+CUS000235,Golden Mobile Point,small_business,Dadar,Mumbai,Maharashtra,IT Services,2026-06-30,power_banks|smartphones|keyboards|speakers,16077.78,1.458,bank_transfer,35000.0,0,0.4415,normal,0.1805,0.493,0.0576,False
+CUS000236,Zara Patel,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-12-03,storage_devices|power_banks|televisions|smartphones,1812.41,0.817,cash,0.0,0,0.8116,normal,0.25,0.421,0.2046,False
+CUS000237,Kirti Traders Pvt. Ltd.,corporate,Santacruz,Mumbai,Maharashtra,Healthcare,2024-11-11,webcams|monitors|feature_phones,25000.0,0.242,credit,519000.0,45,0.8957,excellent,0.25,0.346,0.1385,False
+CUS000238,Riya Mehta,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2023-02-07,tablets|chargers|televisions,3410.85,0.184,cash,0.0,0,0.4093,normal,0.1063,0.326,0.3261,False
+CUS000239,Mumbai Solutions Corp.,corporate,Vile Parle,Mumbai,Maharashtra,Logistics,2024-01-22,ups_devices|webcams,42141.83,0.203,credit,391000.0,45,0.5216,normal,0.076,0.407,0.2231,False
+CUS000240,Rahul Kapoor,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2024-01-11,webcams|printers,6781.76,0.325,UPI,0.0,0,0.5539,normal,0.2118,0.479,0.0302,False
+CUS000241,Vihaan Trivedi,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2025-04-26,keyboards|smartwatches|feature_phones|headphones,2853.75,0.404,cash,0.0,0,0.5402,normal,0.0977,0.455,0.2157,False
+CUS000242,Nikhil Joshi,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-11-30,ups_devices|monitors,1713.9,0.769,cash,0.0,0,0.3428,normal,0.0841,0.294,0.0297,False
+CUS000243,Zara Verma,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2024-03-23,smartwatches|headphones|ups_devices|tablets,2781.13,0.085,credit_card,0.0,0,0.8795,normal,0.1748,0.381,0.5465,False
+CUS000244,United Mobile Point,small_business,Surat,Surat,Gujarat,Media,2025-09-12,chargers|feature_phones|webcams|cables,38670.37,0.856,UPI,44000.0,30,0.2571,normal,0.0483,0.504,0.3664,True
+CUS000245,Imran Khan,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2025-11-09,chargers,1289.92,0.937,UPI,0.0,0,0.2715,normal,0.2359,0.412,0.3811,True
+CUS000246,Manoj Trivedi,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2026-04-28,power_banks|routers|smartwatches,3213.15,0.679,credit_card,0.0,0,0.6443,normal,0.1904,0.3,0.1207,False
+CUS000247,Skyline Enterprises,small_business,Kurla,Mumbai,Maharashtra,Retail Trade,2024-11-11,power_banks|smartwatches,4098.48,0.984,UPI,28000.0,0,0.3632,normal,0.2356,0.232,0.1385,False
+CUS000248,Ganesh Distributors,small_business,Ghatkopar,Mumbai,Maharashtra,Finance,2023-10-10,monitors|webcams|routers|power_banks,21485.99,1.272,UPI,20000.0,45,0.4191,normal,0.1416,0.581,0.035,False
+CUS000249,Mahesh Gupta,retail,Surat,Surat,Gujarat,N/A (individual),2024-02-28,routers|storage_devices,2215.09,0.397,cash,0.0,0,0.7555,normal,0.0353,0.334,0.1094,True
+CUS000250,Sunil Singh,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2023-09-20,cables,4295.14,0.188,credit_card,0.0,0,0.8185,normal,0.0856,0.35,0.1562,False
+CUS000251,Kirti Technologies,small_business,Khar,Mumbai,Maharashtra,Finance,2022-09-25,cables|feature_phones|smartphones|earbuds,10799.49,0.737,UPI,35000.0,0,0.6785,normal,0.057,0.274,0.0298,False
+CUS000252,Anika Agarwal,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-12-23,tablets|cables,1551.66,0.234,UPI,0.0,0,0.8337,excellent,0.1327,0.088,0.0599,False
+CUS000253,Saanvi Pereira,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2025-03-09,accessories|monitors|power_banks,4147.59,1.263,debit_card,0.0,0,0.7121,normal,0.1175,0.923,0.0605,True
+CUS000254,Isha Malhotra,retail,Khar,Mumbai,Maharashtra,N/A (individual),2024-10-04,smartphones|speakers,1438.7,0.588,UPI,0.0,0,0.8062,excellent,0.0277,0.62,0.1136,False
+CUS000255,Aadhya Pandey,retail,Khar,Mumbai,Maharashtra,N/A (individual),2025-11-10,smartwatches|headphones,2347.4,0.113,cash,0.0,0,0.7744,excellent,0.25,0.274,0.2631,False
+CUS000256,Vikram Colaco,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-07-09,laptops|mice|routers|tablets,2545.45,0.459,credit_card,0.0,0,0.546,normal,0.162,0.112,0.2517,False
+CUS000257,Om Tiwari,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2025-10-24,webcams,666.35,0.143,cash,0.0,0,0.8094,normal,0.026,0.261,0.1298,True
+CUS000258,Golden Solutions,small_business,Dombivli,Mumbai,Maharashtra,Healthcare,2026-03-11,mice|webcams|headphones|keyboards,6467.43,0.894,credit,38000.0,45,0.7384,normal,0.25,0.2,0.1937,False
+CUS000259,Amit Gupta,retail,Surat,Surat,Gujarat,N/A (individual),2026-04-05,laptops|mice,2099.32,0.712,UPI,0.0,0,0.6148,normal,0.2408,0.072,0.2109,True
+CUS000260,Sai Mobile Point,small_business,Dadar,Mumbai,Maharashtra,Education,2023-03-25,tablets|smartwatches|ups_devices|speakers,15195.24,1.829,bank_transfer,20000.0,15,0.8044,normal,0.1655,0.413,0.2682,False
+CUS000261,Diya Gupta,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-12-20,chargers|smartphones|feature_phones|power_banks,2160.3,0.436,debit_card,0.0,0,0.9386,excellent,0.146,0.036,0.0699,False
+CUS000262,Sneha Bose,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2026-04-21,smartphones|headphones|power_banks|earbuds,1065.38,0.729,UPI,0.0,0,0.2828,late,0.1424,0.67,0.0616,False
+CUS000263,Mumbai Retail,small_business,Powai,Mumbai,Maharashtra,Real Estate,2023-08-11,chargers|routers,12584.27,0.664,credit,36000.0,15,0.3075,normal,0.0836,0.845,0.1155,False
+CUS000264,Ritesh Pereira,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-06-25,speakers|smartwatches|chargers,3769.11,0.929,credit_card,0.0,0,0.4699,normal,0.1418,0.297,0.0936,False
+CUS000265,Anika Shaikh,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2025-12-31,power_banks|headphones|routers|smartphones,1834.81,0.3,cash,0.0,0,0.2072,normal,0.1211,0.379,0.0373,False
+CUS000266,Suresh Bhatia,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2023-05-18,webcams,1497.83,0.5,UPI,0.0,0,0.6203,normal,0.215,0.219,0.1241,False
+CUS000267,Reyansh Patel,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-11-12,smartphones,1627.04,0.525,credit_card,0.0,0,0.5918,normal,0.2133,0.282,0.0679,False
+CUS000268,New India Gadget Hub,small_business,Indore,Indore,Madhya Pradesh,Retail Trade,2026-01-30,printers|laptops|smartphones|keyboards,7088.81,1.039,credit,173000.0,15,0.632,normal,0.14,0.313,0.0595,True
+CUS000269,Farhan Rathod,retail,Khar,Mumbai,Maharashtra,N/A (individual),2026-05-01,laptops|smartwatches,1395.21,0.775,cash,0.0,0,0.4578,normal,0.098,0.301,0.1468,False
+CUS000270,Aarav Menon,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2026-02-25,smartphones|feature_phones|smartwatches|speakers,3593.86,0.554,cash,0.0,0,0.1001,late,0.25,0.778,0.0895,False
+CUS000271,Sai Chauhan,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2025-05-15,routers|speakers|mice|keyboards,4793.27,0.422,cash,0.0,0,0.5233,normal,0.0502,0.071,0.1133,True
+CUS000272,Sai Chopra,retail,Khar,Mumbai,Maharashtra,N/A (individual),2022-11-09,ups_devices|mice|televisions|accessories,4390.97,0.956,debit_card,0.0,0,0.1901,late,0.0227,0.203,0.0909,False
+CUS000273,Sunil Mishra,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2022-11-07,power_banks|headphones|mice,2382.84,0.066,credit_card,0.0,0,0.8249,excellent,0.1579,0.256,0.1333,False
+CUS000274,Ritesh Verma,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2025-10-05,power_banks|televisions|storage_devices|mice,1314.46,0.307,UPI,0.0,0,0.672,normal,0.0171,0.147,0.0238,False
+CUS000275,Ira Malhotra,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2023-07-02,smartphones,845.4,0.141,debit_card,0.0,0,0.6258,normal,0.0606,0.416,0.0876,False
+CUS000276,City Gadget Hub,small_business,Vile Parle,Mumbai,Maharashtra,Healthcare,2025-01-01,routers|keyboards,37198.72,2.815,bank_transfer,30000.0,0,0.6798,normal,0.1744,0.489,0.1367,False
+CUS000277,Farhan Pereira,retail,Malad,Mumbai,Maharashtra,N/A (individual),2026-01-06,cables|storage_devices|monitors|headphones,1480.1,0.05,cash,0.0,0,0.496,late,0.0649,0.259,0.1686,False
+CUS000278,Elite Infotech,small_business,Indore,Indore,Madhya Pradesh,Hospitality,2025-04-06,feature_phones|headphones|laptops|cables,29768.61,3.227,UPI,20000.0,45,0.2447,late,0.25,0.178,0.2223,True
+CUS000279,Star Distributors,small_business,Bandra West,Mumbai,Maharashtra,Healthcare,2025-10-25,storage_devices|smartphones|power_banks|headphones,32354.52,1.041,credit,51000.0,30,0.7593,normal,0.0728,0.807,0.219,False
+CUS000280,Andheri Traders,small_business,Khar,Mumbai,Maharashtra,Manufacturing,2024-08-10,speakers|televisions|smartphones,13026.9,0.39,bank_transfer,38000.0,30,0.2986,normal,0.25,0.659,0.2171,False
+CUS000281,Vinod Nair,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2026-01-11,ups_devices,1498.89,0.185,UPI,0.0,0,0.3186,late,0.1111,0.211,0.2106,True
+CUS000282,Kirti Impex Pvt. Ltd.,corporate,Bandra East,Mumbai,Maharashtra,Logistics,2022-10-31,printers|speakers|feature_phones,25000.0,0.909,bank_transfer,274000.0,30,0.8978,excellent,0.0947,0.042,0.1174,False
+CUS000283,Ramesh Ansari,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-09-09,headphones|mice|laptops,2544.05,0.757,debit_card,0.0,0,0.0525,late,0.0709,0.037,0.3951,False
+CUS000284,Rajesh Jain,retail,Powai,Mumbai,Maharashtra,N/A (individual),2025-02-23,speakers|smartphones|mice,909.48,0.171,UPI,0.0,0,0.5764,normal,0.1381,0.435,0.0661,False
+CUS000285,Ishaan Colaco,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-07-22,webcams|routers|ups_devices|power_banks,4408.56,0.63,UPI,0.0,0,0.2776,normal,0.1705,0.762,0.2646,True
+CUS000286,Karan Iyer,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2026-05-30,chargers,2134.97,0.052,debit_card,0.0,0,0.4026,normal,0.25,0.562,0.2505,True
+CUS000287,Anjali Solanki,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2026-05-06,webcams|tablets,1802.92,0.116,UPI,0.0,0,0.7115,normal,0.2178,0.597,0.1019,False
+CUS000288,Silver Solutions,small_business,Bengaluru,Bengaluru,Karnataka,Logistics,2023-07-13,power_banks|monitors|tablets|earbuds,5993.56,2.721,credit,21000.0,30,0.8974,normal,0.07,0.601,0.1007,True
+CUS000289,Yash Chauhan,retail,Powai,Mumbai,Maharashtra,N/A (individual),2023-09-23,monitors|smartwatches,1544.59,0.065,UPI,0.0,0,0.8651,normal,0.1389,0.164,0.1681,False
+CUS000290,Pankaj Banerjee,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2022-12-28,monitors|headphones|smartphones,2263.91,0.565,UPI,0.0,0,0.99,excellent,0.25,0.182,0.0362,True
+CUS000291,Krishna Agarwal,retail,Delhi,Delhi,Delhi,N/A (individual),2025-01-13,ups_devices|mice,841.16,0.184,UPI,0.0,0,0.6726,normal,0.0401,0.525,0.2422,True
+CUS000292,Suresh Trivedi,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2025-01-22,tablets|ups_devices|cables|televisions,1215.89,0.695,UPI,0.0,0,0.5437,normal,0.0692,0.728,0.1826,False
+CUS000293,Elite Enterprises,small_business,Nashik,Nashik,Maharashtra,Media,2026-01-02,cables|routers|monitors|tablets,12678.16,1.271,credit,47000.0,15,0.6751,normal,0.25,0.211,0.1834,False
+CUS000294,Aadhya Trivedi,retail,Malad,Mumbai,Maharashtra,N/A (individual),2023-03-09,cables,4211.25,0.184,UPI,0.0,0,0.5945,normal,0.0864,0.339,0.2139,False
+CUS000295,Sneha Rao,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2022-08-24,feature_phones|accessories|smartwatches,529.98,0.152,UPI,0.0,0,0.7132,normal,0.0584,0.429,0.2212,False
+CUS000296,Vinod Desai,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2023-07-12,laptops|routers,1118.75,0.091,UPI,0.0,0,0.5957,normal,0.1938,0.279,0.1347,True
+CUS000297,Shree Digital World,small_business,Kandivali,Mumbai,Maharashtra,Logistics,2024-07-08,accessories|chargers|feature_phones|televisions,22505.71,0.434,credit,20000.0,0,0.3583,late,0.0254,0.023,0.2102,False
+CUS000298,Aditya Shah,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2025-06-12,webcams|earbuds,3187.81,0.181,credit_card,0.0,0,0.5768,normal,0.0365,0.277,0.0587,False
+CUS000299,Sanjay Sharma,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2022-12-10,mice,2085.5,0.713,debit_card,0.0,0,0.4535,normal,0.1343,0.317,0.283,False
+CUS000300,Reyansh Mehta,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2022-10-07,accessories,3757.41,0.921,cash,0.0,0,0.5,excellent,0.215,0.115,0.1777,False
+CUS000301,Ashok D'Souza,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2022-09-13,tablets|routers|monitors,2271.48,0.281,UPI,0.0,0,0.9,normal,0.1828,0.138,0.2117,True
+CUS000302,Sunil Shah,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2026-06-15,smartwatches|keyboards|mice,2506.92,0.197,cash,0.0,0,0.6975,normal,0.085,0.419,0.1771,False
+CUS000303,Kirti Mobile Point,small_business,Santacruz,Mumbai,Maharashtra,Hospitality,2024-09-28,televisions|power_banks,23017.81,0.386,credit,20000.0,45,0.2742,normal,0.0569,0.287,0.3933,False
+CUS000304,Vinod Kumar,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2024-09-27,tablets|routers|smartphones|storage_devices,2187.5,0.749,cash,0.0,0,0.4432,normal,0.0236,0.341,0.201,True
+CUS000305,Myra Mishra,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2025-11-17,feature_phones|storage_devices,874.39,0.099,debit_card,0.0,0,0.7683,normal,0.2076,0.553,0.1359,False
+CUS000306,Sunita Chauhan,retail,Delhi,Delhi,Delhi,N/A (individual),2024-02-09,headphones|speakers,1513.69,0.319,credit_card,0.0,0,0.6859,normal,0.0725,0.503,0.1588,True
+CUS000307,Sai Technologies,small_business,Andheri West,Mumbai,Maharashtra,Manufacturing,2024-05-09,power_banks|mice|storage_devices|chargers,9650.88,0.256,bank_transfer,39000.0,0,0.0553,late,0.2369,0.389,0.4733,False
+CUS000308,Alok Mehta,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2026-01-24,storage_devices,1493.33,0.267,UPI,0.0,0,0.7503,normal,0.132,0.241,0.3988,True
+CUS000309,Prakash Trivedi,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2025-04-20,chargers|accessories|storage_devices,1282.23,0.403,UPI,0.0,0,0.9602,excellent,0.1329,0.041,0.083,True
+CUS000310,Ganesh Gadget Hub,small_business,Khar,Mumbai,Maharashtra,Education,2022-09-23,printers|power_banks,5014.92,0.28,bank_transfer,30000.0,15,0.5649,normal,0.25,0.513,0.0069,False
+CUS000311,Pankaj Iyer,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2024-06-11,monitors|chargers|feature_phones|laptops,1528.15,1.555,UPI,0.0,0,0.4015,normal,0.0899,0.358,0.2526,True
+CUS000312,Riya Mehta,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2023-02-26,ups_devices,2320.2,1.307,UPI,0.0,0,0.5127,normal,0.171,0.29,0.0198,False
+CUS000313,Ramesh Verma,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2023-01-29,feature_phones|tablets,4283.26,1.152,UPI,0.0,0,0.5106,normal,0.0189,0.398,0.1089,False
+CUS000314,Suresh Bose,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2023-09-01,ups_devices|monitors,4021.37,0.447,UPI,0.0,0,0.6272,normal,0.1463,0.124,0.1543,False
+CUS000315,Skyline Enterprises,small_business,Andheri West,Mumbai,Maharashtra,Education,2025-12-21,laptops|storage_devices,9817.67,0.308,bank_transfer,36000.0,15,0.5746,normal,0.25,0.496,0.018,False
+CUS000316,Meera Gupta,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2025-01-29,power_banks,1711.15,0.226,UPI,0.0,0,0.9556,excellent,0.1204,0.524,0.0404,False
+CUS000317,Mahesh Chopra,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-05-16,accessories|smartwatches|power_banks|feature_phones,1199.67,0.451,cash,0.0,0,0.2643,late,0.1503,0.242,0.1236,False
+CUS000318,Ira Tiwari,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2025-05-26,routers|feature_phones|tablets|storage_devices,2997.51,0.296,UPI,0.0,0,0.5333,normal,0.2491,0.513,0.0693,False
+CUS000319,Sai Distributors,small_business,Dombivli,Mumbai,Maharashtra,Logistics,2022-09-05,speakers|tablets|mice,14182.84,0.312,UPI,31000.0,0,0.6096,normal,0.25,0.901,0.2467,False
+CUS000320,Ritesh Mukherjee,retail,Surat,Surat,Gujarat,N/A (individual),2023-10-08,feature_phones|chargers|storage_devices,1776.21,0.816,cash,0.0,0,0.9,normal,0.1603,0.666,0.1584,True
+CUS000321,Isha Khanna,retail,Powai,Mumbai,Maharashtra,N/A (individual),2025-02-07,keyboards|accessories,4547.86,0.05,cash,0.0,0,0.9126,excellent,0.1429,0.38,0.1368,False
+CUS000322,Meera Pandey,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-07-30,smartphones,2475.74,0.278,UPI,0.0,0,0.6588,normal,0.2146,0.711,0.1972,False
+CUS000323,Om Impex,small_business,Jogeshwari,Mumbai,Maharashtra,Retail Trade,2023-10-15,earbuds|televisions,41920.31,0.676,bank_transfer,20000.0,0,0.5446,normal,0.0322,0.421,0.1368,False
+CUS000324,Anika Malhotra,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2023-04-15,keyboards|power_banks|monitors|storage_devices,2164.96,0.306,cash,0.0,0,0.3257,normal,0.2404,0.596,0.424,False
+CUS000325,Siddharth Fernandes,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-01-21,smartwatches,2804.47,1.396,debit_card,0.0,0,0.5358,normal,0.1466,0.242,0.0491,False
+CUS000326,Vivaan Iyer,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2023-05-05,smartphones|keyboards|power_banks,990.23,1.39,debit_card,0.0,0,0.7039,normal,0.0564,0.536,0.1598,False
+CUS000327,Kavita Menon,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2023-12-07,webcams|power_banks|chargers|smartwatches,2967.11,0.05,UPI,0.0,0,0.3345,normal,0.2007,0.301,0.3607,False
+CUS000328,Royal Impex,small_business,Bandra West,Mumbai,Maharashtra,Retail Trade,2026-05-26,webcams|power_banks|speakers|chargers,6907.27,0.819,credit,33000.0,15,0.5199,normal,0.25,0.457,0.2308,False
+CUS000329,Nikhil Reddy,retail,Surat,Surat,Gujarat,N/A (individual),2025-08-22,monitors,3684.34,0.772,UPI,0.0,0,0.7297,normal,0.25,0.28,0.1358,True
+CUS000330,Diya Pandey,retail,Powai,Mumbai,Maharashtra,N/A (individual),2023-04-03,printers|smartwatches|tablets|laptops,2211.63,0.178,UPI,0.0,0,0.8069,normal,0.1429,0.34,0.0802,False
+CUS000331,Reyansh Mukherjee,retail,Malad,Mumbai,Maharashtra,N/A (individual),2023-12-25,keyboards,1930.3,0.402,cash,0.0,0,0.99,excellent,0.1074,0.274,0.1467,False
+CUS000332,Saanvi Sharma,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2022-09-13,tablets|earbuds,1384.57,0.17,UPI,0.0,0,0.588,normal,0.2258,0.218,0.1599,False
+CUS000333,Priya Singh,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2025-03-16,earbuds|printers,865.37,0.594,debit_card,0.0,0,0.8937,normal,0.25,0.257,0.0443,False
+CUS000334,Mahesh Mukherjee,retail,Pune,Pune,Maharashtra,N/A (individual),2022-11-06,feature_phones|storage_devices|smartwatches,2417.91,0.29,UPI,0.0,0,0.7127,normal,0.25,0.22,0.357,False
+CUS000335,Aadhya Reddy,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2026-03-18,tablets|cables|power_banks,1470.71,0.15,UPI,0.0,0,0.7579,normal,0.1118,0.433,0.0977,False
+CUS000336,Skyline Traders,small_business,Jogeshwari,Mumbai,Maharashtra,Logistics,2026-05-27,ups_devices|tablets|storage_devices,9417.74,0.674,UPI,60000.0,0,0.3787,normal,0.1428,0.073,0.1795,False
+CUS000337,Meera Colaco,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2023-09-22,routers,5544.03,0.226,credit_card,0.0,0,0.2941,normal,0.2156,0.274,0.2735,True
+CUS000338,Vikram Rathod,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2025-01-19,tablets|headphones,4057.24,0.257,UPI,0.0,0,0.5155,normal,0.0918,0.237,0.3648,False
+CUS000339,Karan Reddy,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2025-01-28,televisions|routers|laptops,1253.49,0.05,UPI,0.0,0,0.3657,normal,0.0551,0.415,0.1509,True
+CUS000340,National Communications,small_business,Bengaluru,Bengaluru,Karnataka,Logistics,2024-01-18,routers,19240.26,0.1,bank_transfer,108000.0,0,0.6579,normal,0.0065,0.131,0.1682,True
+CUS000341,Arjun Gupta,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2023-05-31,smartphones|chargers,1704.24,0.376,UPI,0.0,0,0.3298,late,0.033,0.738,0.0517,False
+CUS000342,Aryan Gupta,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-03-24,keyboards|mice|tablets,1839.89,0.244,UPI,0.0,0,0.7266,normal,0.0994,0.136,0.1651,False
+CUS000343,Ganesh Pereira,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2026-03-14,feature_phones|chargers|cables|routers,1582.2,0.204,UPI,0.0,0,0.5891,normal,0.1211,0.492,0.0098,False
+CUS000344,Royal Mobile Point LLP,corporate,Vile Parle,Mumbai,Maharashtra,Media,2024-12-12,chargers|power_banks,37934.81,0.402,bank_transfer,237000.0,30,0.9736,excellent,0.1753,0.157,0.1391,False
+CUS000345,United Impex Corp.,corporate,Bandra West,Mumbai,Maharashtra,Real Estate,2023-02-28,feature_phones|monitors,48699.54,1.068,UPI,275000.0,30,0.4917,normal,0.1392,0.355,0.0544,False
+CUS000346,Amit Mukherjee,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2023-01-16,earbuds|printers|televisions,7250.65,0.31,cash,0.0,0,0.6212,normal,0.0336,0.355,0.1765,False
+CUS000347,Riya Kapoor,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2025-02-27,tablets|mice|routers|smartphones,1595.02,0.232,credit_card,0.0,0,0.459,normal,0.0816,0.449,0.0109,False
+CUS000348,Prakash Malhotra,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2023-03-29,smartphones,2906.1,0.462,cash,0.0,0,0.2643,late,0.1883,0.266,0.2855,False
+CUS000349,Prime Distributors Corp.,corporate,Thane West,Mumbai,Maharashtra,Healthcare,2025-08-12,monitors|laptops|televisions|headphones,25000.0,0.259,bank_transfer,328000.0,30,0.7351,normal,0.1704,0.705,0.1023,False
+CUS000350,Dev Colaco,retail,Powai,Mumbai,Maharashtra,N/A (individual),2023-01-16,feature_phones|routers|monitors,4370.74,0.843,credit_card,0.0,0,0.265,normal,0.25,0.418,0.1862,False
+CUS000351,Aryan Gupta,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-08-28,headphones|feature_phones,4081.32,0.426,debit_card,0.0,0,0.7049,normal,0.212,0.183,0.265,False
+CUS000352,Suraj Technologies,small_business,Surat,Surat,Gujarat,IT Services,2022-08-15,smartwatches|storage_devices|printers|mice,23754.63,1.587,UPI,26000.0,0,0.5328,normal,0.0322,0.377,0.0988,True
+CUS000353,Golden Digital World,small_business,Pune,Pune,Maharashtra,Finance,2026-05-14,smartphones|storage_devices|feature_phones|chargers,6294.41,0.905,bank_transfer,30000.0,0,0.3185,normal,0.1987,0.316,0.2419,False
+CUS000354,Ishaan Jain,retail,Delhi,Delhi,Delhi,N/A (individual),2025-02-06,cables|power_banks|chargers|keyboards,702.28,0.545,UPI,0.0,0,0.9649,excellent,0.0995,0.634,0.1608,True
+CUS000355,Aryan Desai,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2024-04-16,keyboards|chargers|power_banks,1094.43,0.163,UPI,0.0,0,0.632,normal,0.25,0.438,0.1813,False
+CUS000356,New India Mobile Point,small_business,Kandivali,Mumbai,Maharashtra,Education,2026-02-14,televisions,7427.07,0.251,bank_transfer,27000.0,15,0.9,normal,0.25,0.332,0.052,False
+CUS000357,Pankaj Yadav,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2023-11-16,headphones|webcams|smartphones|accessories,733.84,0.385,cash,0.0,0,0.5927,normal,0.0991,0.266,0.1986,False
+CUS000358,Krishna Pandey,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2023-03-01,chargers|cables,2913.15,0.075,cash,0.0,0,0.5964,normal,0.1395,0.482,0.0075,False
+CUS000359,Kavya Joshi,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2026-03-20,headphones|smartphones|accessories|mice,1949.65,1.216,UPI,0.0,0,0.3685,normal,0.1421,0.217,0.12,False
+CUS000360,Amit Fernandes,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2026-03-13,smartwatches|smartphones|routers|monitors,3221.44,0.552,UPI,0.0,0,0.1213,late,0.25,0.287,0.1839,False
+CUS000361,Vasant Solutions,small_business,Malad,Mumbai,Maharashtra,Hospitality,2022-08-24,televisions|ups_devices|power_banks|smartwatches,11096.09,0.566,credit,33000.0,45,0.5498,normal,0.2107,0.157,0.306,False
+CUS000362,Horizon Traders Corp.,corporate,Kurla,Mumbai,Maharashtra,Manufacturing,2025-06-29,feature_phones|monitors|headphones|power_banks,56950.95,0.944,bank_transfer,167000.0,45,0.595,normal,0.1325,0.488,0.04,False
+CUS000363,Yash Vora,retail,Delhi,Delhi,Delhi,N/A (individual),2023-12-12,televisions|mice|ups_devices,1656.14,0.415,UPI,0.0,0,0.131,late,0.25,0.355,0.2977,True
+CUS000364,Zara Singh,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2025-01-11,laptops|accessories|headphones,777.95,0.226,UPI,0.0,0,0.8437,excellent,0.1325,0.775,0.1346,False
+CUS000365,Ganesh Electronics,small_business,Dombivli,Mumbai,Maharashtra,Retail Trade,2025-07-07,routers|earbuds|monitors|mice,10456.86,0.821,credit,53000.0,30,0.5579,normal,0.25,0.626,0.0425,False
+CUS000366,Sunita Khanna,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-12-13,tablets|televisions,2257.27,1.308,UPI,0.0,0,0.3184,normal,0.0601,0.524,0.1583,False
+CUS000367,Sai Infotech Corp.,corporate,Andheri West,Mumbai,Maharashtra,Finance,2024-11-03,headphones|earbuds|cables,164019.51,0.083,UPI,325000.0,60,0.6976,normal,0.195,0.078,0.0763,False
+CUS000368,Shree Electronics,small_business,Borivali,Mumbai,Maharashtra,Logistics,2025-10-28,tablets|earbuds,12276.54,0.477,UPI,21000.0,30,0.4319,normal,0.1021,0.247,0.1647,False
+CUS000369,Priya Gupta,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2022-08-04,smartwatches|power_banks|speakers,1133.52,0.306,credit_card,0.0,0,0.6603,normal,0.1438,0.507,0.2352,False
+CUS000370,Suresh Banerjee,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2026-04-11,tablets|cables,1600.74,0.065,credit_card,0.0,0,0.6109,normal,0.1775,0.598,0.2476,False
+CUS000371,Shree Infotech,small_business,Borivali,Mumbai,Maharashtra,Logistics,2026-01-24,tablets,16813.24,1.684,bank_transfer,51000.0,30,0.631,normal,0.04,0.22,0.2925,False
+CUS000372,Sanjay Shah,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2022-12-21,monitors|televisions,1036.06,0.05,debit_card,0.0,0,0.6657,excellent,0.1171,0.301,0.3254,False
+CUS000373,Yash Yadav,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2022-08-20,cables|laptops|speakers,1857.47,0.201,UPI,0.0,0,0.3636,normal,0.25,0.832,0.1174,False
+CUS000374,Sunil Pillai,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2025-02-11,feature_phones,2184.19,0.411,UPI,0.0,0,0.4792,normal,0.0819,0.241,0.1643,False
+CUS000375,Pankaj Chauhan,retail,Powai,Mumbai,Maharashtra,N/A (individual),2022-10-22,storage_devices|keyboards|chargers|smartphones,1985.19,0.141,cash,0.0,0,0.3855,normal,0.0643,0.657,0.101,False
+CUS000376,Karan Rao,retail,Pune,Pune,Maharashtra,N/A (individual),2024-05-30,laptops,3240.95,1.6,debit_card,0.0,0,0.2529,late,0.2451,0.108,0.0715,False
+CUS000377,Zara Pillai,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-01-01,ups_devices,1306.4,0.05,cash,0.0,0,0.438,normal,0.2272,0.284,0.1679,False
+CUS000378,Sai Mehta,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2025-04-19,cables|ups_devices,1208.19,0.389,UPI,0.0,0,0.5389,normal,0.25,0.125,0.112,False
+CUS000379,Ganesh Impex,small_business,Vile Parle,Mumbai,Maharashtra,Finance,2023-12-03,speakers,13295.0,1.351,UPI,25000.0,15,0.7609,normal,0.1139,0.311,0.1034,False
+CUS000380,Ganesh Traders LLP,corporate,Nagpur,Nagpur,Maharashtra,IT Services,2022-11-16,keyboards|routers,66119.64,0.057,credit,500000.0,30,0.4668,normal,0.1651,0.448,0.0698,False
+CUS000381,Aarav Chopra,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2023-04-03,laptops|keyboards|accessories|power_banks,4199.49,0.24,credit_card,0.0,0,0.078,late,0.0275,0.83,0.1381,False
+CUS000382,Siddharth Singh,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2023-08-23,laptops|mice|cables,1916.8,0.134,debit_card,0.0,0,0.6708,normal,0.0544,0.218,0.1091,False
+CUS000383,Sanjay Malhotra,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2026-06-26,smartphones|storage_devices,3036.42,0.308,cash,0.0,0,0.7198,normal,0.1138,0.714,0.1716,False
+CUS000384,Rajesh Shaikh,retail,Khar,Mumbai,Maharashtra,N/A (individual),2022-09-13,televisions|smartwatches,4386.54,0.707,cash,0.0,0,0.7606,normal,0.0688,0.505,0.1176,False
+CUS000385,Arjun Pillai,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2023-07-19,accessories|laptops|headphones,1635.08,0.135,UPI,0.0,0,0.7107,normal,0.2095,0.293,0.3272,False
+CUS000386,Skyline Impex Corp.,corporate,Andheri East,Mumbai,Maharashtra,Retail Trade,2023-09-02,mice|smartwatches|accessories|power_banks,40999.87,0.528,bank_transfer,362000.0,30,0.3413,normal,0.1462,0.224,0.2295,False
+CUS000387,Ishaan Solanki,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2024-08-08,accessories|power_banks|routers|chargers,908.53,1.279,UPI,0.0,0,0.4871,normal,0.1163,0.71,0.3343,False
+CUS000388,Aarav Menon,retail,Nashik,Nashik,Maharashtra,N/A (individual),2022-08-12,accessories|ups_devices|power_banks|headphones,2517.28,1.52,UPI,0.0,0,0.0508,late,0.194,0.428,0.3989,False
+CUS000389,United Retail Pvt. Ltd.,corporate,Ghatkopar,Mumbai,Maharashtra,Manufacturing,2024-03-21,laptops,49341.49,1.064,credit,150000.0,45,0.3131,normal,0.1189,0.417,0.3243,False
+CUS000390,Vinod Sharma,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2024-10-24,power_banks|speakers|smartphones|cables,3028.7,0.189,UPI,0.0,0,0.8724,excellent,0.0806,0.172,0.1798,False
+CUS000391,Rohan Shaikh,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2023-05-03,headphones|cables,2169.22,0.225,credit_card,0.0,0,0.7033,normal,0.1572,0.531,0.2724,False
+CUS000392,Diya Kapoor,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2025-08-19,headphones|laptops|cables,3968.09,0.941,debit_card,0.0,0,0.6247,excellent,0.1456,0.641,0.0391,False
+CUS000393,Karan Kumar,retail,Delhi,Delhi,Delhi,N/A (individual),2025-11-21,cables,2476.05,0.821,debit_card,0.0,0,0.9265,excellent,0.25,0.747,0.1761,True
+CUS000394,Anika Gupta,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2024-04-29,cables|chargers,2328.47,0.389,UPI,0.0,0,0.2786,late,0.1696,0.04,0.1298,False
+CUS000395,Zara Vora,retail,Surat,Surat,Gujarat,N/A (individual),2023-09-08,routers|smartphones|chargers,1419.97,0.828,UPI,0.0,0,0.6748,normal,0.0326,0.276,0.2156,True
+CUS000396,Riya Reddy,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2024-08-28,storage_devices,2397.33,0.391,cash,0.0,0,0.5174,normal,0.1167,0.671,0.1088,True
+CUS000397,Farhan Mehta,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2024-01-12,headphones|feature_phones,4144.02,0.05,UPI,0.0,0,0.5,excellent,0.1201,0.655,0.3726,False
+CUS000398,Silver Infotech,small_business,Dadar,Mumbai,Maharashtra,Education,2026-02-28,power_banks|monitors|routers,8366.38,0.718,bank_transfer,59000.0,30,0.5064,normal,0.25,0.139,0.0418,False
+CUS000399,Prakash Sharma,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2024-11-29,tablets,2462.71,0.181,UPI,0.0,0,0.1549,late,0.0159,0.151,0.1286,False
+CUS000400,Dev Mishra,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2024-10-30,power_banks,1333.42,0.48,cash,0.0,0,0.2222,normal,0.25,0.338,0.2516,False
+CUS000401,Andheri Impex LLP,corporate,Vile Parle,Mumbai,Maharashtra,Healthcare,2023-09-06,earbuds|monitors|televisions|printers,118718.55,0.121,bank_transfer,351000.0,60,0.6173,normal,0.1059,0.374,0.1528,False
+CUS000402,Siddharth Yadav,retail,Powai,Mumbai,Maharashtra,N/A (individual),2025-03-10,webcams|laptops|smartphones|keyboards,992.2,0.837,UPI,0.0,0,0.5177,normal,0.1212,0.84,0.0426,False
+CUS000403,Sagar Technologies Corp.,corporate,Bandra West,Mumbai,Maharashtra,Finance,2024-02-24,speakers|accessories|tablets,146624.39,0.539,credit,247000.0,60,0.19,late,0.25,0.108,0.129,False
+CUS000404,Anika D'Souza,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-02-09,power_banks|speakers|routers,1606.23,0.06,UPI,0.0,0,0.8262,normal,0.2361,0.171,0.1589,False
+CUS000405,Star Technologies,small_business,Bandra West,Mumbai,Maharashtra,Healthcare,2023-02-16,power_banks|webcams|printers|monitors,13829.44,0.26,bank_transfer,69000.0,30,0.5345,normal,0.0813,0.358,0.2227,False
+CUS000406,Pooja Solanki,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2023-11-09,ups_devices|power_banks|webcams,3218.68,0.176,cash,0.0,0,0.6107,normal,0.204,0.161,0.2653,False
+CUS000407,Silver Impex,small_business,Vile Parle,Mumbai,Maharashtra,Manufacturing,2023-10-24,speakers|earbuds,13617.36,0.1,credit,70000.0,30,0.6418,normal,0.1091,0.319,0.2457,False
+CUS000408,Elite Gadget Hub,small_business,Dadar,Mumbai,Maharashtra,Media,2023-03-31,tablets,4496.41,2.344,credit,46000.0,30,0.699,normal,0.1382,0.104,0.2454,False
+CUS000409,Pankaj Ansari,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2023-08-26,power_banks|feature_phones|keyboards,2751.77,0.089,UPI,0.0,0,0.5265,normal,0.0452,0.506,0.0956,False
+CUS000410,Sanjay Rao,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2025-11-27,chargers|power_banks,1300.0,0.05,debit_card,0.0,0,0.41,normal,0.0927,0.676,0.0667,False
+CUS000411,Horizon Trading Co.,small_business,Thane West,Mumbai,Maharashtra,Media,2025-01-25,routers,9767.28,2.545,bank_transfer,20000.0,30,0.9214,excellent,0.0701,0.132,0.1631,False
+CUS000412,Ananya Vora,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2026-06-03,storage_devices|mice,2745.77,0.439,UPI,0.0,0,0.735,normal,0.25,0.687,0.281,False
+CUS000413,Shree Electronics,small_business,Santacruz,Mumbai,Maharashtra,IT Services,2024-03-22,keyboards,33666.2,0.158,UPI,35000.0,45,0.499,normal,0.0465,0.614,0.0571,False
+CUS000414,Sagar Digital World,small_business,Jogeshwari,Mumbai,Maharashtra,Logistics,2025-04-02,cables|accessories|keyboards|power_banks,3000.0,1.708,UPI,20000.0,0,0.5081,normal,0.0643,0.425,0.281,False
+CUS000415,Pooja Banerjee,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-10-21,printers|keyboards|webcams,2719.49,0.419,cash,0.0,0,0.7446,normal,0.0901,0.674,0.316,False
+CUS000416,Yash Sharma,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2023-09-30,webcams|printers,362.67,0.052,cash,0.0,0,0.4302,normal,0.1013,0.37,0.0491,False
+CUS000417,Vikram Shah,retail,Surat,Surat,Gujarat,N/A (individual),2023-11-25,webcams|monitors|smartwatches|routers,1291.8,1.272,cash,0.0,0,0.6128,normal,0.0922,0.529,0.4066,True
+CUS000418,Nikhil Deshmukh,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2022-08-24,cables,1203.14,0.438,UPI,0.0,0,0.4317,normal,0.0778,0.47,0.0978,False
+CUS000419,Golden Digital World,small_business,Santacruz,Mumbai,Maharashtra,Real Estate,2023-10-01,power_banks|webcams|earbuds|printers,17268.26,2.169,credit,59000.0,45,0.6854,normal,0.1504,0.324,0.1798,False
+CUS000420,Reyansh Kumar,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2022-07-10,storage_devices|televisions,2260.47,0.989,cash,0.0,0,0.4392,normal,0.174,0.43,0.0099,False
+CUS000421,Mumbai Digital World,small_business,Nagpur,Nagpur,Maharashtra,IT Services,2025-02-19,earbuds|speakers|routers|cables,21054.64,3.053,credit,51000.0,15,0.4551,normal,0.1669,0.219,0.1098,False
+CUS000422,Karan Pandey,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-06-09,mice|accessories,5089.88,0.05,cash,0.0,0,0.6959,normal,0.076,0.505,0.0998,False
+CUS000423,Metro Systems,small_business,Surat,Surat,Gujarat,Manufacturing,2023-05-10,tablets|smartwatches,6688.5,0.203,credit,23000.0,0,0.7707,normal,0.25,0.068,0.3176,True
+CUS000424,Om Digital World,small_business,Andheri East,Mumbai,Maharashtra,Hospitality,2022-12-15,ups_devices|earbuds|smartphones,18592.59,0.392,bank_transfer,83000.0,15,0.8556,excellent,0.1165,0.201,0.0523,False
+CUS000425,Dev Kulkarni,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-09-06,cables|smartwatches|power_banks|ups_devices,1327.08,0.125,cash,0.0,0,0.4889,normal,0.0993,0.71,0.0405,False
+CUS000426,Horizon Electronics,small_business,Ghatkopar,Mumbai,Maharashtra,Logistics,2023-11-06,cables|smartwatches|keyboards,10598.87,0.1,UPI,20000.0,15,0.5781,normal,0.0298,0.269,0.3053,False
+CUS000427,Manoj Ansari,retail,Powai,Mumbai,Maharashtra,N/A (individual),2022-10-03,keyboards|headphones|smartwatches|earbuds,1761.63,1.476,credit_card,0.0,0,0.5373,normal,0.108,0.116,0.1736,False
+CUS000428,Saanvi Mukherjee,retail,Surat,Surat,Gujarat,N/A (individual),2023-01-14,mice|power_banks|accessories,1968.33,0.112,cash,0.0,0,0.6582,normal,0.1194,0.417,0.0996,True
+CUS000429,Royal Retail Pvt. Ltd.,corporate,Santacruz,Mumbai,Maharashtra,Hospitality,2024-09-14,laptops|chargers|smartphones|monitors,49200.57,1.131,bank_transfer,201000.0,30,0.1058,late,0.2017,0.296,0.2762,False
+CUS000430,Andheri Solutions,small_business,Kandivali,Mumbai,Maharashtra,Manufacturing,2023-04-25,smartphones|routers,12126.15,0.58,credit,35000.0,45,0.6696,normal,0.1887,0.58,0.1688,False
+CUS000431,Metro Technologies,small_business,Ahmedabad,Ahmedabad,Gujarat,Manufacturing,2023-10-31,storage_devices|ups_devices|cables|accessories,5599.57,0.155,credit,47000.0,30,0.7122,normal,0.1462,0.495,0.3034,True
+CUS000432,Ganesh Vora,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2025-06-25,routers|webcams,1436.62,0.229,UPI,0.0,0,0.3157,normal,0.2173,0.365,0.5184,False
+CUS000433,Golden Traders Pvt. Ltd.,corporate,Chembur,Mumbai,Maharashtra,Retail Trade,2023-12-17,cables|headphones|keyboards,90175.15,0.799,bank_transfer,183000.0,60,0.8053,normal,0.2123,0.698,0.3895,False
+CUS000434,Sagar Traders LLP,corporate,Andheri East,Mumbai,Maharashtra,Retail Trade,2023-03-28,smartwatches|storage_devices|laptops,25000.0,0.293,credit,173000.0,45,0.3041,normal,0.1992,0.056,0.0584,False
+CUS000435,Ishaan Tiwari,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2026-06-21,earbuds,3736.19,0.227,cash,0.0,0,0.5,excellent,0.2066,0.504,0.0922,False
+CUS000436,Arjun Vora,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2024-12-11,smartwatches|earbuds|keyboards|smartphones,894.46,0.05,UPI,0.0,0,0.2664,normal,0.0393,0.065,0.1382,False
+CUS000437,Reyansh Vora,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2023-04-22,cables,1525.36,1.496,credit_card,0.0,0,0.9467,excellent,0.0632,0.457,0.0307,False
+CUS000438,Royal Technologies,small_business,Indore,Indore,Madhya Pradesh,Hospitality,2025-06-30,power_banks|printers,12464.46,2.352,credit,90000.0,0,0.8313,normal,0.0717,0.499,0.1018,True
+CUS000439,Rohan Yadav,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2024-07-15,laptops|earbuds|televisions|ups_devices,3230.89,0.705,debit_card,0.0,0,0.4871,normal,0.0543,0.069,0.2093,False
+CUS000440,Sai Yadav,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2023-12-02,mice|chargers,967.86,0.769,credit_card,0.0,0,0.7217,normal,0.1504,0.67,0.1349,False
+CUS000441,Ashok Chopra,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2023-04-25,monitors|storage_devices|laptops|mice,2804.29,0.449,UPI,0.0,0,0.7378,excellent,0.1808,0.238,0.0961,False
+CUS000442,Kavita Malhotra,retail,Pune,Pune,Maharashtra,N/A (individual),2024-02-01,chargers|keyboards|feature_phones|laptops,1043.11,0.218,UPI,0.0,0,0.1438,late,0.1637,0.263,0.2587,False
+CUS000443,Arjun Jain,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2023-08-15,cables|mice|webcams|ups_devices,1358.17,0.772,cash,0.0,0,0.5392,normal,0.2382,0.594,0.0549,False
+CUS000444,Sanjay Pandey,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2025-10-10,mice,2337.55,1.062,UPI,0.0,0,0.5236,normal,0.0873,0.666,0.1289,False
+CUS000445,Vasant Gadget Hub LLP,corporate,Andheri West,Mumbai,Maharashtra,Logistics,2023-10-16,chargers|feature_phones,96533.69,0.05,credit,273000.0,60,0.7691,normal,0.0387,0.501,0.4129,False
+CUS000446,Ira Khanna,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2022-12-25,feature_phones|power_banks|keyboards|storage_devices,4731.4,0.118,UPI,0.0,0,0.3572,normal,0.0503,0.104,0.1971,False
+CUS000447,Saanvi Rathod,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2025-03-11,smartwatches|power_banks|webcams,2090.94,0.41,UPI,0.0,0,0.3758,normal,0.131,0.549,0.0219,False
+CUS000448,Vivaan Pillai,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2022-12-17,televisions|feature_phones|storage_devices,1923.54,0.392,cash,0.0,0,0.981,excellent,0.1699,0.086,0.3431,False
+CUS000449,Vivaan Mishra,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2023-12-26,smartwatches|webcams|speakers|accessories,4132.64,0.31,UPI,0.0,0,0.4515,late,0.25,0.442,0.1687,False
+CUS000450,Aadhya Nair,retail,Surat,Surat,Gujarat,N/A (individual),2025-04-15,routers|monitors,936.38,0.07,debit_card,0.0,0,0.6516,normal,0.0692,0.689,0.2334,True
+CUS000451,New India Technologies,small_business,Chembur,Mumbai,Maharashtra,Media,2024-08-04,webcams|printers,10025.45,0.212,credit,39000.0,0,0.6133,normal,0.0592,0.124,0.1214,False
+CUS000452,Karan Sharma,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2025-02-10,headphones,2317.08,0.05,credit_card,0.0,0,0.723,normal,0.25,0.412,0.3606,True
+CUS000453,Mumbai Impex,small_business,Mulund,Mumbai,Maharashtra,Education,2024-09-19,monitors|chargers,27897.88,1.453,bank_transfer,28000.0,45,0.6262,normal,0.0387,0.4,0.0958,False
+CUS000454,Anil Vora,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-08-12,smartwatches|ups_devices,3044.04,0.118,credit_card,0.0,0,0.3568,normal,0.0454,0.33,0.0193,False
+CUS000455,Sai Gadget Hub Pvt. Ltd.,corporate,Nagpur,Nagpur,Maharashtra,Media,2023-02-28,storage_devices,43690.67,0.525,bank_transfer,190000.0,30,0.7391,normal,0.0973,0.505,0.1538,False
+CUS000456,Mumbai Systems,small_business,Indore,Indore,Madhya Pradesh,Finance,2024-03-09,feature_phones|tablets|smartphones|headphones,11439.37,0.456,bank_transfer,20000.0,15,0.847,normal,0.1575,0.209,0.2917,True
+CUS000457,Suraj Systems,small_business,Pune,Pune,Maharashtra,IT Services,2023-10-21,webcams,10465.21,0.593,credit,56000.0,0,0.6341,normal,0.0106,0.344,0.1984,False
+CUS000458,Horizon Gadget Hub Pvt. Ltd.,corporate,Goregaon,Mumbai,Maharashtra,Retail Trade,2024-06-20,storage_devices|laptops|speakers|earbuds,79807.5,0.197,bank_transfer,308000.0,45,0.8425,excellent,0.0538,0.396,0.104,False
+CUS000459,Nisha Agarwal,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2023-06-09,tablets|printers,1385.24,0.848,credit_card,0.0,0,0.5453,normal,0.1484,0.357,0.2298,True
+CUS000460,Kabir Iyer,retail,Pune,Pune,Maharashtra,N/A (individual),2024-05-16,speakers|cables|power_banks|tablets,1179.69,0.102,credit_card,0.0,0,0.0994,late,0.182,0.491,0.1477,False
+CUS000461,Ganesh Communications,small_business,Goregaon,Mumbai,Maharashtra,Retail Trade,2025-05-29,televisions|monitors,7511.44,1.301,credit,59000.0,45,0.6198,normal,0.1889,0.527,0.143,False
+CUS000462,Vikram Verma,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2024-04-21,smartphones|tablets,2306.5,0.491,cash,0.0,0,0.4941,normal,0.0535,0.481,0.2363,False
+CUS000463,Shree Enterprises,small_business,Malad,Mumbai,Maharashtra,Logistics,2026-05-15,webcams|mice,19929.93,1.979,credit,36000.0,0,0.5791,normal,0.0566,0.255,0.1746,False
+CUS000464,Vivaan Rathod,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2023-02-19,speakers|power_banks|monitors,3947.63,1.2,credit_card,0.0,0,0.55,late,0.202,0.421,0.5059,False
+CUS000465,Deepak Shah,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-12-18,earbuds|laptops|printers,6744.95,1.134,debit_card,0.0,0,0.6695,normal,0.2288,0.078,0.1038,False
+CUS000466,Skyline Gadget Hub,small_business,Dadar,Mumbai,Maharashtra,Retail Trade,2025-04-20,monitors|storage_devices|power_banks|mice,7910.32,0.858,UPI,68000.0,0,0.7008,normal,0.1251,0.044,0.2099,False
+CUS000467,Ganesh Retail,small_business,Powai,Mumbai,Maharashtra,IT Services,2024-11-02,webcams|keyboards|televisions,13534.79,1.151,UPI,33000.0,45,0.3886,normal,0.0499,0.269,0.101,False
+CUS000468,Ashok Gupta,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2023-07-21,chargers,4700.67,0.597,cash,0.0,0,0.8399,excellent,0.1146,0.43,0.0365,False
+CUS000469,Krishna Trivedi,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2024-01-16,accessories,2111.29,0.251,UPI,0.0,0,0.3818,normal,0.25,0.49,0.103,False
+CUS000470,Aditya Khan,retail,Malad,Mumbai,Maharashtra,N/A (individual),2024-08-05,smartphones|televisions|headphones|speakers,4155.75,0.355,UPI,0.0,0,0.3697,normal,0.0299,0.399,0.0584,False
+CUS000471,Ritesh Bhatia,retail,Nashik,Nashik,Maharashtra,N/A (individual),2023-12-16,ups_devices,937.81,0.082,credit_card,0.0,0,0.3041,normal,0.1514,0.5,0.0274,False
+CUS000472,Reyansh Joshi,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2023-12-31,keyboards|mice|smartwatches,2430.54,0.296,UPI,0.0,0,0.0984,late,0.1803,0.443,0.2482,True
+CUS000473,Ganesh Trivedi,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2023-04-08,televisions,2670.71,0.631,UPI,0.0,0,0.8864,normal,0.0674,0.366,0.0523,True
+CUS000474,Vasant Retail,small_business,Nashik,Nashik,Maharashtra,Logistics,2023-08-20,tablets|monitors,5277.47,1.207,credit,44000.0,15,0.4465,normal,0.1887,0.309,0.1673,False
+CUS000475,Prime Mobile Point Pvt. Ltd.,corporate,Andheri West,Mumbai,Maharashtra,Manufacturing,2025-10-20,ups_devices,51776.82,0.291,UPI,217000.0,45,0.537,normal,0.2253,0.312,0.0657,False
+CUS000476,Suraj Mobile Point Pvt. Ltd.,corporate,Powai,Mumbai,Maharashtra,Finance,2023-02-21,smartwatches|chargers|monitors|webcams,29238.12,0.877,bank_transfer,383000.0,45,0.5954,normal,0.0916,0.839,0.1496,False
+CUS000477,Om Solutions,small_business,Malad,Mumbai,Maharashtra,Education,2026-06-17,webcams|power_banks|headphones,40195.98,3.066,bank_transfer,20000.0,30,0.4752,normal,0.0551,0.543,0.2474,False
+CUS000478,Reyansh Kapoor,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2025-12-11,laptops|routers|power_banks|smartphones,3989.73,0.874,debit_card,0.0,0,0.8692,normal,0.0477,0.627,0.152,False
+CUS000479,Ramesh Joshi,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2024-07-21,ups_devices|cables,575.24,0.284,UPI,0.0,0,0.3846,normal,0.25,0.844,0.1828,False
+CUS000480,Reyansh Kapoor,retail,Nashik,Nashik,Maharashtra,N/A (individual),2023-12-26,smartphones|storage_devices|cables,1535.48,0.064,UPI,0.0,0,0.3325,late,0.0994,0.247,0.2283,False
+CUS000481,Siddharth Reddy,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2024-02-06,earbuds|storage_devices|routers,1846.19,0.142,cash,0.0,0,0.8722,excellent,0.1456,0.692,0.1398,True
+CUS000482,Shree Enterprises Pvt. Ltd.,corporate,Khar,Mumbai,Maharashtra,IT Services,2024-10-07,ups_devices|monitors|mice|power_banks,26538.64,0.598,bank_transfer,150000.0,30,0.6922,normal,0.1664,0.603,0.1347,False
+CUS000483,Om Kapoor,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-03-22,accessories|feature_phones|routers|laptops,2512.91,0.05,UPI,0.0,0,0.5587,normal,0.0657,0.699,0.0853,False
+CUS000484,Silver Mobile Point LLP,corporate,Dombivli,Mumbai,Maharashtra,Media,2026-04-28,storage_devices|laptops,25000.0,0.195,bank_transfer,310000.0,45,0.6556,normal,0.133,0.39,0.1615,False
+CUS000485,United Mobile Point,small_business,Ghatkopar,Mumbai,Maharashtra,Manufacturing,2024-01-03,headphones,10267.02,0.243,bank_transfer,34000.0,30,0.6162,normal,0.2448,0.383,0.4223,False
+CUS000486,Sai Distributors,small_business,Chembur,Mumbai,Maharashtra,Education,2023-09-20,televisions|printers,38379.69,1.963,UPI,20000.0,15,0.633,normal,0.0815,0.362,0.155,False
+CUS000487,Prime Digital World Pvt. Ltd.,corporate,Ahmedabad,Ahmedabad,Gujarat,Manufacturing,2023-06-02,smartphones|headphones|storage_devices|feature_phones,27113.79,0.089,bank_transfer,168000.0,60,0.6814,excellent,0.1471,0.647,0.0539,True
+CUS000488,Ganesh Systems,small_business,Ahmedabad,Ahmedabad,Gujarat,Finance,2023-08-09,televisions,10403.46,0.488,bank_transfer,78000.0,45,0.2884,normal,0.1206,0.45,0.0295,True
+CUS000489,Anjali Shah,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2026-04-13,headphones,1051.12,0.309,UPI,0.0,0,0.3569,normal,0.0534,0.167,0.0501,False
+CUS000490,Myra Ansari,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2022-11-13,headphones,1378.28,0.471,UPI,0.0,0,0.709,excellent,0.234,0.356,0.0927,False
+CUS000491,Skyline Technologies,small_business,Jogeshwari,Mumbai,Maharashtra,Logistics,2023-03-16,feature_phones,16525.21,1.425,bank_transfer,20000.0,15,0.4159,normal,0.0963,0.087,0.1467,False
+CUS000492,Sunita Joshi,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2026-03-06,chargers,1387.12,0.13,UPI,0.0,0,0.2216,normal,0.1393,0.493,0.1556,False
+CUS000493,Elite Communications,small_business,Mulund,Mumbai,Maharashtra,Finance,2025-11-07,webcams,16352.36,1.415,bank_transfer,44000.0,0,0.4625,late,0.0786,0.34,0.1067,False
+CUS000494,Siddharth Tiwari,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2025-03-23,storage_devices|laptops|accessories|ups_devices,1607.57,0.146,UPI,0.0,0,0.9114,excellent,0.2329,0.401,0.2381,False
+CUS000495,Silver Electronics Corp.,corporate,Pune,Pune,Maharashtra,Logistics,2026-02-09,monitors|laptops|ups_devices,26945.98,0.533,bank_transfer,150000.0,45,0.8867,normal,0.1237,0.172,0.194,False
+CUS000496,Isha Mishra,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-05-24,laptops|printers|headphones,1917.2,0.05,cash,0.0,0,0.5316,normal,0.1906,0.465,0.2057,False
+CUS000497,Meera D'Souza,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2024-10-18,monitors,3301.21,0.412,cash,0.0,0,0.578,normal,0.1057,0.395,0.112,False
+CUS000498,Horizon Distributors,small_business,Pune,Pune,Maharashtra,Finance,2025-07-03,printers,4520.91,0.204,credit,53000.0,0,0.611,normal,0.25,0.374,0.436,False
+CUS000499,Amit Banerjee,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2026-05-13,tablets|smartphones,1271.88,0.166,UPI,0.0,0,0.0374,late,0.25,0.048,0.3832,True
+CUS000500,Suresh Agarwal,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2025-07-13,ups_devices|keyboards|storage_devices,3401.92,0.203,UPI,0.0,0,0.2522,normal,0.0798,0.499,0.2249,False
+CUS000501,Skyline Solutions,small_business,Ghatkopar,Mumbai,Maharashtra,Media,2025-05-27,smartwatches|speakers|chargers|monitors,4686.73,0.131,credit,23000.0,0,0.7329,normal,0.1715,0.305,0.1217,False
+CUS000502,Metro Distributors,small_business,Chembur,Mumbai,Maharashtra,Manufacturing,2025-08-19,monitors,10560.76,0.792,bank_transfer,41000.0,30,0.8786,normal,0.0703,0.603,0.3168,False
+CUS000503,Anika D'Souza,retail,Powai,Mumbai,Maharashtra,N/A (individual),2026-03-12,feature_phones|storage_devices|monitors|ups_devices,1643.56,0.058,UPI,0.0,0,0.6592,normal,0.1258,0.426,0.0825,False
+CUS000504,Aadhya Vora,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2024-02-01,smartphones|storage_devices|laptops,2429.63,0.052,UPI,0.0,0,0.5541,normal,0.1566,0.248,0.1695,False
+CUS000505,Krishna Trivedi,retail,Delhi,Delhi,Delhi,N/A (individual),2023-05-11,keyboards|smartphones|monitors|webcams,3921.82,0.676,UPI,0.0,0,0.6397,normal,0.1793,0.758,0.0966,True
+CUS000506,Nikhil Pereira,retail,Malad,Mumbai,Maharashtra,N/A (individual),2023-08-14,mice|routers|printers,1959.63,0.05,UPI,0.0,0,0.6827,normal,0.0459,0.492,0.0081,False
+CUS000507,Ira Yadav,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2024-09-16,power_banks|keyboards|storage_devices|earbuds,1673.51,0.518,UPI,0.0,0,0.3262,normal,0.0569,0.684,0.0055,False
+CUS000508,Saanvi Nair,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-01-07,power_banks,1696.36,0.897,cash,0.0,0,0.1166,late,0.2343,0.41,0.1189,True
+CUS000509,Sagar Gadget Hub LLP,corporate,Dombivli,Mumbai,Maharashtra,Healthcare,2026-03-08,cables|mice|televisions|routers,127207.16,0.228,bank_transfer,150000.0,30,0.0587,late,0.1136,0.152,0.1463,False
+CUS000510,Anjali Bhatia,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2026-02-02,feature_phones|televisions|accessories|webcams,1521.05,0.703,UPI,0.0,0,0.5094,normal,0.188,0.257,0.0974,False
+CUS000511,Anjali Chopra,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-09-25,earbuds|smartphones|monitors,2308.28,0.335,UPI,0.0,0,0.6918,normal,0.1481,0.463,0.0923,False
+CUS000512,Ganesh Malhotra,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2025-01-15,feature_phones,3041.29,1.269,cash,0.0,0,0.8855,normal,0.2359,0.402,0.1777,False
+CUS000513,Ayesha Mukherjee,retail,Malad,Mumbai,Maharashtra,N/A (individual),2025-03-02,accessories|earbuds,5127.74,0.208,cash,0.0,0,0.5985,normal,0.1024,0.205,0.3763,False
+CUS000514,Om Mobile Point LLP,corporate,Mulund,Mumbai,Maharashtra,Hospitality,2025-09-30,monitors|keyboards|power_banks|cables,25000.0,0.601,bank_transfer,194000.0,60,0.8666,normal,0.25,0.411,0.282,False
+CUS000515,Reyansh Chauhan,retail,Surat,Surat,Gujarat,N/A (individual),2025-11-05,speakers|cables,1333.9,0.986,UPI,0.0,0,0.5032,normal,0.074,0.493,0.3213,True
+CUS000516,Vinod Rathod,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2024-03-15,cables|smartphones,2782.24,0.398,UPI,0.0,0,0.6548,normal,0.2146,0.169,0.4299,False
+CUS000517,City Enterprises,small_business,Borivali,Mumbai,Maharashtra,Real Estate,2025-11-04,headphones|smartphones,16338.07,0.607,bank_transfer,49000.0,0,0.551,normal,0.1287,0.342,0.1112,False
+CUS000518,Om Solutions,small_business,Andheri West,Mumbai,Maharashtra,Hospitality,2022-08-20,ups_devices|accessories,4840.2,0.678,credit,22000.0,0,0.7727,normal,0.0277,0.131,0.2954,False
+CUS000519,Anjali Chopra,retail,Khar,Mumbai,Maharashtra,N/A (individual),2022-12-03,power_banks|earbuds|chargers|ups_devices,1577.45,0.451,UPI,0.0,0,0.7048,normal,0.1049,0.393,0.1772,False
+CUS000520,New India Infotech,small_business,Nagpur,Nagpur,Maharashtra,Retail Trade,2022-11-13,chargers|printers|laptops,11798.0,0.238,credit,35000.0,45,0.317,late,0.25,0.113,0.1871,False
+CUS000521,Ritesh Malhotra,retail,Nashik,Nashik,Maharashtra,N/A (individual),2025-06-08,mice|ups_devices|smartwatches|chargers,5473.11,0.059,UPI,0.0,0,0.6696,normal,0.111,0.422,0.0674,False
+CUS000522,Sagar Retail,small_business,Borivali,Mumbai,Maharashtra,Finance,2023-12-13,feature_phones,7473.89,0.435,credit,28000.0,15,0.5829,normal,0.25,0.102,0.1094,False
+CUS000523,Sneha Khanna,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2024-12-28,earbuds|tablets,3689.53,0.531,UPI,0.0,0,0.5541,normal,0.0714,0.22,0.2688,False
+CUS000524,Ishaan Bose,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2023-04-03,chargers|smartphones|keyboards,1290.98,0.237,cash,0.0,0,0.9763,excellent,0.25,0.697,0.1717,False
+CUS000525,Elite Enterprises Pvt. Ltd.,corporate,Andheri West,Mumbai,Maharashtra,Manufacturing,2024-10-31,accessories|printers,176374.72,0.735,credit,150000.0,30,0.3918,normal,0.1253,0.066,0.0893,False
+CUS000526,Ramesh Pereira,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-08-02,storage_devices|accessories|chargers,1552.3,0.222,UPI,0.0,0,0.7264,normal,0.0916,0.397,0.2267,False
+CUS000527,Prime Traders,small_business,Dadar,Mumbai,Maharashtra,Healthcare,2024-10-20,laptops|chargers,16487.81,2.244,credit,20000.0,0,0.5421,normal,0.0822,0.576,0.2646,False
+CUS000528,Horizon Electronics,small_business,Vile Parle,Mumbai,Maharashtra,Finance,2025-03-13,keyboards,7939.49,1.354,bank_transfer,35000.0,0,0.9553,excellent,0.0745,0.629,0.1897,False
+CUS000529,Om Retail,small_business,Dadar,Mumbai,Maharashtra,Retail Trade,2022-10-25,headphones,7908.13,0.778,credit,68000.0,0,0.02,late,0.1954,0.649,0.1727,False
+CUS000530,Anil Trivedi,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-06-13,storage_devices|accessories|speakers|laptops,2814.81,0.269,cash,0.0,0,0.8997,excellent,0.0451,0.624,0.1348,False
+CUS000531,Prime Retail,small_business,Delhi,Delhi,Delhi,IT Services,2025-02-02,headphones|chargers|earbuds|accessories,36623.57,1.313,credit,55000.0,0,0.6966,normal,0.1088,0.599,0.2024,True
+CUS000532,Isha Chauhan,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2022-10-01,chargers|tablets|routers|earbuds,1408.7,0.285,UPI,0.0,0,0.1523,late,0.1066,0.543,0.3308,False
+CUS000533,Aarav Rao,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2023-07-26,feature_phones,2663.47,0.114,credit_card,0.0,0,0.9208,excellent,0.0866,0.126,0.1043,False
+CUS000534,Varun Gupta,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2026-02-25,televisions|keyboards|cables|printers,2741.58,0.089,UPI,0.0,0,0.6984,normal,0.25,0.419,0.2412,False
+CUS000535,Mumbai Mobile Point,small_business,Malad,Mumbai,Maharashtra,IT Services,2023-04-21,chargers|storage_devices,5880.16,1.069,credit,50000.0,0,0.2701,normal,0.1562,0.482,0.316,False
+CUS000536,Mahesh Deshmukh,retail,Pune,Pune,Maharashtra,N/A (individual),2024-07-28,routers|accessories|monitors,1423.58,0.583,UPI,0.0,0,0.3302,normal,0.25,0.12,0.1333,False
+CUS000537,Imran Yadav,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2024-03-08,ups_devices|tablets|keyboards|mice,2682.85,0.377,credit_card,0.0,0,0.769,normal,0.0337,0.169,0.1305,True
+CUS000538,Arjun Kapoor,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2024-07-03,laptops,8922.11,0.447,cash,0.0,0,0.9371,excellent,0.0972,0.267,0.0249,False
+CUS000539,Karan Solanki,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-01-08,monitors,1729.22,0.077,UPI,0.0,0,0.306,late,0.25,0.61,0.2482,False
+CUS000540,Dev Mehta,retail,Khar,Mumbai,Maharashtra,N/A (individual),2025-05-14,speakers,1459.96,0.217,credit_card,0.0,0,0.8868,excellent,0.25,0.33,0.1304,False
+CUS000541,Rahul Chopra,retail,Khar,Mumbai,Maharashtra,N/A (individual),2025-03-26,monitors|routers|accessories|earbuds,1304.54,0.331,cash,0.0,0,0.1237,late,0.197,0.327,0.0435,False
+CUS000542,Rohan Nair,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2026-03-14,routers,4046.52,0.615,cash,0.0,0,0.8484,normal,0.0059,0.197,0.0395,False
+CUS000543,Rajesh Patel,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2023-08-18,ups_devices,1540.76,0.05,credit_card,0.0,0,0.7896,normal,0.1839,0.571,0.0959,False
+CUS000544,Arjun Ansari,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2025-11-17,ups_devices|accessories,1554.56,0.576,UPI,0.0,0,0.6013,normal,0.0163,0.23,0.0739,False
+CUS000545,Pooja Singh,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-08-05,cables,1664.35,0.397,UPI,0.0,0,0.3728,normal,0.1282,0.029,0.1836,True
+CUS000546,Om Systems,small_business,Bandra East,Mumbai,Maharashtra,Retail Trade,2023-02-15,webcams|chargers|routers|power_banks,17989.69,0.387,bank_transfer,116000.0,0,0.5649,normal,0.0343,0.435,0.2405,False
+CUS000547,Saanvi Khanna,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-02-25,ups_devices|monitors,1478.67,0.05,cash,0.0,0,0.5365,normal,0.1713,0.375,0.0369,False
+CUS000548,Suresh Kapoor,retail,Delhi,Delhi,Delhi,N/A (individual),2024-02-06,accessories|headphones|speakers|keyboards,2216.43,0.25,cash,0.0,0,0.5465,normal,0.25,0.649,0.2711,True
+CUS000549,Kavya Khanna,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-12-31,ups_devices|laptops,2059.92,1.782,UPI,0.0,0,0.55,late,0.1611,0.185,0.1974,False
+CUS000550,Sagar Digital World,small_business,Dadar,Mumbai,Maharashtra,Healthcare,2024-08-06,storage_devices|monitors,18530.21,0.424,bank_transfer,39000.0,45,0.807,normal,0.1376,0.581,0.0271,False
+CUS000551,Horizon Digital World,small_business,Bandra East,Mumbai,Maharashtra,Hospitality,2022-12-03,smartphones|ups_devices|monitors,12530.08,1.329,bank_transfer,20000.0,30,0.8546,normal,0.1866,0.595,0.2536,False
+CUS000552,Om Kapoor,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2022-08-19,power_banks|keyboards|headphones,1636.69,0.962,cash,0.0,0,0.236,normal,0.2434,0.419,0.0887,False
+CUS000553,Zara Trivedi,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2026-02-17,webcams|tablets|speakers,1271.76,0.18,cash,0.0,0,0.1554,late,0.1411,0.622,0.0776,False
+CUS000554,Royal Gadget Hub Corp.,corporate,Nashik,Nashik,Maharashtra,Real Estate,2023-12-03,mice|smartphones,37663.95,0.071,bank_transfer,204000.0,30,0.5877,normal,0.1367,0.384,0.2353,False
+CUS000555,Aryan Mehta,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2024-08-20,smartphones,3278.53,0.305,debit_card,0.0,0,0.2534,normal,0.1477,0.681,0.1282,False
+CUS000556,Karan Trivedi,retail,Malad,Mumbai,Maharashtra,N/A (individual),2025-06-11,feature_phones,1264.05,0.333,UPI,0.0,0,0.6473,normal,0.1138,0.367,0.198,False
+CUS000557,Ishaan Fernandes,retail,Surat,Surat,Gujarat,N/A (individual),2025-07-24,smartphones|feature_phones|earbuds,1517.58,0.191,UPI,0.0,0,0.2339,normal,0.25,0.677,0.2922,True
+CUS000558,Arjun Joshi,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2025-10-20,webcams,5785.58,0.621,UPI,0.0,0,0.0923,late,0.085,0.596,0.1224,False
+CUS000559,Sanjay Shaikh,retail,Surat,Surat,Gujarat,N/A (individual),2025-09-20,headphones|smartphones,1246.05,0.315,UPI,0.0,0,0.4462,normal,0.133,0.369,0.1411,True
+CUS000560,Horizon Impex Corp.,corporate,Vile Parle,Mumbai,Maharashtra,Manufacturing,2025-03-06,tablets|keyboards|printers,44475.22,1.348,credit,150000.0,60,0.1433,late,0.008,0.725,0.2796,False
+CUS000561,Suresh Khan,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2025-03-15,headphones|feature_phones|smartwatches|chargers,1626.86,0.43,cash,0.0,0,0.9375,excellent,0.0407,0.597,0.0283,False
+CUS000562,Golden Trading Co.,small_business,Goregaon,Mumbai,Maharashtra,Healthcare,2024-10-27,mice|power_banks,27893.99,0.261,credit,27000.0,30,0.651,normal,0.0148,0.186,0.3418,False
+CUS000563,Om Pandey,retail,Pune,Pune,Maharashtra,N/A (individual),2025-08-23,mice,3740.05,0.33,debit_card,0.0,0,0.2,normal,0.2256,0.295,0.1096,False
+CUS000564,Karan Kumar,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2026-01-26,feature_phones,1238.14,0.514,UPI,0.0,0,0.9408,excellent,0.0354,0.25,0.0606,False
+CUS000565,Sanjay Rao,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-10-21,feature_phones|smartwatches|headphones,2326.39,1.761,cash,0.0,0,0.8493,excellent,0.0176,0.431,0.0798,False
+CUS000566,Pankaj Mehta,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2022-12-16,ups_devices,1645.43,0.073,UPI,0.0,0,0.6309,normal,0.0851,0.324,0.299,False
+CUS000567,Kavya Chopra,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2022-12-03,chargers,1565.12,0.063,UPI,0.0,0,0.4783,normal,0.067,0.39,0.0808,False
+CUS000568,Rajesh Nair,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2023-08-28,routers,836.3,0.311,UPI,0.0,0,0.5855,normal,0.25,0.265,0.3405,False
+CUS000569,Saanvi Pandey,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2024-08-18,tablets,3722.95,0.389,UPI,0.0,0,0.3072,normal,0.0733,0.371,0.1056,False
+CUS000570,Horizon Traders,small_business,Powai,Mumbai,Maharashtra,Manufacturing,2024-09-24,speakers|storage_devices|webcams,13285.72,0.395,credit,25000.0,0,0.795,excellent,0.0592,0.302,0.0511,False
+CUS000571,Neha Mehta,retail,Delhi,Delhi,Delhi,N/A (individual),2024-09-24,monitors|televisions|cables,1335.18,0.07,UPI,0.0,0,0.8775,normal,0.0135,0.472,0.0741,True
+CUS000572,Aryan Mukherjee,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2024-03-15,keyboards|speakers|smartphones,1827.96,1.215,UPI,0.0,0,0.3532,normal,0.09,0.384,0.1565,False
+CUS000573,Rohan Pandey,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2026-02-20,laptops|feature_phones|power_banks|cables,1791.17,0.43,debit_card,0.0,0,0.8743,excellent,0.1485,0.38,0.1811,False
+CUS000574,Royal Gadget Hub LLP,corporate,Khar,Mumbai,Maharashtra,Retail Trade,2022-08-12,mice,99964.31,0.113,bank_transfer,167000.0,45,0.9,normal,0.1553,0.157,0.2704,False
+CUS000575,Mahesh Patel,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2022-11-22,printers|mice|accessories|keyboards,1829.66,0.53,UPI,0.0,0,0.4929,normal,0.2276,0.121,0.185,False
+CUS000576,Skyline Traders,small_business,Santacruz,Mumbai,Maharashtra,Finance,2023-01-03,routers|tablets|printers|storage_devices,15969.37,1.401,bank_transfer,59000.0,45,0.5674,normal,0.25,0.132,0.2987,False
+CUS000577,Ayesha Mukherjee,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2023-02-20,smartwatches,1454.63,0.798,UPI,0.0,0,0.4916,normal,0.101,0.531,0.175,False
+CUS000578,Elite Mobile Point,small_business,Khar,Mumbai,Maharashtra,Logistics,2025-10-26,feature_phones,3000.0,0.974,UPI,40000.0,45,0.8554,excellent,0.0992,0.166,0.0523,False
+CUS000579,Anil Iyer,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2024-03-12,earbuds,4607.32,0.454,UPI,0.0,0,0.582,normal,0.234,0.326,0.1455,False
+CUS000580,Arjun Trivedi,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2026-04-16,keyboards|ups_devices|laptops,1607.92,0.05,UPI,0.0,0,0.8654,normal,0.0693,0.036,0.0263,False
+CUS000581,Mahesh Verma,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-03-12,speakers|power_banks|headphones|keyboards,3001.28,0.394,debit_card,0.0,0,0.7118,normal,0.0882,0.063,0.3549,False
+CUS000582,Manoj Tiwari,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2024-12-12,storage_devices,6971.51,0.291,cash,0.0,0,0.4819,normal,0.1022,0.122,0.1812,False
+CUS000583,Manoj Joshi,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-03-10,ups_devices|mice|monitors|chargers,1200.75,0.117,credit_card,0.0,0,0.6614,normal,0.1822,0.408,0.005,False
+CUS000584,Kirti Enterprises,small_business,Borivali,Mumbai,Maharashtra,Manufacturing,2024-07-11,monitors|keyboards|accessories|storage_devices,24376.15,4.351,credit,35000.0,30,0.556,normal,0.0322,0.461,0.1202,False
+CUS000585,Yash Rathod,retail,Delhi,Delhi,Delhi,N/A (individual),2025-06-28,tablets,4183.97,1.163,credit_card,0.0,0,0.5371,normal,0.1184,0.338,0.0968,True
+CUS000586,Sanjay Khan,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2024-10-15,smartwatches|tablets|earbuds,1862.56,0.788,UPI,0.0,0,0.9375,excellent,0.2354,0.351,0.4383,False
+CUS000587,Sai Gadget Hub,small_business,Dadar,Mumbai,Maharashtra,Hospitality,2024-11-29,cables,6225.29,0.1,bank_transfer,60000.0,45,0.4201,normal,0.1526,0.434,0.2096,False
+CUS000588,Krishna Nair,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2022-08-05,keyboards|smartwatches|mice|power_banks,1779.0,0.276,debit_card,0.0,0,0.6696,normal,0.1232,0.149,0.074,False
+CUS000589,Sai D'Souza,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2024-09-23,webcams|printers,1433.37,0.513,UPI,0.0,0,0.0347,late,0.0766,0.341,0.3353,False
+CUS000590,Om Infotech,small_business,Andheri East,Mumbai,Maharashtra,Education,2024-06-29,headphones|chargers|televisions,17650.16,1.352,credit,65000.0,0,0.7648,normal,0.1979,0.666,0.2277,False
+CUS000591,Shree Distributors,small_business,Powai,Mumbai,Maharashtra,Education,2024-12-05,earbuds|accessories|laptops|routers,6941.37,1.552,bank_transfer,121000.0,15,0.4704,normal,0.1203,0.326,0.3425,False
+CUS000592,Aditya Kulkarni,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2024-04-12,monitors|earbuds|headphones,4635.54,0.281,UPI,0.0,0,0.467,normal,0.25,0.793,0.3433,False
+CUS000593,Isha Solanki,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2023-05-13,ups_devices|power_banks|mice,1757.71,0.559,UPI,0.0,0,0.8779,excellent,0.0705,0.464,0.1162,False
+CUS000594,Isha Kapoor,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2022-10-29,chargers|printers,2864.34,0.216,UPI,0.0,0,0.8049,excellent,0.129,0.387,0.0419,False
+CUS000595,Manoj Yadav,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2026-05-06,tablets,3080.03,0.05,UPI,0.0,0,0.4896,normal,0.0905,0.232,0.2627,False
+CUS000596,Anjali Joshi,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2022-12-30,smartphones,2092.08,0.148,cash,0.0,0,0.5553,normal,0.0118,0.12,0.1825,False
+CUS000597,Dev Kapoor,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2026-01-05,speakers|power_banks,1175.72,0.076,credit_card,0.0,0,0.5737,normal,0.0962,0.154,0.1644,True
+CUS000598,Aryan Gupta,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2024-06-13,headphones|cables|ups_devices,1106.52,0.581,UPI,0.0,0,0.6481,normal,0.1767,0.411,0.2081,False
+CUS000599,Aditya Verma,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2022-07-06,power_banks|earbuds,1658.25,0.49,credit_card,0.0,0,0.4725,normal,0.1425,0.703,0.1382,True
+CUS000600,Prakash Deshmukh,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2026-04-08,chargers,2293.69,0.064,debit_card,0.0,0,0.6545,normal,0.0829,0.602,0.1306,False
+CUS000601,Zara Deshmukh,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2025-08-11,headphones|speakers|keyboards,1264.84,0.555,debit_card,0.0,0,0.5053,normal,0.0155,0.704,0.1488,False
+CUS000602,Golden Electronics Corp.,corporate,Surat,Surat,Gujarat,Retail Trade,2025-03-13,tablets,113921.7,0.099,bank_transfer,150000.0,60,0.7663,normal,0.0167,0.059,0.0864,True
+CUS000603,Ganesh Kumar,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2023-05-31,storage_devices|headphones|speakers,1590.69,0.73,cash,0.0,0,0.6467,normal,0.0374,0.381,0.1468,False
+CUS000604,Om Verma,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2025-08-09,feature_phones|chargers,3145.89,0.178,UPI,0.0,0,0.4726,normal,0.25,0.399,0.2643,False
+CUS000605,Ayesha Mukherjee,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-01-05,headphones,3180.6,0.419,debit_card,0.0,0,0.6553,normal,0.2159,0.105,0.1434,False
+CUS000606,Amit Gupta,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2026-06-11,chargers|laptops,2189.16,0.166,UPI,0.0,0,0.417,normal,0.1099,0.526,0.1297,False
+CUS000607,Deepak Rathod,retail,Surat,Surat,Gujarat,N/A (individual),2023-01-08,tablets|televisions|monitors,1841.83,1.946,cash,0.0,0,0.7367,normal,0.0814,0.259,0.0584,True
+CUS000608,Zara Bhatia,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2026-02-20,speakers|televisions,2560.19,0.614,UPI,0.0,0,0.8267,normal,0.1213,0.125,0.1775,False
+CUS000609,Rahul Pillai,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-05-01,printers,2185.65,0.42,UPI,0.0,0,0.704,normal,0.0735,0.311,0.2969,False
+CUS000610,Star Infotech,small_business,Goregaon,Mumbai,Maharashtra,Media,2022-08-20,earbuds|smartwatches|chargers|webcams,6978.75,1.768,credit,22000.0,0,0.4954,late,0.1448,0.514,0.2535,False
+CUS000611,Anjali Nair,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-01-22,power_banks,1200.45,0.108,UPI,0.0,0,0.6647,normal,0.0671,0.709,0.0499,False
+CUS000612,Deepak Patel,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2023-01-26,cables|headphones|accessories,2208.75,0.265,UPI,0.0,0,0.4247,normal,0.1273,0.339,0.1165,False
+CUS000613,Sagar Infotech Corp.,corporate,Borivali,Mumbai,Maharashtra,Manufacturing,2025-08-26,speakers|smartwatches,31444.34,0.717,credit,291000.0,15,0.6268,normal,0.25,0.085,0.2327,False
+CUS000614,Vivaan Reddy,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2024-11-15,headphones,1265.82,0.576,UPI,0.0,0,0.6179,normal,0.0997,0.363,0.1263,True
+CUS000615,Yash Malhotra,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-04-23,smartwatches,3833.96,0.168,UPI,0.0,0,0.4256,normal,0.1493,0.541,0.0434,False
+CUS000616,Aditya Khan,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2023-05-13,speakers|televisions|printers|cables,2208.36,0.129,UPI,0.0,0,0.5212,normal,0.0286,0.326,0.113,False
+CUS000617,Elite Gadget Hub,small_business,Dadar,Mumbai,Maharashtra,Hospitality,2024-07-03,tablets|televisions|keyboards,18874.32,1.058,credit,22000.0,45,0.6424,normal,0.1927,0.531,0.2009,False
+CUS000618,Arjun Khan,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2025-04-27,power_banks|routers|accessories,4309.37,0.348,cash,0.0,0,0.4075,late,0.0205,0.507,0.1963,False
+CUS000619,Ayesha Solanki,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2024-03-12,keyboards,2036.8,0.4,UPI,0.0,0,0.7854,normal,0.0671,0.685,0.0655,True
+CUS000620,City Systems,small_business,Surat,Surat,Gujarat,Finance,2025-05-22,feature_phones|storage_devices,9518.01,0.1,UPI,42000.0,0,0.0415,late,0.041,0.859,0.1563,True
+CUS000621,United Impex,small_business,Goregaon,Mumbai,Maharashtra,IT Services,2023-01-05,smartphones|keyboards|storage_devices,13343.3,0.541,bank_transfer,29000.0,45,0.6019,normal,0.1492,0.229,0.0445,False
+CUS000622,Anjali Patel,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2026-02-20,accessories|power_banks|headphones,2591.4,0.35,cash,0.0,0,0.7236,normal,0.0575,0.531,0.0293,False
+CUS000623,New India Gadget Hub LLP,corporate,Ghatkopar,Mumbai,Maharashtra,Manufacturing,2023-04-29,power_banks,33157.22,0.05,UPI,150000.0,45,0.2561,late,0.1232,0.356,0.1898,False
+CUS000624,Yash Rao,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2024-09-17,headphones|chargers|cables,700.74,0.084,cash,0.0,0,0.6202,normal,0.164,0.515,0.1876,False
+CUS000625,Sunil Rao,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-08-04,power_banks|headphones|accessories,1659.82,0.929,cash,0.0,0,0.8206,normal,0.25,0.656,0.1386,False
+CUS000626,Anika Trivedi,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-08-11,webcams|televisions|accessories|headphones,2760.85,0.172,UPI,0.0,0,0.4191,normal,0.2208,0.12,0.0791,False
+CUS000627,Anil Nair,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2026-03-29,power_banks,2099.81,0.942,cash,0.0,0,0.7469,excellent,0.2124,0.868,0.1152,False
+CUS000628,Ayesha Pereira,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2024-11-19,storage_devices,1975.11,0.05,credit_card,0.0,0,0.4169,normal,0.1715,0.289,0.292,False
+CUS000629,Anika Agarwal,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2025-01-05,cables,1559.7,0.11,UPI,0.0,0,0.2701,normal,0.0569,0.355,0.108,False
+CUS000630,Suresh Mukherjee,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-02-13,cables,1581.83,0.191,credit_card,0.0,0,0.2,normal,0.0223,0.242,0.2643,True
+CUS000631,Saanvi Chauhan,retail,Nashik,Nashik,Maharashtra,N/A (individual),2026-03-27,webcams|tablets|speakers,2227.6,0.762,credit_card,0.0,0,0.2822,normal,0.1501,0.618,0.1393,False
+CUS000632,Anika Fernandes,retail,Pune,Pune,Maharashtra,N/A (individual),2026-05-15,feature_phones|smartphones,1398.53,0.12,UPI,0.0,0,0.518,normal,0.0969,0.343,0.0729,False
+CUS000633,Amit Nair,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-11-08,monitors|mice,1409.97,0.298,UPI,0.0,0,0.6543,normal,0.0424,0.063,0.1228,False
+CUS000634,Kabir Vora,retail,Pune,Pune,Maharashtra,N/A (individual),2023-01-29,printers|feature_phones|laptops|speakers,1510.88,0.239,credit_card,0.0,0,0.9228,excellent,0.0246,0.27,0.1869,False
+CUS000635,Yash Chopra,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2023-11-03,smartphones,1508.64,0.493,cash,0.0,0,0.3955,normal,0.25,0.371,0.0763,False
+CUS000636,Nikhil Malhotra,retail,Malad,Mumbai,Maharashtra,N/A (individual),2025-10-12,mice|accessories,2818.12,0.949,debit_card,0.0,0,0.4425,normal,0.0715,0.437,0.2124,False
+CUS000637,Riya Trivedi,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2025-09-03,keyboards|mice|tablets|speakers,2984.77,0.95,UPI,0.0,0,0.2849,normal,0.1141,0.526,0.0367,False
+CUS000638,Pankaj Tiwari,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2025-12-30,cables|webcams|headphones,1422.43,0.313,credit_card,0.0,0,0.9,normal,0.0873,0.927,0.0936,True
+CUS000639,Elite Systems,small_business,Ahmedabad,Ahmedabad,Gujarat,Healthcare,2026-01-03,feature_phones|power_banks,8158.44,1.027,bank_transfer,20000.0,0,0.1279,late,0.0747,0.464,0.269,True
+CUS000640,Om Rao,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2025-08-04,chargers|smartwatches|routers|keyboards,2295.85,0.054,cash,0.0,0,0.1764,late,0.083,0.447,0.2218,False
+CUS000641,Neha Malhotra,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2025-03-31,smartphones|tablets|webcams,1470.65,0.412,debit_card,0.0,0,0.5991,normal,0.0673,0.113,0.1705,False
+CUS000642,Nisha D'Souza,retail,Delhi,Delhi,Delhi,N/A (individual),2026-06-03,speakers|monitors,737.99,0.055,UPI,0.0,0,0.5834,normal,0.0467,0.275,0.1626,True
+CUS000643,Saanvi Chopra,retail,Powai,Mumbai,Maharashtra,N/A (individual),2023-09-20,feature_phones|speakers|earbuds,2086.51,0.227,cash,0.0,0,0.5126,normal,0.1925,0.204,0.0798,False
+CUS000644,New India Impex,small_business,Nashik,Nashik,Maharashtra,Manufacturing,2023-11-06,chargers,16020.71,1.715,bank_transfer,20000.0,45,0.3043,normal,0.2434,0.243,0.146,False
+CUS000645,Vinod Khanna,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2024-03-17,accessories,1656.11,0.266,UPI,0.0,0,0.5887,normal,0.25,0.652,0.1984,False
+CUS000646,Varun Mishra,retail,Pune,Pune,Maharashtra,N/A (individual),2023-08-29,webcams|feature_phones|ups_devices,1076.87,0.246,credit_card,0.0,0,0.8578,normal,0.0977,0.224,0.1023,False
+CUS000647,Shree Infotech,small_business,Santacruz,Mumbai,Maharashtra,Healthcare,2025-07-20,feature_phones|printers|storage_devices|keyboards,11579.96,0.585,UPI,23000.0,15,0.6495,normal,0.1713,0.263,0.0991,False
+CUS000648,Ayesha D'Souza,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-09-12,mice,1228.35,1.309,credit_card,0.0,0,0.6593,normal,0.1945,0.435,0.08,False
+CUS000649,Anil Fernandes,retail,Nashik,Nashik,Maharashtra,N/A (individual),2025-10-02,routers|earbuds|televisions,4868.1,0.431,debit_card,0.0,0,0.2957,normal,0.112,0.375,0.1343,False
+CUS000650,Amit Mukherjee,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2023-04-07,accessories|speakers|mice,3781.51,0.095,credit_card,0.0,0,0.3386,late,0.119,0.206,0.1675,False
+CUS000651,City Mobile Point,small_business,Kurla,Mumbai,Maharashtra,Healthcare,2023-07-31,smartwatches|monitors|mice|headphones,12465.48,0.303,UPI,101000.0,15,0.7142,normal,0.0532,0.823,0.1918,False
+CUS000652,Sanjay Reddy,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2022-09-03,smartphones|headphones,818.87,0.79,UPI,0.0,0,0.134,late,0.0563,0.528,0.0982,False
+CUS000653,Vikram Banerjee,retail,Malad,Mumbai,Maharashtra,N/A (individual),2024-06-07,cables,1035.7,0.414,UPI,0.0,0,0.4323,normal,0.1475,0.671,0.0868,False
+CUS000654,Ishaan Pereira,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2025-08-02,monitors|accessories|keyboards,1673.46,0.814,UPI,0.0,0,0.6656,normal,0.2144,0.238,0.0703,False
+CUS000655,Aarav Trivedi,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2023-02-01,webcams|earbuds|headphones,2119.78,0.778,UPI,0.0,0,0.7731,excellent,0.25,0.274,0.2277,False
+CUS000656,Riya Desai,retail,Malad,Mumbai,Maharashtra,N/A (individual),2025-01-06,monitors,3844.23,1.893,UPI,0.0,0,0.55,late,0.1564,0.136,0.2014,False
+CUS000657,Rajesh Pereira,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2022-08-13,tablets|printers|headphones|chargers,3691.18,0.772,UPI,0.0,0,0.8156,excellent,0.1141,0.622,0.1245,True
+CUS000658,Star Mobile Point,small_business,Goregaon,Mumbai,Maharashtra,Real Estate,2022-11-05,webcams|power_banks|smartwatches,18501.72,2.161,credit,118000.0,30,0.627,normal,0.1602,0.526,0.1127,False
+CUS000659,Kirti Impex,small_business,Chembur,Mumbai,Maharashtra,Media,2023-02-24,feature_phones|headphones,10276.65,3.777,credit,47000.0,30,0.7331,excellent,0.0887,0.515,0.3964,False
+CUS000660,National Systems,small_business,Andheri West,Mumbai,Maharashtra,Finance,2024-08-22,mice,17051.24,1.016,credit,45000.0,45,0.4766,normal,0.0969,0.312,0.1074,False
+CUS000661,Dev Yadav,retail,Surat,Surat,Gujarat,N/A (individual),2025-08-03,chargers|monitors|ups_devices|printers,5026.74,0.05,UPI,0.0,0,0.4981,normal,0.0303,0.49,0.314,True
+CUS000662,Anil Banerjee,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2023-05-31,mice|accessories,1400.03,0.079,debit_card,0.0,0,0.7638,excellent,0.0448,0.368,0.1998,False
+CUS000663,Ritesh Ansari,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2023-10-01,smartwatches|printers,1095.29,0.272,cash,0.0,0,0.5464,normal,0.0187,0.087,0.158,False
+CUS000664,Vihaan Joshi,retail,Pune,Pune,Maharashtra,N/A (individual),2024-09-21,earbuds,1545.97,0.37,UPI,0.0,0,0.6589,normal,0.25,0.691,0.0127,False
+CUS000665,Arjun Verma,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2023-12-12,mice|tablets|smartphones,1858.48,0.835,credit_card,0.0,0,0.5597,normal,0.1684,0.461,0.0742,False
+CUS000666,Dev Shaikh,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-09-25,smartwatches|tablets|keyboards,3366.28,0.88,debit_card,0.0,0,0.8152,normal,0.1368,0.527,0.1549,False
+CUS000667,Elite Digital World,small_business,Malad,Mumbai,Maharashtra,Education,2023-11-16,power_banks|mice|storage_devices,11012.94,0.444,bank_transfer,20000.0,15,0.758,normal,0.25,0.877,0.1361,False
+CUS000668,Ritesh Bhatia,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2025-12-19,cables|smartwatches|headphones,1221.33,0.391,UPI,0.0,0,0.5342,normal,0.25,0.337,0.0502,False
+CUS000669,Pankaj Nair,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2023-06-26,mice|cables|smartphones|ups_devices,1524.44,0.11,UPI,0.0,0,0.4922,normal,0.2171,0.285,0.0707,False
+CUS000670,Vinod Sharma,retail,Khar,Mumbai,Maharashtra,N/A (individual),2024-12-08,printers|keyboards,3207.42,0.506,UPI,0.0,0,0.5091,normal,0.1911,0.581,0.1427,False
+CUS000671,Priya Vora,retail,Surat,Surat,Gujarat,N/A (individual),2024-08-26,ups_devices|feature_phones|printers,1779.76,0.475,cash,0.0,0,0.8984,excellent,0.0418,0.641,0.182,True
+CUS000672,Royal Mobile Point,small_business,Kandivali,Mumbai,Maharashtra,Retail Trade,2023-04-30,mice|laptops,3000.0,0.348,UPI,76000.0,30,0.7591,normal,0.0679,0.102,0.3324,False
+CUS000673,Metro Infotech,small_business,Borivali,Mumbai,Maharashtra,Healthcare,2023-09-29,mice|earbuds|laptops|tablets,7761.0,0.602,UPI,69000.0,30,0.298,normal,0.1596,0.499,0.2023,False
+CUS000674,Suresh Nair,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2024-03-02,monitors,2436.39,0.265,UPI,0.0,0,0.3908,normal,0.0809,0.471,0.2358,True
+CUS000675,City Systems,small_business,Malad,Mumbai,Maharashtra,IT Services,2025-05-11,storage_devices|feature_phones,9493.23,0.504,credit,29000.0,30,0.306,normal,0.25,0.57,0.4265,False
+CUS000676,Anjali Vora,retail,Pune,Pune,Maharashtra,N/A (individual),2024-02-11,keyboards,2094.22,0.183,cash,0.0,0,0.6828,normal,0.1452,0.121,0.2274,False
+CUS000677,Star Systems,small_business,Indore,Indore,Madhya Pradesh,Real Estate,2024-04-15,tablets,9549.87,1.034,bank_transfer,47000.0,15,0.7787,normal,0.0409,0.399,0.0861,True
+CUS000678,Reyansh Bose,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2023-04-10,keyboards|earbuds|tablets,2656.45,0.997,UPI,0.0,0,0.9,normal,0.1768,0.363,0.2437,False
+CUS000679,Nisha Bose,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-03-05,printers,2114.98,0.263,UPI,0.0,0,0.4923,normal,0.089,0.677,0.1052,False
+CUS000680,Meera Banerjee,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2025-06-16,cables|power_banks|mice|headphones,9348.04,0.373,credit_card,0.0,0,0.88,normal,0.0261,0.517,0.1912,False
+CUS000681,Pankaj Pandey,retail,Khar,Mumbai,Maharashtra,N/A (individual),2025-07-06,power_banks,2707.68,0.105,UPI,0.0,0,0.8931,normal,0.0427,0.259,0.1412,False
+CUS000682,Suraj Enterprises LLP,corporate,Dombivli,Mumbai,Maharashtra,Education,2025-02-12,power_banks|headphones|earbuds|printers,46305.21,0.14,bank_transfer,419000.0,30,0.3395,late,0.25,0.613,0.0652,False
+CUS000683,Reyansh Vora,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2026-04-11,tablets,4873.76,0.541,credit_card,0.0,0,0.4934,normal,0.0284,0.073,0.034,False
+CUS000684,City Gadget Hub,small_business,Dombivli,Mumbai,Maharashtra,Real Estate,2022-12-02,webcams,19338.83,1.044,bank_transfer,91000.0,45,0.3921,normal,0.1345,0.093,0.0985,False
+CUS000685,National Digital World,small_business,Nagpur,Nagpur,Maharashtra,Healthcare,2022-12-08,speakers|keyboards,10125.85,2.392,bank_transfer,331000.0,30,0.7433,normal,0.0255,0.319,0.104,False
+CUS000686,Prakash Gupta,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-04-05,storage_devices|printers|monitors,1108.79,0.237,UPI,0.0,0,0.2789,normal,0.2134,0.37,0.0403,False
+CUS000687,Ananya Vora,retail,Delhi,Delhi,Delhi,N/A (individual),2023-09-27,chargers|keyboards|power_banks,2038.32,0.726,UPI,0.0,0,0.2227,normal,0.0768,0.603,0.1374,True
+CUS000688,Elite Impex,small_business,Ahmedabad,Ahmedabad,Gujarat,Media,2026-01-31,smartwatches|chargers|printers|keyboards,18506.52,1.064,UPI,56000.0,30,0.4507,normal,0.1445,0.885,0.2147,True
+CUS000689,Om Bose,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-04-06,routers|webcams|speakers,1335.2,1.072,UPI,0.0,0,0.2887,late,0.1385,0.388,0.0975,False
+CUS000690,Saanvi Singh,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2024-04-21,webcams|cables,2041.55,0.318,cash,0.0,0,0.7838,normal,0.25,0.467,0.0594,False
+CUS000691,Ritesh Pandey,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2023-06-22,televisions,857.95,0.393,credit_card,0.0,0,0.462,normal,0.25,0.208,0.1791,False
+CUS000692,Om Digital World,small_business,Malad,Mumbai,Maharashtra,Hospitality,2025-07-18,headphones,7702.8,0.638,bank_transfer,20000.0,30,0.2635,normal,0.0373,0.535,0.0536,False
+CUS000693,Sneha Banerjee,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2024-12-15,chargers|speakers|power_banks|laptops,3241.61,0.394,cash,0.0,0,0.7679,normal,0.1227,0.389,0.0809,False
+CUS000694,Vihaan Mukherjee,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-01-26,webcams|laptops|headphones|power_banks,1986.39,0.522,debit_card,0.0,0,0.1018,late,0.2268,0.338,0.1651,False
+CUS000695,Diya Khan,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2025-12-03,power_banks|tablets|laptops|accessories,1454.56,0.276,debit_card,0.0,0,0.762,excellent,0.1369,0.364,0.1867,False
+CUS000696,Amit Pandey,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-01-23,power_banks|tablets,1482.42,0.716,UPI,0.0,0,0.4635,normal,0.0367,0.166,0.0523,False
+CUS000697,Aadhya Khanna,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2025-09-21,speakers|earbuds,1606.84,1.208,UPI,0.0,0,0.8076,normal,0.2105,0.514,0.0392,True
+CUS000698,Krishna Verma,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2024-02-08,power_banks|ups_devices|speakers|laptops,2549.57,0.343,UPI,0.0,0,0.2598,normal,0.0927,0.225,0.08,False
+CUS000699,Skyline Trading Co.,small_business,Chembur,Mumbai,Maharashtra,Finance,2023-10-06,televisions|speakers|smartphones|feature_phones,10615.93,1.505,credit,32000.0,15,0.7329,normal,0.1371,0.369,0.0246,False
+CUS000700,Nisha Shaikh,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2024-02-16,accessories|earbuds,2179.33,0.157,cash,0.0,0,0.3022,normal,0.2453,0.541,0.1826,False
+CUS000701,Sagar Distributors LLP,corporate,Delhi,Delhi,Delhi,Logistics,2024-12-21,speakers|earbuds|smartphones|televisions,70502.92,0.151,credit,176000.0,30,0.4789,late,0.0933,0.585,0.0929,True
+CUS000702,Ritesh Rao,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2026-02-12,tablets|webcams,1844.63,0.601,UPI,0.0,0,0.8511,normal,0.0724,0.28,0.2008,False
+CUS000703,Elite Distributors Pvt. Ltd.,corporate,Bandra East,Mumbai,Maharashtra,Manufacturing,2025-09-18,printers|keyboards|power_banks|laptops,53467.56,0.622,credit,270000.0,60,0.6655,normal,0.085,0.505,0.0537,False
+CUS000704,Ashok Fernandes,retail,Powai,Mumbai,Maharashtra,N/A (individual),2026-04-20,speakers,1140.28,0.368,cash,0.0,0,0.9755,excellent,0.1242,0.214,0.2417,False
+CUS000705,Suresh Mishra,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2026-04-16,webcams,2277.33,0.305,debit_card,0.0,0,0.1012,late,0.1222,0.56,0.1031,False
+CUS000706,Vikram Jain,retail,Powai,Mumbai,Maharashtra,N/A (individual),2025-12-31,power_banks|keyboards,823.89,0.05,UPI,0.0,0,0.5458,normal,0.0602,0.253,0.1104,False
+CUS000707,Anika Nair,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2022-11-29,power_banks|smartwatches,1502.17,0.05,UPI,0.0,0,0.7762,normal,0.064,0.13,0.1367,False
+CUS000708,Rahul Mishra,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2022-10-03,monitors|cables|routers|laptops,1688.03,0.239,credit_card,0.0,0,0.0252,late,0.0336,0.534,0.1357,False
+CUS000709,Sai Infotech,small_business,Vile Parle,Mumbai,Maharashtra,Healthcare,2025-06-26,ups_devices|smartphones|headphones,6921.97,0.16,bank_transfer,31000.0,45,0.0971,late,0.2179,0.564,0.1473,False
+CUS000710,Anjali Desai,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2026-02-23,routers|keyboards,2417.05,0.306,UPI,0.0,0,0.6377,normal,0.0368,0.432,0.2173,False
+CUS000711,Anil Mukherjee,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2025-06-08,feature_phones|smartphones,5067.71,0.24,UPI,0.0,0,0.5703,normal,0.25,0.457,0.1709,False
+CUS000712,Isha Solanki,retail,Nashik,Nashik,Maharashtra,N/A (individual),2026-06-13,tablets|storage_devices|ups_devices,2520.69,0.122,UPI,0.0,0,0.6224,normal,0.0804,0.62,0.2962,False
+CUS000713,Suresh Agarwal,retail,Surat,Surat,Gujarat,N/A (individual),2024-04-23,keyboards|earbuds,2958.22,0.05,UPI,0.0,0,0.3065,normal,0.25,0.562,0.1493,True
+CUS000714,Reyansh Pillai,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2026-01-19,tablets|cables,873.78,0.529,UPI,0.0,0,0.3261,normal,0.25,0.163,0.1341,False
+CUS000715,Kavita Mishra,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2023-10-16,smartphones|power_banks,3884.93,0.259,cash,0.0,0,0.3892,normal,0.25,0.096,0.1143,False
+CUS000716,Varun Reddy,retail,Surat,Surat,Gujarat,N/A (individual),2024-02-17,televisions|accessories|laptops|smartphones,2116.13,0.071,UPI,0.0,0,0.681,normal,0.1987,0.402,0.081,True
+CUS000717,Reyansh Bhatia,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2025-10-17,smartwatches|monitors|mice,3067.9,0.181,cash,0.0,0,0.691,normal,0.1296,0.26,0.0294,False
+CUS000718,Diya Mehta,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2025-04-10,printers|earbuds|cables,2022.03,0.209,cash,0.0,0,0.7916,normal,0.0854,0.625,0.0954,False
+CUS000719,Prime Gadget Hub,small_business,Jogeshwari,Mumbai,Maharashtra,IT Services,2022-07-07,webcams|cables|routers|chargers,14067.66,0.1,credit,21000.0,0,0.08,late,0.2454,0.615,0.0762,False
+CUS000720,Diya Rathod,retail,Surat,Surat,Gujarat,N/A (individual),2024-11-07,televisions|accessories|routers|power_banks,1071.83,0.05,UPI,0.0,0,0.7236,normal,0.0946,0.191,0.2232,True
+CUS000721,Aarav Kumar,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2024-06-15,ups_devices|smartphones|mice|printers,1058.32,1.406,UPI,0.0,0,0.3485,normal,0.2145,0.453,0.0568,False
+CUS000722,Elite Impex,small_business,Goregaon,Mumbai,Maharashtra,Hospitality,2026-04-07,accessories|earbuds,12466.57,0.182,bank_transfer,24000.0,30,0.6886,normal,0.25,0.653,0.1383,False
+CUS000723,Horizon Communications,small_business,Indore,Indore,Madhya Pradesh,Manufacturing,2023-06-22,printers,9247.68,0.1,UPI,47000.0,15,0.0797,late,0.25,0.23,0.0667,True
+CUS000724,Aditya Tiwari,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2025-11-07,earbuds|headphones|routers|smartwatches,2041.0,0.05,UPI,0.0,0,0.755,normal,0.0804,0.384,0.1486,False
+CUS000725,Rajesh Mishra,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2022-09-06,feature_phones|smartphones|speakers,1885.2,0.07,UPI,0.0,0,0.7166,normal,0.1842,0.521,0.0584,False
+CUS000726,Ira Kumar,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2025-02-28,cables|power_banks|tablets,3721.17,0.556,credit_card,0.0,0,0.7224,normal,0.1786,0.182,0.3004,False
+CUS000727,Ishaan Yadav,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2026-01-30,routers,625.7,0.058,cash,0.0,0,0.8608,normal,0.074,0.181,0.2865,False
+CUS000728,Ananya Tiwari,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2022-12-25,feature_phones|keyboards|televisions|laptops,1979.25,0.16,cash,0.0,0,0.5205,normal,0.25,0.752,0.1574,False
+CUS000729,Sagar Retail Corp.,corporate,Bandra West,Mumbai,Maharashtra,IT Services,2023-09-18,chargers|power_banks,25000.0,0.42,credit,150000.0,30,0.1944,late,0.1349,0.664,0.2713,False
+CUS000730,Saanvi Deshmukh,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2026-05-17,accessories|monitors|headphones|storage_devices,2516.42,0.05,UPI,0.0,0,0.3729,late,0.0312,0.496,0.2833,False
+CUS000731,Sunil Yadav,retail,Pune,Pune,Maharashtra,N/A (individual),2024-12-31,webcams|mice,2928.52,0.079,UPI,0.0,0,0.6335,normal,0.2293,0.247,0.3064,False
+CUS000732,Rohan Kulkarni,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2022-12-24,printers,2307.67,0.646,cash,0.0,0,0.4639,normal,0.1227,0.469,0.128,True
+CUS000733,Vikram Desai,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2026-01-18,earbuds|mice,1734.47,0.05,cash,0.0,0,0.4949,normal,0.029,0.256,0.1322,False
+CUS000734,Mumbai Communications Pvt. Ltd.,corporate,Khar,Mumbai,Maharashtra,Logistics,2026-01-02,chargers|tablets,44960.91,0.369,UPI,273000.0,60,0.4886,normal,0.0575,0.551,0.2666,False
+CUS000735,Isha Shah,retail,Malad,Mumbai,Maharashtra,N/A (individual),2024-02-16,accessories,1449.54,0.371,cash,0.0,0,0.4962,normal,0.25,0.311,0.1682,False
+CUS000736,Sanjay Chopra,retail,Khar,Mumbai,Maharashtra,N/A (individual),2024-09-23,printers|cables,2952.07,0.828,UPI,0.0,0,0.7845,normal,0.0919,0.192,0.2503,False
+CUS000737,Sagar Traders,small_business,Vashi,Mumbai,Maharashtra,Healthcare,2024-12-31,headphones,39918.9,0.712,credit,24000.0,0,0.4986,normal,0.25,0.035,0.0958,False
+CUS000738,Aryan Shaikh,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2023-06-22,smartphones|speakers|mice,1893.99,0.103,UPI,0.0,0,0.2453,late,0.0288,0.538,0.1177,False
+CUS000739,Prime Mobile Point,small_business,Bandra East,Mumbai,Maharashtra,Finance,2022-07-27,keyboards|cables|smartphones|speakers,8537.27,0.602,bank_transfer,26000.0,0,0.2766,late,0.25,0.744,0.0661,False
+CUS000740,Om Gadget Hub,small_business,Vile Parle,Mumbai,Maharashtra,Healthcare,2023-08-04,tablets|earbuds,7218.25,0.148,bank_transfer,55000.0,30,0.5954,normal,0.085,0.204,0.1041,False
+CUS000741,Aadhya Ansari,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2024-10-25,feature_phones|keyboards|power_banks|printers,1385.16,0.812,debit_card,0.0,0,0.8882,normal,0.0767,0.669,0.0488,False
+CUS000742,Nisha Bhatia,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2023-12-30,tablets,1070.81,0.832,credit_card,0.0,0,0.5439,normal,0.1727,0.693,0.1769,False
+CUS000743,Aditya Rathod,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-09-22,headphones|chargers|printers|storage_devices,3253.29,0.309,UPI,0.0,0,0.5492,normal,0.0435,0.439,0.0316,False
+CUS000744,Vihaan Bhatia,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-03-19,tablets|monitors|televisions|routers,1436.54,0.601,cash,0.0,0,0.9057,excellent,0.1678,0.613,0.1115,False
+CUS000745,Manoj Gupta,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2025-02-13,speakers|laptops|power_banks|webcams,3439.58,0.403,debit_card,0.0,0,0.7547,normal,0.2316,0.322,0.1523,False
+CUS000746,Sunita Yadav,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2023-02-05,power_banks|chargers|smartphones|speakers,1622.22,0.205,UPI,0.0,0,0.5994,normal,0.1083,0.238,0.2097,False
+CUS000747,Riya Rao,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2024-10-15,chargers|smartphones|power_banks,1091.29,0.05,UPI,0.0,0,0.5244,normal,0.1178,0.165,0.2196,True
+CUS000748,Diya Reddy,retail,Pune,Pune,Maharashtra,N/A (individual),2023-04-29,keyboards,1023.99,0.05,debit_card,0.0,0,0.3199,late,0.0828,0.484,0.227,False
+CUS000749,Saanvi Malhotra,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2023-01-04,televisions,3798.85,0.051,cash,0.0,0,0.2217,normal,0.1529,0.305,0.3678,False
+CUS000750,Prakash Kulkarni,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2022-10-02,keyboards|webcams,1127.06,0.05,credit_card,0.0,0,0.4439,normal,0.1067,0.688,0.211,False
+CUS000751,Diya Colaco,retail,Khar,Mumbai,Maharashtra,N/A (individual),2022-10-08,cables,4023.2,0.115,credit_card,0.0,0,0.8536,normal,0.0802,0.469,0.0925,False
+CUS000752,United Distributors LLP,corporate,Chembur,Mumbai,Maharashtra,Finance,2025-11-13,ups_devices|speakers|headphones|tablets,43299.52,0.292,credit,249000.0,45,0.4533,normal,0.0925,0.451,0.4199,False
+CUS000753,Ganesh Agarwal,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2022-12-13,earbuds|keyboards|chargers,1368.51,0.09,UPI,0.0,0,0.7096,normal,0.1686,0.3,0.2382,False
+CUS000754,Ayesha Reddy,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2025-09-01,power_banks,886.16,0.427,UPI,0.0,0,0.2024,late,0.25,0.222,0.0626,False
+CUS000755,Zara Patel,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-12-29,smartwatches,6041.86,1.255,UPI,0.0,0,0.2336,normal,0.1443,0.311,0.1897,False
+CUS000756,Imran Mehta,retail,Pune,Pune,Maharashtra,N/A (individual),2026-05-25,accessories|chargers,1325.54,0.777,cash,0.0,0,0.4179,normal,0.1877,0.607,0.3871,False
+CUS000757,Neha Banerjee,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2025-12-16,accessories|laptops,2635.12,1.071,UPI,0.0,0,0.8394,normal,0.2092,0.641,0.1724,True
+CUS000758,Yash Agarwal,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2025-12-29,speakers|headphones,893.33,0.172,cash,0.0,0,0.3107,normal,0.1988,0.16,0.0276,False
+CUS000759,Anil Ansari,retail,Khar,Mumbai,Maharashtra,N/A (individual),2024-02-10,ups_devices|power_banks,1060.6,0.589,credit_card,0.0,0,0.2251,late,0.0472,0.344,0.129,False
+CUS000760,Royal Impex,small_business,Borivali,Mumbai,Maharashtra,IT Services,2026-01-28,headphones|monitors,4674.89,2.321,credit,51000.0,15,0.7712,normal,0.2215,0.224,0.0872,False
+CUS000761,Vihaan Reddy,retail,Khar,Mumbai,Maharashtra,N/A (individual),2025-09-10,smartphones|feature_phones|headphones,2611.47,0.072,cash,0.0,0,0.9879,excellent,0.25,0.381,0.1442,False
+CUS000762,Andheri Traders,small_business,Ghatkopar,Mumbai,Maharashtra,Media,2024-01-21,printers|headphones|monitors|tablets,9778.6,1.66,credit,55000.0,45,0.5665,normal,0.25,0.535,0.0418,False
+CUS000763,Rajesh Joshi,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2024-08-30,smartwatches|keyboards,1340.42,0.382,UPI,0.0,0,0.5101,normal,0.0396,0.435,0.1048,False
+CUS000764,Vinod Shaikh,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2025-03-31,accessories|keyboards|chargers,5104.67,0.924,UPI,0.0,0,0.2961,normal,0.0307,0.074,0.006,False
+CUS000765,Horizon Distributors,small_business,Vile Parle,Mumbai,Maharashtra,Finance,2024-06-07,smartwatches|cables|mice,38437.94,0.412,UPI,75000.0,0,0.6615,excellent,0.1181,0.442,0.1181,False
+CUS000766,Vivaan D'Souza,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-05-25,mice,626.01,0.383,credit_card,0.0,0,0.5811,normal,0.2037,0.374,0.2128,False
+CUS000767,Krishna Nair,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2026-05-06,routers|feature_phones|storage_devices,12308.24,0.135,credit_card,0.0,0,0.1414,late,0.0295,0.129,0.1869,False
+CUS000768,Sai Electronics Corp.,corporate,Chembur,Mumbai,Maharashtra,Finance,2025-04-04,keyboards|power_banks|tablets|earbuds,25000.0,0.476,credit,460000.0,30,0.7373,normal,0.2176,0.7,0.1891,False
+CUS000769,Anil D'Souza,retail,Delhi,Delhi,Delhi,N/A (individual),2024-02-16,smartphones|chargers|cables|printers,1915.11,0.661,UPI,0.0,0,0.9135,excellent,0.1912,0.496,0.0167,True
+CUS000770,Sunil Reddy,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2026-05-14,keyboards|mice|smartwatches,5535.27,0.412,UPI,0.0,0,0.2113,late,0.1481,0.375,0.0873,False
+CUS000771,Vivaan Fernandes,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2024-02-06,headphones,3740.63,0.086,debit_card,0.0,0,0.4208,normal,0.0743,0.267,0.0369,False
+CUS000772,Shree Solutions,small_business,Bengaluru,Bengaluru,Karnataka,Finance,2025-09-07,routers|chargers,11985.97,0.784,bank_transfer,51000.0,15,0.7306,normal,0.2161,0.872,0.296,True
+CUS000773,Ritesh Khanna,retail,Malad,Mumbai,Maharashtra,N/A (individual),2024-01-03,laptops|chargers|tablets,1451.59,1.125,UPI,0.0,0,0.7333,normal,0.1451,0.518,0.1936,False
+CUS000774,National Communications,small_business,Santacruz,Mumbai,Maharashtra,Finance,2026-01-21,feature_phones|tablets|printers,4110.48,0.525,bank_transfer,34000.0,0,0.5755,normal,0.0272,0.495,0.1107,False
+CUS000775,Zara Desai,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2023-12-25,accessories|printers,6911.27,0.187,credit_card,0.0,0,0.9,normal,0.1971,0.478,0.3928,False
+CUS000776,Amit Gupta,retail,Pune,Pune,Maharashtra,N/A (individual),2022-11-22,accessories,3621.68,0.841,UPI,0.0,0,0.3093,normal,0.1297,0.34,0.266,False
+CUS000777,Golden Communications LLP,corporate,Pune,Pune,Maharashtra,Logistics,2023-10-13,accessories|routers,122368.47,0.05,UPI,199000.0,30,0.7606,normal,0.0883,0.15,0.285,False
+CUS000778,Ganesh Communications,small_business,Chembur,Mumbai,Maharashtra,Retail Trade,2023-12-22,monitors,4350.48,0.1,bank_transfer,24000.0,30,0.8696,excellent,0.1473,0.509,0.3382,False
+CUS000779,Elite Impex,small_business,Bengaluru,Bengaluru,Karnataka,Hospitality,2025-05-19,speakers|keyboards,20242.53,0.486,bank_transfer,20000.0,0,0.4056,normal,0.1294,0.057,0.1909,True
+CUS000780,Nikhil Tiwari,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2026-06-02,cables|printers|headphones,2810.58,0.349,cash,0.0,0,0.6889,normal,0.25,0.219,0.0825,False
+CUS000781,Nisha Kumar,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2024-11-27,speakers|ups_devices,3354.93,0.063,UPI,0.0,0,0.5305,normal,0.1164,0.341,0.0775,False
+CUS000782,Royal Digital World,small_business,Chembur,Mumbai,Maharashtra,Education,2024-07-17,power_banks|printers|mice|keyboards,5549.36,0.306,bank_transfer,65000.0,15,0.4807,normal,0.2126,0.845,0.1042,False
+CUS000783,Kavya Bose,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-07-13,earbuds|laptops,2560.26,0.066,credit_card,0.0,0,0.14,late,0.1607,0.235,0.147,False
+CUS000784,Zara Shah,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-03-16,tablets|speakers|storage_devices,5911.23,0.203,UPI,0.0,0,0.4369,normal,0.1679,0.143,0.0876,False
+CUS000785,Varun Deshmukh,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2023-01-03,earbuds,892.21,0.573,cash,0.0,0,0.8875,normal,0.153,0.588,0.2692,False
+CUS000786,Ashok Menon,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2025-01-28,power_banks|webcams|feature_phones|smartphones,1194.21,0.05,UPI,0.0,0,0.7628,normal,0.127,0.203,0.1054,True
+CUS000787,Golden Distributors,small_business,Bengaluru,Bengaluru,Karnataka,Logistics,2024-05-02,keyboards,5389.35,0.386,bank_transfer,28000.0,30,0.4156,normal,0.1287,0.857,0.1075,True
+CUS000788,Saanvi Mukherjee,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2023-11-17,laptops|smartwatches|accessories,1204.21,0.5,UPI,0.0,0,0.2,normal,0.25,0.533,0.1895,True
+CUS000789,Riya Pandey,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2026-03-05,smartphones|headphones,1825.6,0.675,UPI,0.0,0,0.8086,excellent,0.25,0.552,0.1005,False
+CUS000790,Yash Singh,retail,Pune,Pune,Maharashtra,N/A (individual),2024-10-28,headphones,1524.11,0.136,UPI,0.0,0,0.6251,normal,0.1027,0.113,0.2267,False
+CUS000791,Royal Solutions,small_business,Ghatkopar,Mumbai,Maharashtra,Manufacturing,2024-06-10,speakers|mice,7043.04,0.884,UPI,29000.0,45,0.4645,normal,0.1065,0.332,0.0287,False
+CUS000792,Prakash D'Souza,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2026-01-20,speakers|accessories|chargers|laptops,3150.58,1.298,UPI,0.0,0,0.2407,normal,0.1342,0.367,0.3028,False
+CUS000793,Rohan Pillai,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2022-11-27,headphones|keyboards,2085.5,0.124,credit_card,0.0,0,0.2393,normal,0.1648,0.128,0.0295,False
+CUS000794,Shree Enterprises,small_business,Chembur,Mumbai,Maharashtra,IT Services,2025-07-01,mice|earbuds|cables,21999.35,1.647,credit,20000.0,0,0.6172,normal,0.068,0.494,0.1312,False
+CUS000795,Ananya Trivedi,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-01-26,webcams|storage_devices,1789.62,0.143,UPI,0.0,0,0.5376,late,0.1392,0.244,0.2212,False
+CUS000796,Suresh D'Souza,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2025-08-14,printers|feature_phones|ups_devices,1281.48,0.05,UPI,0.0,0,0.858,normal,0.25,0.644,0.3925,False
+CUS000797,Om Solutions,small_business,Mulund,Mumbai,Maharashtra,Finance,2024-02-25,speakers,11465.5,2.336,credit,29000.0,45,0.5385,normal,0.19,0.137,0.2018,False
+CUS000798,Kavya Malhotra,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2023-10-08,cables|power_banks|printers,1099.47,0.05,credit_card,0.0,0,0.3689,late,0.1746,0.496,0.3941,False
+CUS000799,Saanvi Mukherjee,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2022-07-04,accessories,1998.44,0.701,UPI,0.0,0,0.7993,excellent,0.182,0.174,0.1051,True
+CUS000800,Anika Mishra,retail,Delhi,Delhi,Delhi,N/A (individual),2024-06-24,webcams|televisions,1590.45,0.392,UPI,0.0,0,0.8487,normal,0.0389,0.407,0.4673,True
+CUS000801,Dev Khanna,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2026-05-19,earbuds|chargers|routers,839.0,0.82,cash,0.0,0,0.6232,normal,0.25,0.348,0.1634,False
+CUS000802,Sunita Yadav,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2026-03-14,speakers|smartphones,1573.45,0.37,UPI,0.0,0,0.8262,normal,0.25,0.234,0.2779,True
+CUS000803,Neha Kapoor,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-03-13,smartphones|accessories|tablets|laptops,3507.68,0.452,UPI,0.0,0,0.105,late,0.0363,0.162,0.0511,False
+CUS000804,Sunita Kumar,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2026-02-12,televisions|smartphones|ups_devices,1257.59,0.104,credit_card,0.0,0,0.7132,normal,0.0899,0.545,0.1885,False
+CUS000805,Pooja Pandey,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2023-06-24,webcams|mice|accessories,4355.04,0.455,debit_card,0.0,0,0.4261,normal,0.1307,0.353,0.2395,False
+CUS000806,Elite Solutions,small_business,Vashi,Mumbai,Maharashtra,Retail Trade,2024-07-29,webcams|ups_devices|speakers,11390.77,0.269,bank_transfer,20000.0,15,0.5689,normal,0.186,0.347,0.106,False
+CUS000807,Kirti Retail LLP,corporate,Powai,Mumbai,Maharashtra,Manufacturing,2024-06-12,accessories|earbuds,48775.76,1.661,credit,323000.0,45,0.9,normal,0.0533,0.362,0.2579,False
+CUS000808,Varun Pillai,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2026-01-05,monitors|laptops|storage_devices|chargers,1852.47,0.252,cash,0.0,0,0.5268,normal,0.1333,0.258,0.2102,False
+CUS000809,United Impex Pvt. Ltd.,corporate,Powai,Mumbai,Maharashtra,Media,2023-05-25,laptops|tablets,77807.52,0.275,credit,343000.0,30,0.5291,normal,0.1462,0.103,0.08,False
+CUS000810,Kavita Trivedi,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-09-14,televisions|keyboards|webcams,1452.43,0.05,UPI,0.0,0,0.5393,normal,0.052,0.375,0.3166,False
+CUS000811,Mumbai Systems,small_business,Powai,Mumbai,Maharashtra,Education,2026-01-31,headphones|laptops,19456.17,0.312,bank_transfer,33000.0,0,0.4255,late,0.0511,0.638,0.1519,False
+CUS000812,Amit Tiwari,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2023-01-09,webcams,2335.68,0.522,UPI,0.0,0,0.2,normal,0.0261,0.165,0.142,False
+CUS000813,Shree Technologies,small_business,Khar,Mumbai,Maharashtra,Finance,2024-01-25,headphones|televisions|accessories,7477.28,0.272,bank_transfer,97000.0,30,0.4959,normal,0.2272,0.254,0.1863,False
+CUS000814,Farhan Menon,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2025-07-24,smartwatches|cables|smartphones|speakers,2936.38,1.583,cash,0.0,0,0.2,normal,0.0956,0.554,0.3118,True
+CUS000815,Saanvi Bose,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2025-09-08,power_banks|mice|monitors|storage_devices,1603.44,1.056,cash,0.0,0,0.0848,late,0.119,0.395,0.1125,False
+CUS000816,Pooja Pillai,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2025-10-28,mice|storage_devices,4263.54,1.011,UPI,0.0,0,0.6175,normal,0.0821,0.57,0.0958,False
+CUS000817,Reyansh Yadav,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2026-03-01,webcams|accessories|mice,2555.7,0.417,UPI,0.0,0,0.9,normal,0.0672,0.381,0.2444,False
+CUS000818,Vasant Electronics Pvt. Ltd.,corporate,Borivali,Mumbai,Maharashtra,Healthcare,2023-07-16,cables|keyboards|speakers|smartphones,28200.39,0.101,bank_transfer,175000.0,45,0.0555,late,0.25,0.781,0.0887,False
+CUS000819,Royal Electronics,small_business,Andheri East,Mumbai,Maharashtra,Media,2024-02-11,feature_phones|earbuds,4579.48,0.707,bank_transfer,66000.0,30,0.5947,normal,0.0635,0.455,0.1396,False
+CUS000820,Mahesh Shaikh,retail,Khar,Mumbai,Maharashtra,N/A (individual),2026-01-28,accessories|smartwatches,4730.36,0.983,UPI,0.0,0,0.636,normal,0.0293,0.307,0.0931,False
+CUS000821,Horizon Electronics,small_business,Powai,Mumbai,Maharashtra,Education,2024-12-16,earbuds|chargers|accessories|printers,7948.91,0.653,bank_transfer,34000.0,45,0.51,normal,0.0761,0.777,0.0359,False
+CUS000822,Mahesh Desai,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-07-26,smartphones|monitors|routers,4202.92,0.492,cash,0.0,0,0.3128,normal,0.1869,0.093,0.0683,True
+CUS000823,Aarav Yadav,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2022-07-06,televisions|earbuds|cables,4188.07,0.161,UPI,0.0,0,0.3502,normal,0.2092,0.57,0.2858,False
+CUS000824,Ritesh Bose,retail,Khar,Mumbai,Maharashtra,N/A (individual),2024-03-07,earbuds|televisions,1728.89,0.303,debit_card,0.0,0,0.7621,normal,0.0966,0.241,0.0731,False
+CUS000825,Isha Malhotra,retail,Malad,Mumbai,Maharashtra,N/A (individual),2024-03-06,power_banks|storage_devices|smartphones,3939.51,0.249,cash,0.0,0,0.2429,normal,0.062,0.182,0.2282,False
+CUS000826,Vasant Solutions,small_business,Khar,Mumbai,Maharashtra,Healthcare,2023-04-05,ups_devices|webcams|mice,6339.74,0.786,UPI,29000.0,45,0.2,normal,0.0635,0.564,0.1703,False
+CUS000827,Pooja Fernandes,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2024-05-17,headphones|feature_phones|accessories|power_banks,1703.41,0.05,UPI,0.0,0,0.718,normal,0.1024,0.942,0.1225,False
+CUS000828,Anika Mehta,retail,Nashik,Nashik,Maharashtra,N/A (individual),2025-10-26,smartwatches|earbuds|keyboards,1963.12,0.05,UPI,0.0,0,0.558,normal,0.1315,0.42,0.2214,False
+CUS000829,Om Rathod,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2025-02-24,earbuds|mice|cables,3388.92,0.321,UPI,0.0,0,0.4488,normal,0.0858,0.381,0.1702,False
+CUS000830,Silver Trading Co.,small_business,Malad,Mumbai,Maharashtra,Manufacturing,2025-06-08,accessories|monitors|routers,44132.72,0.527,UPI,139000.0,0,0.7218,normal,0.0702,0.817,0.336,False
+CUS000831,Ira Khan,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2023-09-01,speakers|routers,2236.37,0.05,UPI,0.0,0,0.7253,excellent,0.1099,0.575,0.0526,False
+CUS000832,Om Traders,small_business,Kurla,Mumbai,Maharashtra,Retail Trade,2023-01-01,tablets,59689.16,0.591,credit,89000.0,0,0.7245,normal,0.1881,0.779,0.2047,False
+CUS000833,Priya Menon,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2023-04-04,televisions,1509.89,0.28,debit_card,0.0,0,0.6406,normal,0.25,0.532,0.1706,False
+CUS000834,Yash Menon,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2025-07-17,feature_phones|laptops|smartwatches|accessories,1152.0,0.133,UPI,0.0,0,0.2874,normal,0.25,0.368,0.15,False
+CUS000835,Saanvi Kapoor,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-02-17,monitors|printers,2846.28,0.771,cash,0.0,0,0.6682,normal,0.0542,0.058,0.0458,False
+CUS000836,Farhan Khanna,retail,Malad,Mumbai,Maharashtra,N/A (individual),2023-05-22,monitors|laptops|televisions|storage_devices,1766.4,0.297,credit_card,0.0,0,0.0521,late,0.1607,0.202,0.1633,False
+CUS000837,Ashok Khanna,retail,Nashik,Nashik,Maharashtra,N/A (individual),2026-05-04,televisions|power_banks,1344.64,0.499,UPI,0.0,0,0.6474,normal,0.25,0.617,0.1654,False
+CUS000838,Suresh Jain,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-03-23,cables,2000.58,0.335,UPI,0.0,0,0.2,normal,0.0774,0.349,0.1081,False
+CUS000839,Kirti Retail,small_business,Powai,Mumbai,Maharashtra,Finance,2024-03-02,televisions|power_banks|earbuds,12415.79,0.1,UPI,94000.0,30,0.919,excellent,0.1313,0.476,0.1747,False
+CUS000840,Ayesha Singh,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2025-03-10,laptops|smartwatches|routers|headphones,3296.97,0.332,UPI,0.0,0,0.2781,normal,0.0435,0.52,0.0424,False
+CUS000841,Rohan Banerjee,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2023-01-20,headphones,1502.31,0.075,cash,0.0,0,0.2767,normal,0.1745,0.487,0.1008,False
+CUS000842,Yash Kumar,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2022-09-04,feature_phones|ups_devices,1694.56,0.321,credit_card,0.0,0,0.7476,normal,0.2413,0.193,0.0463,False
+CUS000843,Kirti Enterprises,small_business,Jogeshwari,Mumbai,Maharashtra,Hospitality,2023-07-15,headphones|routers,20397.13,2.34,bank_transfer,22000.0,45,0.7267,excellent,0.0907,0.563,0.2958,False
+CUS000844,Farhan Mukherjee,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2024-11-15,keyboards|storage_devices,4925.5,0.291,UPI,0.0,0,0.6038,normal,0.0528,0.444,0.5102,False
+CUS000845,Vivaan Deshmukh,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2023-05-09,smartwatches|printers|accessories,1036.35,0.321,UPI,0.0,0,0.3999,normal,0.1596,0.079,0.5194,False
+CUS000846,Royal Trading Co.,small_business,Thane West,Mumbai,Maharashtra,Finance,2022-08-07,earbuds|keyboards,43124.31,0.982,credit,78000.0,0,0.6691,normal,0.1115,0.495,0.086,False
+CUS000847,Sunil Rao,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2026-05-15,keyboards|power_banks,853.02,0.05,cash,0.0,0,0.3637,normal,0.1861,0.478,0.0303,False
+CUS000848,Sunil Banerjee,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-02-06,feature_phones|ups_devices|smartwatches,1175.97,0.05,credit_card,0.0,0,0.3321,late,0.2387,0.672,0.0533,False
+CUS000849,Imran Bose,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2025-10-09,smartwatches|speakers|feature_phones,2103.1,1.009,UPI,0.0,0,0.5147,normal,0.0571,0.12,0.1565,False
+CUS000850,Kavita Banerjee,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2025-10-16,smartwatches|accessories|keyboards,1005.53,0.057,credit_card,0.0,0,0.9316,excellent,0.0181,0.536,0.099,False
+CUS000851,Royal Retail Pvt. Ltd.,corporate,Bandra West,Mumbai,Maharashtra,Hospitality,2023-05-24,monitors|televisions|feature_phones,33004.35,0.135,credit,150000.0,60,0.0252,late,0.1459,0.502,0.0884,False
+CUS000852,Meera Chauhan,retail,Powai,Mumbai,Maharashtra,N/A (individual),2023-12-15,earbuds|webcams|chargers|smartphones,1273.13,0.088,debit_card,0.0,0,0.6377,normal,0.0113,0.566,0.1545,False
+CUS000853,Sunil Khanna,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-02-22,monitors,1134.24,0.427,UPI,0.0,0,0.6358,normal,0.25,0.315,0.1036,True
+CUS000854,Pankaj Rao,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2023-09-25,feature_phones|laptops|monitors,4240.98,0.05,UPI,0.0,0,0.1167,late,0.0254,0.49,0.2569,False
+CUS000855,Prakash Mehta,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2026-04-20,storage_devices|cables|tablets|power_banks,630.87,0.377,UPI,0.0,0,0.6295,normal,0.0992,0.286,0.0506,True
+CUS000856,Ganesh Mishra,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2023-02-11,printers|mice,2385.03,0.089,UPI,0.0,0,0.9729,excellent,0.1539,0.164,0.2504,False
+CUS000857,United Trading Co.,small_business,Bandra West,Mumbai,Maharashtra,Hospitality,2024-11-03,chargers,5433.42,0.628,UPI,38000.0,30,0.577,normal,0.055,0.237,0.2389,False
+CUS000858,Sagar Communications,small_business,Delhi,Delhi,Delhi,Retail Trade,2022-08-18,printers,5867.75,1.87,bank_transfer,57000.0,30,0.8603,normal,0.25,0.242,0.0334,True
+CUS000859,Diya Verma,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2025-12-09,televisions|headphones|speakers,2909.87,0.685,credit_card,0.0,0,0.7548,normal,0.0511,0.548,0.0378,False
+CUS000860,Sneha Iyer,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2025-09-09,tablets|earbuds|chargers|ups_devices,2490.26,0.225,debit_card,0.0,0,0.6935,normal,0.1152,0.427,0.1913,False
+CUS000861,Meera Ansari,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2024-09-18,speakers|cables,2534.45,0.191,UPI,0.0,0,0.3915,normal,0.1377,0.795,0.0318,False
+CUS000862,Sunil Tiwari,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2024-05-17,headphones|smartwatches,1575.53,0.083,UPI,0.0,0,0.2,normal,0.2065,0.26,0.0233,False
+CUS000863,Andheri Solutions,small_business,Nashik,Nashik,Maharashtra,Real Estate,2023-02-17,accessories|keyboards|chargers|monitors,25515.16,1.803,credit,43000.0,30,0.7561,normal,0.0987,0.353,0.0735,False
+CUS000864,Ashok Verma,retail,Surat,Surat,Gujarat,N/A (individual),2023-01-26,monitors|cables,1410.99,0.411,cash,0.0,0,0.662,normal,0.1488,0.778,0.0314,True
+CUS000865,Karan Desai,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2025-06-04,mice|printers|keyboards|tablets,2343.98,0.086,credit_card,0.0,0,0.7918,normal,0.25,0.319,0.0447,True
+CUS000866,Andheri Impex,small_business,Mulund,Mumbai,Maharashtra,Education,2025-02-13,speakers|earbuds,3792.83,3.346,credit,31000.0,15,0.234,normal,0.25,0.576,0.2099,False
+CUS000867,Myra Kumar,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2024-06-06,power_banks|keyboards|chargers|printers,2670.45,0.304,UPI,0.0,0,0.5533,normal,0.2232,0.507,0.2235,False
+CUS000868,Silver Traders Pvt. Ltd.,corporate,Ghatkopar,Mumbai,Maharashtra,Retail Trade,2024-03-29,power_banks,89541.85,0.387,bank_transfer,261000.0,30,0.8144,excellent,0.1871,0.617,0.3675,False
+CUS000869,National Traders,small_business,Khar,Mumbai,Maharashtra,IT Services,2024-08-23,headphones|feature_phones|laptops|chargers,30704.55,0.389,bank_transfer,40000.0,30,0.4363,normal,0.1211,0.737,0.0952,False
+CUS000870,Ritesh Joshi,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2024-04-04,printers|routers,1309.64,0.127,UPI,0.0,0,0.202,normal,0.1279,0.476,0.0793,False
+CUS000871,Rajesh Pillai,retail,Santacruz,Mumbai,Maharashtra,N/A (individual),2023-02-16,ups_devices|smartphones|accessories|headphones,3261.48,0.893,UPI,0.0,0,0.3945,normal,0.0292,0.491,0.4096,False
+CUS000872,Ira Malhotra,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-09-07,mice|monitors|earbuds,4233.86,0.05,UPI,0.0,0,0.3756,late,0.1947,0.419,0.0686,False
+CUS000873,Mumbai Infotech,small_business,Goregaon,Mumbai,Maharashtra,IT Services,2025-09-14,mice|earbuds|keyboards|printers,29409.6,0.54,bank_transfer,20000.0,30,0.4959,normal,0.1711,0.545,0.1236,False
+CUS000874,Sai Pandey,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-05-20,webcams|power_banks|keyboards|laptops,1622.6,0.321,UPI,0.0,0,0.6411,normal,0.2487,0.242,0.2771,False
+CUS000875,Nisha Jain,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2026-03-10,earbuds,3493.97,0.337,credit_card,0.0,0,0.1746,late,0.0335,0.232,0.0582,False
+CUS000876,Priya Solanki,retail,Goregaon,Mumbai,Maharashtra,N/A (individual),2024-03-31,headphones|monitors,1492.62,1.033,cash,0.0,0,0.4437,late,0.1393,0.443,0.126,False
+CUS000877,Andheri Mobile Point,small_business,Khar,Mumbai,Maharashtra,Education,2024-08-17,storage_devices|power_banks|printers,18604.59,1.047,credit,40000.0,15,0.4457,normal,0.0969,0.27,0.1938,False
+CUS000878,Mahesh Colaco,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2026-01-12,accessories|mice,5535.05,0.545,credit_card,0.0,0,0.2339,normal,0.1864,0.422,0.2834,False
+CUS000879,Sunil Rao,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-02-19,televisions,1617.98,0.181,debit_card,0.0,0,0.1997,late,0.1146,0.135,0.1111,True
+CUS000880,Karan Malhotra,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2024-02-02,earbuds|mice,1626.09,0.141,UPI,0.0,0,0.3758,normal,0.25,0.31,0.143,False
+CUS000881,Ritesh Bose,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2023-09-17,headphones|laptops,1396.9,0.079,UPI,0.0,0,0.8137,normal,0.1075,0.4,0.1017,True
+CUS000882,Kabir Bhatia,retail,Pune,Pune,Maharashtra,N/A (individual),2024-09-10,power_banks|printers,1567.47,0.961,cash,0.0,0,0.2906,late,0.25,0.502,0.0467,False
+CUS000883,Priya Chopra,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2025-08-19,cables|speakers,1348.32,0.204,cash,0.0,0,0.7141,normal,0.0991,0.365,0.18,False
+CUS000884,Anjali Solanki,retail,Nashik,Nashik,Maharashtra,N/A (individual),2025-11-28,chargers|monitors|speakers,1272.34,0.86,cash,0.0,0,0.606,normal,0.25,0.52,0.2143,False
+CUS000885,Mumbai Systems,small_business,Bandra West,Mumbai,Maharashtra,Manufacturing,2024-05-24,laptops|tablets|headphones,10395.23,0.172,bank_transfer,98000.0,30,0.6781,normal,0.0946,0.206,0.1078,False
+CUS000886,Mahesh Gupta,retail,Pune,Pune,Maharashtra,N/A (individual),2026-04-18,accessories,1610.8,0.374,UPI,0.0,0,0.6515,normal,0.0434,0.44,0.0671,False
+CUS000887,Ira Vora,retail,Nashik,Nashik,Maharashtra,N/A (individual),2025-06-17,tablets|printers|cables|smartphones,3708.49,0.121,cash,0.0,0,0.7842,excellent,0.0271,0.562,0.0632,False
+CUS000888,Manoj Mehta,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2025-08-13,routers,1657.52,0.418,UPI,0.0,0,0.9133,excellent,0.0769,0.427,0.1948,False
+CUS000889,Prime Mobile Point LLP,corporate,Dadar,Mumbai,Maharashtra,IT Services,2025-10-14,feature_phones,63564.74,0.616,bank_transfer,150000.0,30,0.6492,normal,0.1405,0.205,0.4743,False
+CUS000890,Star Digital World,small_business,Andheri West,Mumbai,Maharashtra,Logistics,2025-10-31,cables|feature_phones|laptops|smartwatches,6545.18,0.718,UPI,20000.0,15,0.9153,excellent,0.25,0.278,0.0254,False
+CUS000891,Prakash Fernandes,retail,Khar,Mumbai,Maharashtra,N/A (individual),2025-03-19,cables|televisions,1651.93,1.026,credit_card,0.0,0,0.9142,excellent,0.1171,0.332,0.1482,False
+CUS000892,Vasant Mobile Point Pvt. Ltd.,corporate,Chembur,Mumbai,Maharashtra,Education,2026-01-09,ups_devices|printers|monitors,34704.54,0.269,bank_transfer,150000.0,30,0.5958,normal,0.1055,0.153,0.2311,False
+CUS000893,Sanjay Iyer,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2022-11-25,earbuds|smartwatches,780.9,0.05,credit_card,0.0,0,0.6533,normal,0.25,0.22,0.2205,False
+CUS000894,Silver Traders,small_business,Vashi,Mumbai,Maharashtra,Media,2025-05-18,monitors|headphones|chargers|storage_devices,6354.03,1.665,credit,46000.0,0,0.7664,normal,0.2196,0.082,0.0659,False
+CUS000895,New India Gadget Hub Corp.,corporate,Borivali,Mumbai,Maharashtra,Media,2022-09-10,televisions|feature_phones|laptops|keyboards,26561.62,0.05,bank_transfer,225000.0,45,0.3502,normal,0.1892,0.535,0.2212,False
+CUS000896,Nisha Solanki,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2023-03-13,power_banks|tablets|earbuds,1841.45,0.418,UPI,0.0,0,0.7591,normal,0.2306,0.511,0.0987,False
+CUS000897,Imran Mishra,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2022-10-18,tablets,1155.5,0.74,UPI,0.0,0,0.9454,excellent,0.25,0.496,0.3703,False
+CUS000898,Kavya Pandey,retail,Khar,Mumbai,Maharashtra,N/A (individual),2026-03-14,ups_devices|headphones|smartphones,3624.68,1.199,debit_card,0.0,0,0.1973,late,0.1006,0.503,0.0895,False
+CUS000899,Ganesh Mobile Point,small_business,Chembur,Mumbai,Maharashtra,Hospitality,2024-11-24,accessories|printers|storage_devices,10931.53,0.656,credit,40000.0,15,0.5861,normal,0.1096,0.253,0.2217,False
+CUS000900,Amit Pereira,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2026-05-11,headphones|webcams|smartwatches|smartphones,930.57,0.134,cash,0.0,0,0.7234,normal,0.0224,0.205,0.1705,False
+CUS000901,Farhan Chopra,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2026-01-27,smartwatches|earbuds,1832.01,0.312,UPI,0.0,0,0.831,normal,0.25,0.479,0.2873,False
+CUS000902,Metro Trading Co.,small_business,Andheri West,Mumbai,Maharashtra,Education,2026-03-02,feature_phones|televisions|headphones,7708.01,1.513,UPI,34000.0,30,0.5942,normal,0.2083,0.555,0.0719,False
+CUS000903,Rahul Menon,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2024-10-12,headphones|laptops,3270.98,0.996,UPI,0.0,0,0.8059,excellent,0.076,0.142,0.1451,False
+CUS000904,Arjun Khan,retail,Delhi,Delhi,Delhi,N/A (individual),2024-12-30,cables|speakers|feature_phones|storage_devices,1122.55,0.259,UPI,0.0,0,0.4373,late,0.0381,0.171,0.3183,True
+CUS000905,Om Mobile Point,small_business,Malad,Mumbai,Maharashtra,Education,2023-07-01,televisions,12388.12,0.903,credit,20000.0,0,0.5715,normal,0.2225,0.295,0.034,False
+CUS000906,Ayesha Fernandes,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2025-06-16,accessories|headphones|power_banks|earbuds,846.18,0.876,UPI,0.0,0,0.2288,normal,0.0977,0.495,0.1685,False
+CUS000907,Aadhya Chopra,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2025-11-02,monitors,1199.16,0.212,credit_card,0.0,0,0.7418,normal,0.25,0.308,0.0325,False
+CUS000908,Vivaan Rathod,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2023-09-01,storage_devices|ups_devices|tablets|speakers,1977.59,0.072,UPI,0.0,0,0.6147,normal,0.0708,0.341,0.0404,False
+CUS000909,Sunita Desai,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2023-03-25,feature_phones|headphones,4490.56,0.141,UPI,0.0,0,0.5812,normal,0.0437,0.156,0.1114,False
+CUS000910,Amit Sharma,retail,Powai,Mumbai,Maharashtra,N/A (individual),2023-06-15,tablets|televisions|chargers,2820.53,1.445,cash,0.0,0,0.6052,normal,0.0359,0.621,0.202,False
+CUS000911,Ananya Khanna,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2024-07-04,cables,2602.55,0.702,cash,0.0,0,0.1409,late,0.1617,0.772,0.1071,False
+CUS000912,Ayesha Nair,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2024-03-17,power_banks|headphones|accessories|smartphones,1944.28,0.461,debit_card,0.0,0,0.8837,normal,0.0435,0.744,0.048,True
+CUS000913,National Communications,small_business,Vile Parle,Mumbai,Maharashtra,Retail Trade,2025-07-13,headphones|power_banks,3017.28,1.69,UPI,109000.0,0,0.9447,excellent,0.25,0.638,0.0947,False
+CUS000914,Krishna Reddy,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2025-05-05,speakers|cables,2100.23,0.112,UPI,0.0,0,0.8128,normal,0.25,0.599,0.1104,False
+CUS000915,Karan Tiwari,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2022-11-25,storage_devices,3682.43,0.466,UPI,0.0,0,0.4059,normal,0.0716,0.504,0.0684,True
+CUS000916,Ashok Desai,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2025-04-19,ups_devices|feature_phones|speakers,3790.12,0.698,UPI,0.0,0,0.7898,normal,0.0684,0.3,0.288,False
+CUS000917,Kavya Vora,retail,Powai,Mumbai,Maharashtra,N/A (individual),2025-03-15,power_banks,8301.44,0.096,cash,0.0,0,0.8409,normal,0.2173,0.36,0.144,False
+CUS000918,Ritesh Trivedi,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2023-02-11,laptops|headphones,939.53,0.181,cash,0.0,0,0.99,excellent,0.0778,0.128,0.0944,False
+CUS000919,Neha Ansari,retail,Thane West,Mumbai,Maharashtra,N/A (individual),2024-01-18,printers,1097.0,0.071,credit_card,0.0,0,0.5832,normal,0.1793,0.4,0.1659,False
+CUS000920,Ganesh Colaco,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2023-08-23,ups_devices,1548.39,0.05,UPI,0.0,0,0.9,normal,0.0793,0.256,0.0732,False
+CUS000921,Vinod Jain,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2024-07-06,smartphones|routers|monitors|speakers,1695.99,0.475,UPI,0.0,0,0.405,late,0.0753,0.511,0.1391,True
+CUS000922,Prakash D'Souza,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-08-30,ups_devices,2839.57,0.391,credit_card,0.0,0,0.4384,late,0.0887,0.337,0.1407,False
+CUS000923,Nisha D'Souza,retail,Powai,Mumbai,Maharashtra,N/A (individual),2023-01-08,routers,1883.48,0.289,debit_card,0.0,0,0.7063,normal,0.0256,0.465,0.0582,False
+CUS000924,Elite Retail,small_business,Kurla,Mumbai,Maharashtra,Education,2024-05-09,earbuds,8739.14,0.287,bank_transfer,22000.0,15,0.5435,normal,0.0339,0.217,0.2288,False
+CUS000925,Elite Traders,small_business,Mulund,Mumbai,Maharashtra,Finance,2023-07-29,keyboards|mice|earbuds|monitors,5936.89,2.703,bank_transfer,59000.0,15,0.0733,late,0.25,0.638,0.2133,False
+CUS000926,Ananya Shaikh,retail,Surat,Surat,Gujarat,N/A (individual),2023-01-14,speakers|earbuds|feature_phones,3303.24,0.49,UPI,0.0,0,0.9724,excellent,0.0421,0.104,0.0408,True
+CUS000927,Royal Digital World,small_business,Powai,Mumbai,Maharashtra,IT Services,2026-03-01,televisions|routers|smartwatches|laptops,15493.71,0.154,bank_transfer,20000.0,0,0.6908,normal,0.1898,0.123,0.1923,False
+CUS000928,Karan Chauhan,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2023-11-20,routers,1097.75,0.288,cash,0.0,0,0.4743,normal,0.25,0.416,0.1501,False
+CUS000929,Suresh Gupta,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2024-07-12,cables|accessories|printers|storage_devices,336.9,0.282,UPI,0.0,0,0.7536,normal,0.1603,0.279,0.1952,False
+CUS000930,Vasant Retail,small_business,Malad,Mumbai,Maharashtra,Logistics,2022-11-10,laptops|televisions|printers|keyboards,10773.86,2.15,credit,65000.0,45,0.3338,normal,0.0832,0.411,0.0566,False
+CUS000931,Kavya Reddy,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2023-04-10,feature_phones,1809.26,0.266,UPI,0.0,0,0.2983,normal,0.25,0.395,0.2266,False
+CUS000932,Zara Rao,retail,Khar,Mumbai,Maharashtra,N/A (individual),2022-08-25,smartphones|printers|monitors|feature_phones,3004.74,1.345,UPI,0.0,0,0.5734,normal,0.1701,0.415,0.1681,False
+CUS000933,Priya Yadav,retail,Chembur,Mumbai,Maharashtra,N/A (individual),2025-10-09,feature_phones,782.25,0.441,cash,0.0,0,0.4017,normal,0.0392,0.284,0.0903,False
+CUS000934,Myra Gupta,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-04-03,monitors|smartphones,722.71,0.289,credit_card,0.0,0,0.7308,normal,0.0562,0.291,0.3282,False
+CUS000935,Nikhil Malhotra,retail,Delhi,Delhi,Delhi,N/A (individual),2024-09-08,storage_devices|keyboards,4606.52,0.394,UPI,0.0,0,0.6867,normal,0.1745,0.166,0.0606,True
+CUS000936,Yash Chauhan,retail,Borivali,Mumbai,Maharashtra,N/A (individual),2026-03-15,laptops|mice,5124.37,0.166,UPI,0.0,0,0.4251,normal,0.25,0.173,0.1886,False
+CUS000937,Karan Shah,retail,Malad,Mumbai,Maharashtra,N/A (individual),2025-01-23,keyboards|power_banks|headphones|smartphones,5931.95,0.228,cash,0.0,0,0.6919,normal,0.25,0.548,0.1022,False
+CUS000938,Metro Distributors,small_business,Jogeshwari,Mumbai,Maharashtra,Finance,2022-12-05,mice|speakers,5736.07,1.204,credit,39000.0,30,0.5722,normal,0.055,0.449,0.1194,False
+CUS000939,Rajesh Chauhan,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2025-12-15,feature_phones,7480.42,0.795,UPI,0.0,0,0.5047,late,0.0833,0.522,0.081,False
+CUS000940,City Solutions,small_business,Andheri East,Mumbai,Maharashtra,Healthcare,2026-03-27,laptops|routers|speakers,21096.94,0.308,credit,21000.0,45,0.428,normal,0.0979,0.155,0.1096,False
+CUS000941,Priya Deshmukh,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2025-01-05,televisions|routers|accessories,1715.98,0.47,UPI,0.0,0,0.5676,normal,0.1959,0.434,0.1478,False
+CUS000942,Sai Infotech,small_business,Dombivli,Mumbai,Maharashtra,Logistics,2025-06-21,mice|laptops|speakers,18156.49,2.963,credit,30000.0,15,0.6888,normal,0.0505,0.718,0.158,False
+CUS000943,Priya Pandey,retail,Bandra West,Mumbai,Maharashtra,N/A (individual),2024-07-02,speakers|keyboards|webcams,1003.89,0.35,debit_card,0.0,0,0.4473,normal,0.2026,0.234,0.2618,False
+CUS000944,City Digital World Corp.,corporate,Andheri West,Mumbai,Maharashtra,Healthcare,2025-06-30,televisions|smartwatches|webcams|laptops,31905.62,0.584,credit,177000.0,30,0.5822,normal,0.25,0.492,0.1794,False
+CUS000945,Myra Verma,retail,Malad,Mumbai,Maharashtra,N/A (individual),2024-08-25,headphones|smartwatches,2413.35,0.925,UPI,0.0,0,0.5539,normal,0.1548,0.099,0.351,False
+CUS000946,Aarav Khanna,retail,Powai,Mumbai,Maharashtra,N/A (individual),2025-07-02,feature_phones|televisions|power_banks,1235.1,0.161,UPI,0.0,0,0.5954,normal,0.1131,0.591,0.0358,False
+CUS000947,Farhan Chauhan,retail,Surat,Surat,Gujarat,N/A (individual),2023-03-25,printers|accessories|routers|cables,2504.46,0.689,UPI,0.0,0,0.4703,normal,0.0339,0.261,0.223,True
+CUS000948,Sai Distributors,small_business,Pune,Pune,Maharashtra,Real Estate,2022-08-29,earbuds|mice|headphones,5471.57,0.171,bank_transfer,67000.0,0,0.4115,normal,0.2477,0.146,0.1098,False
+CUS000949,Mahesh D'Souza,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2025-05-10,printers,3161.53,0.206,credit_card,0.0,0,0.6974,normal,0.0245,0.464,0.0985,False
+CUS000950,Prakash Verma,retail,Andheri West,Mumbai,Maharashtra,N/A (individual),2024-01-09,power_banks,3652.96,0.13,UPI,0.0,0,0.725,normal,0.0259,0.515,0.0908,False
+CUS000951,Sunil Verma,retail,Bengaluru,Bengaluru,Karnataka,N/A (individual),2022-10-15,routers|televisions|ups_devices|headphones,1021.22,0.133,cash,0.0,0,0.4638,normal,0.0714,0.394,0.0642,True
+CUS000952,Kavita Agarwal,retail,Malad,Mumbai,Maharashtra,N/A (individual),2023-11-07,earbuds,1189.81,0.5,debit_card,0.0,0,0.3711,late,0.1332,0.244,0.276,False
+CUS000953,Farhan Kulkarni,retail,Surat,Surat,Gujarat,N/A (individual),2026-02-19,storage_devices|smartwatches|chargers|webcams,2749.94,0.534,cash,0.0,0,0.8757,excellent,0.0644,0.749,0.0241,True
+CUS000954,Metro Distributors,small_business,Borivali,Mumbai,Maharashtra,IT Services,2023-12-09,accessories|printers,19164.3,0.213,bank_transfer,74000.0,15,0.8502,excellent,0.123,0.636,0.0508,False
+CUS000955,Anil Jain,retail,Delhi,Delhi,Delhi,N/A (individual),2024-04-13,printers|routers|mice,1946.45,0.176,UPI,0.0,0,0.6996,normal,0.1387,0.4,0.3316,True
+CUS000956,Sai Solutions,small_business,Andheri West,Mumbai,Maharashtra,Real Estate,2022-11-20,smartwatches|chargers,38752.62,0.119,credit,38000.0,15,0.8183,excellent,0.0877,0.378,0.318,False
+CUS000957,Ganesh Pillai,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2025-12-30,printers|webcams|accessories,3351.53,0.186,credit_card,0.0,0,0.5945,excellent,0.2103,0.233,0.0688,False
+CUS000958,Aditya Yadav,retail,Nashik,Nashik,Maharashtra,N/A (individual),2025-09-26,laptops|storage_devices|smartwatches,1125.08,0.173,UPI,0.0,0,0.6149,normal,0.0832,0.086,0.1957,False
+CUS000959,Prakash Rao,retail,Nashik,Nashik,Maharashtra,N/A (individual),2025-05-09,storage_devices,1463.17,0.219,UPI,0.0,0,0.4188,normal,0.25,0.786,0.0478,False
+CUS000960,Vinod Trivedi,retail,Jogeshwari,Mumbai,Maharashtra,N/A (individual),2025-02-17,speakers|earbuds|smartphones|feature_phones,2571.14,0.313,UPI,0.0,0,0.4441,normal,0.1027,0.373,0.0938,False
+CUS000961,Vivaan Kumar,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2023-04-29,laptops|speakers,3248.85,0.303,credit_card,0.0,0,0.6333,normal,0.1109,0.52,0.1172,False
+CUS000962,Arjun Jain,retail,Nagpur,Nagpur,Maharashtra,N/A (individual),2022-07-31,printers|laptops,1380.15,0.111,debit_card,0.0,0,0.5192,normal,0.0213,0.3,0.152,False
+CUS000963,Ramesh Mukherjee,retail,Ghatkopar,Mumbai,Maharashtra,N/A (individual),2025-04-16,monitors,2705.59,0.659,credit_card,0.0,0,0.6696,normal,0.0354,0.577,0.2539,False
+CUS000964,National Impex,small_business,Khar,Mumbai,Maharashtra,IT Services,2024-02-12,televisions|printers|monitors,17131.48,0.636,credit,45000.0,0,0.3471,normal,0.0456,0.584,0.1515,False
+CUS000965,City Technologies,small_business,Jogeshwari,Mumbai,Maharashtra,Media,2022-12-13,chargers|power_banks,14427.71,0.414,credit,126000.0,45,0.7017,normal,0.1122,0.29,0.0481,False
+CUS000966,Siddharth Rathod,retail,Kurla,Mumbai,Maharashtra,N/A (individual),2024-03-02,smartwatches|earbuds|power_banks,1703.41,0.523,UPI,0.0,0,0.3227,late,0.06,0.07,0.2055,False
+CUS000967,Aarav Rao,retail,Ahmedabad,Ahmedabad,Gujarat,N/A (individual),2026-02-01,power_banks|printers|accessories,1836.42,0.313,UPI,0.0,0,0.7898,normal,0.0484,0.272,0.2812,True
+CUS000968,Alok Rathod,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2025-06-26,storage_devices|feature_phones,1789.34,0.618,UPI,0.0,0,0.6267,normal,0.1373,0.43,0.3861,False
+CUS000969,Ashok Solanki,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2024-12-25,smartwatches,3757.28,0.05,UPI,0.0,0,0.8483,normal,0.0775,0.36,0.2397,False
+CUS000970,Mahesh Yadav,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2024-11-26,headphones,1278.43,0.501,UPI,0.0,0,0.9239,excellent,0.1515,0.516,0.1518,False
+CUS000971,Vikram Verma,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-04-26,routers,3251.3,0.265,debit_card,0.0,0,0.5472,normal,0.25,0.344,0.1763,False
+CUS000972,New India Solutions,small_business,Vashi,Mumbai,Maharashtra,IT Services,2024-04-09,ups_devices,21083.63,1.39,credit,20000.0,30,0.7497,normal,0.25,0.273,0.2817,False
+CUS000973,Vasant Systems,small_business,Andheri East,Mumbai,Maharashtra,IT Services,2022-07-12,headphones|televisions,22195.63,0.466,bank_transfer,31000.0,15,0.2962,normal,0.0607,0.914,0.0955,False
+CUS000974,Manoj Agarwal,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2026-03-27,televisions,3201.44,0.724,UPI,0.0,0,0.1702,late,0.192,0.489,0.4363,False
+CUS000975,Rahul Malhotra,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2024-02-04,smartphones|storage_devices|printers,4196.36,0.551,debit_card,0.0,0,0.8967,normal,0.164,0.465,0.1575,False
+CUS000976,Reyansh Tiwari,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2024-07-22,televisions|printers,2764.06,0.582,UPI,0.0,0,0.8364,excellent,0.0322,0.404,0.1418,False
+CUS000977,Priya Kapoor,retail,Surat,Surat,Gujarat,N/A (individual),2024-01-03,ups_devices|headphones|televisions,4409.12,0.05,UPI,0.0,0,0.5283,normal,0.099,0.61,0.2125,True
+CUS000978,Sagar Impex,small_business,Bandra West,Mumbai,Maharashtra,Logistics,2022-12-01,mice|tablets|feature_phones|storage_devices,14243.36,0.726,UPI,63000.0,30,0.5503,normal,0.0736,0.607,0.1746,False
+CUS000979,Mahesh Ansari,retail,Indore,Indore,Madhya Pradesh,N/A (individual),2023-12-04,earbuds|printers|laptops,2047.93,0.081,UPI,0.0,0,0.5273,normal,0.1648,0.115,0.1502,True
+CUS000980,Ritesh Colaco,retail,Delhi,Delhi,Delhi,N/A (individual),2022-09-11,feature_phones,1256.28,0.05,credit_card,0.0,0,0.8474,excellent,0.1472,0.235,0.0713,True
+CUS000981,Rajesh Gupta,retail,Vashi,Mumbai,Maharashtra,N/A (individual),2022-10-11,earbuds,1990.27,0.239,credit_card,0.0,0,0.368,late,0.0503,0.515,0.1895,False
+CUS000982,Horizon Digital World Pvt. Ltd.,corporate,Powai,Mumbai,Maharashtra,Real Estate,2022-12-06,speakers,36975.08,0.301,bank_transfer,389000.0,30,0.5856,normal,0.25,0.383,0.2247,False
+CUS000983,Meera Mishra,retail,Dadar,Mumbai,Maharashtra,N/A (individual),2023-05-14,headphones|ups_devices,2375.76,0.185,UPI,0.0,0,0.6787,normal,0.0679,0.826,0.1033,False
+CUS000984,Prime Infotech,small_business,Ahmedabad,Ahmedabad,Gujarat,IT Services,2026-06-04,routers|printers|ups_devices|televisions,12163.99,0.371,bank_transfer,28000.0,30,0.2028,normal,0.1498,0.414,0.2152,True
+CUS000985,National Trading Co.,small_business,Dadar,Mumbai,Maharashtra,Logistics,2025-04-06,power_banks|headphones,32446.71,0.59,bank_transfer,64000.0,0,0.3989,normal,0.1232,0.793,0.2459,False
+CUS000986,Arjun Jain,retail,Pune,Pune,Maharashtra,N/A (individual),2024-09-17,headphones|webcams|earbuds,1095.67,1.009,UPI,0.0,0,0.703,normal,0.1134,0.42,0.2115,False
+CUS000987,Om Patel,retail,Bandra East,Mumbai,Maharashtra,N/A (individual),2025-10-13,tablets|routers|televisions|webcams,974.74,0.333,UPI,0.0,0,0.4606,normal,0.0929,0.178,0.2262,False
+CUS000988,Vivaan Vora,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-04-27,chargers,1570.42,0.324,debit_card,0.0,0,0.9596,excellent,0.2167,0.509,0.1517,False
+CUS000989,Nisha Khanna,retail,Khar,Mumbai,Maharashtra,N/A (individual),2023-10-22,mice,1745.0,0.189,debit_card,0.0,0,0.3764,normal,0.0403,0.32,0.0486,False
+CUS000990,Ganesh Retail,small_business,Powai,Mumbai,Maharashtra,Manufacturing,2024-05-23,speakers|feature_phones|televisions|cables,15049.6,0.594,credit,105000.0,30,0.55,late,0.1664,0.305,0.2975,False
+CUS000991,Rajesh Ansari,retail,Kandivali,Mumbai,Maharashtra,N/A (individual),2026-05-13,cables|mice|headphones,1368.11,0.268,UPI,0.0,0,0.7833,normal,0.0771,0.798,0.2316,False
+CUS000992,Farhan Mukherjee,retail,Andheri East,Mumbai,Maharashtra,N/A (individual),2022-12-25,cables|accessories|smartphones|speakers,1688.37,0.418,cash,0.0,0,0.5718,normal,0.0072,0.129,0.1914,False
+CUS000993,Ritesh Chopra,retail,Vile Parle,Mumbai,Maharashtra,N/A (individual),2024-04-29,speakers|webcams,1426.31,0.518,UPI,0.0,0,0.687,normal,0.25,0.887,0.3597,False
+CUS000994,Royal Digital World,small_business,Ghatkopar,Mumbai,Maharashtra,Finance,2024-08-18,printers|mice,3526.59,1.432,credit,24000.0,0,0.7453,excellent,0.0766,0.225,0.0262,False
+CUS000995,Aadhya D'Souza,retail,Nashik,Nashik,Maharashtra,N/A (individual),2024-01-05,ups_devices|accessories,1163.93,0.586,UPI,0.0,0,0.8212,excellent,0.0493,0.46,0.0731,False
+CUS000996,Golden Systems,small_business,Dadar,Mumbai,Maharashtra,Media,2025-10-29,cables|routers|tablets,4665.69,1.453,credit,39000.0,45,0.1085,late,0.1367,0.391,0.1237,False
+CUS000997,Sai Systems,small_business,Bengaluru,Bengaluru,Karnataka,Logistics,2023-10-25,chargers|smartwatches|speakers,15489.89,1.442,UPI,92000.0,15,0.3665,normal,0.0855,0.541,0.2073,True
+CUS000998,Vivaan D'Souza,retail,Dombivli,Mumbai,Maharashtra,N/A (individual),2024-05-13,speakers|feature_phones|chargers,2461.66,0.637,cash,0.0,0,0.1034,late,0.0441,0.568,0.0524,False
+CUS000999,Reyansh Banerjee,retail,Mulund,Mumbai,Maharashtra,N/A (individual),2022-10-12,feature_phones|speakers,1293.3,0.376,cash,0.0,0,0.6601,normal,0.0523,0.12,0.2085,False
+CUS001000,Vikram Shah,retail,Malad,Mumbai,Maharashtra,N/A (individual),2023-12-24,monitors|printers|televisions,3751.68,0.138,UPI,0.0,0,0.8978,excellent,0.1677,0.611,0.2495,False

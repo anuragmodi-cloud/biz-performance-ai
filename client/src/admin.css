@@ -1,0 +1,397 @@
+/* Admin eval-trace page. Reuses style.css's tokens (--primary, --card,
+   --border, etc.) and building blocks (.panel, .btn, .pill, .chip) --
+   this file only adds the layout/pieces specific to this page. */
+
+.admin-back-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.admin-back-link:hover {
+  color: var(--primary);
+}
+
+.admin-layout {
+  flex: 1;
+  padding: 24px 28px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------------- Key gate ---------------- */
+
+.admin-key-gate {
+  max-width: 480px;
+  margin: 40px auto 0;
+}
+
+.admin-key-form {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-key-form .text-ask-input {
+  flex: 1;
+}
+
+.admin-key-error {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--primary-dark);
+  min-height: 1em;
+}
+
+/* ---------------- Dashboard ---------------- */
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* .panel and .admin-dashboard both set their own `display`, which would
+   otherwise beat the browser's default [hidden] rule (same origin/specificity,
+   author stylesheet order wins) -- force it back off whenever toggled. */
+[hidden] {
+  display: none !important;
+}
+
+.admin-summary-header,
+.admin-log-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-controls,
+.admin-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.summary-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: var(--bg);
+}
+
+.summary-card .value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.summary-card .label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.summary-card.warn .value {
+  color: var(--primary-dark);
+}
+
+.summary-stages {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.summary-stages:empty {
+  display: none;
+}
+
+.summary-stages-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-right: 2px;
+}
+
+.chip-warn {
+  background: var(--primary-tint);
+  color: var(--primary-dark);
+}
+
+/* ---------------- Filters ---------------- */
+
+.admin-select {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--body-text);
+}
+
+.admin-session-input {
+  min-width: 180px;
+}
+
+/* ---------------- Log list ---------------- */
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 640px;
+  overflow-y: auto;
+}
+
+.log-row {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  /* .log-list is a flex column with overflow-y:auto so it scrolls once
+     content exceeds its max-height -- but a flex item whose OWN overflow is
+     non-visible (this row's overflow:hidden, needed to clip content to the
+     rounded corners) gets an automatic minimum size of 0 instead of its
+     content size per the flexbox spec, so default flex-shrink:1 crushes
+     every row down toward 0 height once the list's total content exceeds
+     640px, rather than the container just scrolling as intended -- rows
+     collapse to a sliver with their text/badges clipped or overlapping
+     ("stacking"). flex-shrink:0 keeps every row at its natural content
+     height regardless of how many rows are in the list, so overflow-y:auto
+     on the parent is what handles the excess, not row-crushing. */
+  flex-shrink: 0;
+}
+
+.log-row-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.log-row-summary:hover {
+  background: var(--bg);
+}
+
+.log-row-question {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px;
+  color: var(--body-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.log-row-time {
+  font-size: 11.5px;
+  color: var(--muted);
+  flex-shrink: 0;
+  width: 68px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.badge-status-answered {
+  background: var(--success-tint);
+  color: var(--success);
+}
+
+.badge-status-possible_hallucination {
+  background: #fff4e5;
+  color: var(--warn);
+}
+
+.badge-status-unfulfilled {
+  background: #f1f2f4;
+  color: var(--muted);
+}
+
+.badge-status-answered_without_engine {
+  background: var(--primary-tint);
+  color: var(--primary-dark);
+}
+
+.badge-status-ambiguous_entity {
+  background: #fff4e5;
+  color: var(--warn);
+}
+
+.badge-judge-pass {
+  background: var(--success-tint);
+  color: var(--success);
+}
+
+.badge-judge-fail {
+  background: var(--primary-tint);
+  color: var(--primary-dark);
+}
+
+.badge-judge-pending {
+  background: #f1f2f4;
+  color: var(--muted);
+}
+
+.badge-judge-error {
+  background: #fff4e5;
+  color: var(--warn);
+}
+
+.log-row-reason-preview {
+  padding: 0 14px 12px 34px;
+  margin-top: -6px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--primary-dark);
+  background: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.copy-btn {
+  font-family: inherit;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--muted);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.copy-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.detail-block h4 .copy-btn {
+  margin-left: 6px;
+}
+
+.detail-muted {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.log-row-expand-icon {
+  color: var(--muted);
+  font-size: 12px;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.log-row.is-open .log-row-expand-icon {
+  transform: rotate(90deg);
+}
+
+.log-row-detail {
+  display: none;
+  padding: 4px 16px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.log-row.is-open .log-row-detail {
+  display: block;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail-block h4 {
+  margin: 0 0 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.detail-block pre {
+  margin: 0;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.detail-block p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--body-text);
+}
+
+.judge-reason-block {
+  grid-column: 1 / -1;
+}
+
+.judge-reason-block p {
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.detail-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.detail-actions .btn {
+  padding: 8px 16px;
+  font-size: 12.5px;
+}
+
+.detail-action-status {
+  font-size: 12px;
+  color: var(--muted);
+}
