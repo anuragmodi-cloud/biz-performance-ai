@@ -33,5 +33,9 @@ services:
         sync: false
       - key: SARVAM_API_KEY
         sync: false
+      - key: CF_TURN_TOKEN_ID
+        sync: false
+      - key: CF_TURN_API_TOKEN
+        sync: false
       - key: ADMIN_KEY
         sync: false

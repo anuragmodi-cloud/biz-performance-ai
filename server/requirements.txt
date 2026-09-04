@@ -13,4 +13,5 @@ loguru>=0.7
 openai>=1.40
 anthropic>=0.34
 requests>=2.32
+httpx>=0.27
 pipecat-ai[deepseek,runner,sarvam,silero,webrtc]>=1.4.0

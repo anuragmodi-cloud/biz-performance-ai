@@ -57,6 +57,7 @@ try:
     )
 
     from bot import bot as run_voice_bot
+    from turn_credentials import fetch_ice_servers
 
     _webrtc_handler = SmallWebRTCRequestHandler()
     _VOICE_AVAILABLE = True
@@ -65,6 +66,17 @@ except ImportError:
 
 
 if _VOICE_AVAILABLE:
+    @app.on_event("startup")
+    async def _configure_turn() -> None:
+        # Fetched once at startup, not per-connection: the credential's 24h
+        # TTL comfortably outlives any call, and Cloudflare's TURN
+        # credentials aren't single-use, so there's no reason to pay a
+        # per-request round trip (or risk a race between concurrent callers)
+        # to fetch new ones for every /api/offer.
+        ice_servers = await fetch_ice_servers()
+        if ice_servers:
+            _webrtc_handler.update_ice_servers(ice_servers)
+
     @app.post("/start-session")
     async def start_session():
         """Mint a session_id ahead of the WebRTC connect call -- same
