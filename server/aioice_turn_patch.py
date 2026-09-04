@@ -20,6 +20,8 @@ attempts instead of one).
 """
 from __future__ import annotations
 
+from loguru import logger
+
 from aioice import stun
 from aioice.turn import TurnClientMixin, make_integrity_key
 from aioice.utils import random_transaction_id
@@ -32,15 +34,20 @@ async def _request_with_retry(self, request):
         try:
             return await self.request(request)
         except stun.TransactionFailed as e:
-            error_code = e.response.attributes["ERROR-CODE"][0]
+            error_code, reason = e.response.attributes.get("ERROR-CODE", (None, None))
+            has_nonce = "NONCE" in e.response.attributes
+            has_realm = "REALM" in e.response.attributes
             can_retry = (
-                "NONCE" in e.response.attributes
+                has_nonce
                 and self.username is not None
                 and self.password is not None
-                and (
-                    (error_code == 401 and "REALM" in e.response.attributes)
-                    or (error_code == 438 and self.realm is not None)
-                )
+                and ((error_code == 401 and has_realm) or (error_code == 438 and self.realm is not None))
+            )
+            logger.warning(
+                f"TURN auth: {request.message_method.name} attempt {attempt + 1}/{_MAX_AUTH_ATTEMPTS} "
+                f"failed: error_code={error_code} reason={reason!r} has_nonce={has_nonce} "
+                f"has_realm={has_realm} realm={e.response.attributes.get('REALM')!r} "
+                f"username={self.username!r} will_retry={can_retry and attempt < _MAX_AUTH_ATTEMPTS - 1}"
             )
             if not can_retry or attempt == _MAX_AUTH_ATTEMPTS - 1:
                 raise
