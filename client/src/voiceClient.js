@@ -116,8 +116,21 @@ export class VoiceClient {
       const { session_id } = await startResp.json();
       this.sessionId = session_id;
 
+      // Without this, SmallWebRTCTransport() defaults to iceServers: [] --
+      // the browser could only ever offer bare host candidates (its raw
+      // local/carrier-NAT address), invisible to a peer on another network.
+      // Best-effort: an empty list here just means host-only candidates,
+      // same as before this existed, not a hard failure.
+      let iceServers = [];
+      try {
+        const iceResp = await fetch(`${SERVER_URL}/ice-servers`);
+        if (iceResp.ok) ({ iceServers } = await iceResp.json());
+      } catch (error) {
+        console.warn('Could not fetch ICE servers, falling back to host-only candidates:', error);
+      }
+
       this.client = new PipecatClient({
-        transport: new SmallWebRTCTransport(),
+        transport: new SmallWebRTCTransport({ iceServers }),
         enableMic: true,
         enableCam: false,
         callbacks: {

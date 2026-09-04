@@ -23,11 +23,25 @@ from pipecat.transports.smallwebrtc.connection import IceServer
 # fetch below), so there's no need for anything shorter or a refresh loop.
 _TURN_TTL_SECONDS = 86400
 
+# Cached in plain-JSON form (not just as aiortc IceServer objects) so the
+# same credentials can be handed to the BROWSER too -- GET /ice-servers in
+# server.py serves this. TURN credentials are explicitly designed to be
+# given to end clients (that's the entire point of the short-lived
+# generate-ice-servers call instead of a permanent secret), so exposing them
+# here isn't a new risk, it's how TURN is meant to be used from a browser.
+_last_raw_ice_servers: list[dict] | None = None
+
+
+def get_cached_raw_ice_servers() -> list[dict]:
+    return _last_raw_ice_servers or []
+
 
 async def fetch_ice_servers() -> list[IceServer] | None:
     """Returns None if CF_TURN_TOKEN_ID/CF_TURN_API_TOKEN aren't set, or if
     the Cloudflare call fails -- the caller falls back to no ICE servers,
     the same (locally-fine) behavior as before this existed."""
+    global _last_raw_ice_servers
+
     key_id = os.getenv("CF_TURN_TOKEN_ID")
     api_token = os.getenv("CF_TURN_API_TOKEN")
     if not key_id or not api_token:
@@ -49,6 +63,8 @@ async def fetch_ice_servers() -> list[IceServer] | None:
         logger.warning(f"TURN: failed to fetch Cloudflare ICE servers: {type(e).__name__}: {e}")
         return None
 
-    servers = [IceServer(**entry) for entry in data.get("iceServers", [])]
+    raw = data.get("iceServers", [])
+    _last_raw_ice_servers = raw
+    servers = [IceServer(**entry) for entry in raw]
     logger.info(f"TURN: fetched {len(servers)} ICE server(s) from Cloudflare (ttl={_TURN_TTL_SECONDS}s)")
     return servers

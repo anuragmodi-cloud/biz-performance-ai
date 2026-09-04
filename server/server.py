@@ -57,6 +57,7 @@ try:
     )
 
     import aioice_turn_patch
+    import turn_credentials
     from bot import bot as run_voice_bot
     from turn_credentials import fetch_ice_servers
 
@@ -89,6 +90,20 @@ if _VOICE_AVAILABLE:
         session_id = str(uuid.uuid4())
         set_session(session_id, SessionData())
         return {"session_id": session_id}
+
+    @app.get("/ice-servers")
+    async def ice_servers():
+        """The SERVER already has TURN credentials (see turn_credentials.py
+        and the startup hook above) -- this hands the SAME ones to the
+        BROWSER, which otherwise has none at all (voiceClient.js's
+        SmallWebRTCTransport() previously wasn't given any iceServers, so
+        the browser could only ever offer bare host candidates, invisible
+        to a peer on another network or behind restrictive/carrier NAT).
+        Public by design: short-lived TURN credentials are meant to be
+        handed to end clients, that's the entire point of minting them
+        per-instance instead of hardcoding one permanent secret.
+        """
+        return {"iceServers": turn_credentials.get_cached_raw_ice_servers()}
 
     @app.post("/api/offer")
     async def offer(request: "SmallWebRTCRequest", background_tasks: BackgroundTasks, session_id: str | None = None):
