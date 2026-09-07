@@ -22,6 +22,7 @@ import time
 from dotenv import load_dotenv
 from loguru import logger
 from pipecat.audio.vad.silero import SileroVADAnalyzer
+from pipecat.audio.vad.vad_analyzer import VADParams
 from pipecat.frames.frames import EndFrame, LLMRunFrame, TTSSpeakFrame
 from pipecat.pipeline.pipeline import Pipeline
 from pipecat.pipeline.worker import PipelineParams, PipelineWorker
@@ -67,6 +68,16 @@ NO_AUDIO_CLOSING_LINE = (
     "check karke thodi der baad dobara call karein. Dhanyawad."
 )
 
+# Pipecat/Silero's defaults (confidence=0.7, start_secs=0.2, min_volume=0.6)
+# only need 200ms of sufficiently loud, speech-shaped audio to decide "the
+# user started talking" -- a sharp, high-pitched background sound (a bird
+# chirp, a door, a notification) can have spectral characteristics close
+# enough to human speech to cross that bar, wrongly barging in on the bot
+# mid-sentence. Raised here to require both a higher-confidence match and a
+# louder signal, trading a little responsiveness to genuinely soft speech
+# for real resistance to short, sharp non-speech noise.
+VAD_PARAMS = VADParams(confidence=0.85, min_volume=0.7)
+
 
 async def run_bot(transport: BaseTransport, runner_args: RunnerArguments) -> None:
     logger.info("Starting bot")
@@ -110,7 +121,7 @@ async def run_bot(transport: BaseTransport, runner_args: RunnerArguments) -> Non
     user_aggregator, assistant_aggregator = LLMContextAggregatorPair(
         context,
         user_params=LLMUserAggregatorParams(
-            vad_analyzer=SileroVADAnalyzer(),
+            vad_analyzer=SileroVADAnalyzer(params=VAD_PARAMS),
             user_idle_timeout=USER_IDLE_TIMEOUT_SECS,
             # Pipecat's default end-of-turn detector is a local ONNX model
             # (LocalSmartTurnAnalyzerV3) run in-process on every frame -- real

@@ -174,13 +174,28 @@ export class VoiceClient {
     }
   }
 
+  // One reused <audio> element instead of creating a new one on every
+  // TrackStarted -- if the connection ever renegotiates mid-call (observed
+  // happening automatically under network stress), TrackStarted fires again
+  // with a new track, and creating another element each time leaks stale
+  // ones AND risks a fresh element's autoplay getting silently blocked
+  // outside a direct user gesture (the pipeline still believes it's
+  // speaking -- BotStartedSpeakingFrame doesn't know playback failed --
+  // which is exactly "UI shows speaking, no sound"). play() is called
+  // explicitly and its rejection logged, instead of relying on the
+  // autoplay attribute failing invisibly.
   setupAudio() {
+    if (!this._audioEl) {
+      this._audioEl = document.createElement('audio');
+      this._audioEl.autoplay = true;
+      document.body.appendChild(this._audioEl);
+    }
     this.client.on(RTVIEvent.TrackStarted, (track, participant) => {
       if (!participant?.local && track.kind === 'audio') {
-        const audio = document.createElement('audio');
-        audio.autoplay = true;
-        audio.srcObject = new MediaStream([track]);
-        document.body.appendChild(audio);
+        this._audioEl.srcObject = new MediaStream([track]);
+        this._audioEl.play().catch((error) => {
+          console.error('Bot audio playback blocked/failed:', error);
+        });
       }
     });
   }
