@@ -114,8 +114,16 @@ async def run_bot(transport: BaseTransport, runner_args: RunnerArguments) -> Non
     session_id = runner_args.session_id or "dev-session"
     ask_calculation_engine = build_pipecat_tool(session_id)
 
+    # A reconnect within RESUME_WINDOW_SECS of a disconnect (see server.py's
+    # /start-session) reuses the same session_id and has this session's
+    # saved_llm_messages populated (set in on_client_disconnected below) --
+    # restore that conversation instead of starting over with just the
+    # system prompt, so a brief drop doesn't erase what was already said.
+    resumed_messages = get_session(session_id).saved_llm_messages
+    is_resume = bool(resumed_messages)
+
     context = LLMContext(
-        messages=[{"role": "system", "content": SYSTEM_PROMPT}],
+        messages=resumed_messages if is_resume else [{"role": "system", "content": SYSTEM_PROMPT}],
         tools=ToolsSchema(standard_tools=[ask_calculation_engine]),
     )
     user_aggregator, assistant_aggregator = LLMContextAggregatorPair(
@@ -168,6 +176,16 @@ async def run_bot(transport: BaseTransport, runner_args: RunnerArguments) -> Non
             logger.info(f"session_id={session_id}: on_client_ready fired again -- ignoring")
             return
         conversation_started = True
+
+        if is_resume:
+            # Conversation history is already restored into `context` --
+            # don't re-greet as if this were a brand new call, just become
+            # ready to listen again.
+            logger.info(
+                f"session_id={session_id}: resumed session, {len(resumed_messages)} prior "
+                f"message(s) restored -- skipping greeting"
+            )
+            return
 
         context.add_message(
             {
@@ -248,7 +266,11 @@ async def run_bot(transport: BaseTransport, runner_args: RunnerArguments) -> Non
         # capture whatever's buffered even if a tool call never resolved --
         # there's no more chance to wait for the real answer.
         voice_turn_observer.flush(force=True)
-        update_session(session_id, disconnected_at=time.time())
+        # Snapshot the conversation so far -- a reconnect within
+        # RESUME_WINDOW_SECS restores it (see the top of run_bot()) instead
+        # of starting over. list(...) copies it now, since `context` itself
+        # is about to be torn down along with the rest of this pipeline.
+        update_session(session_id, disconnected_at=time.time(), saved_llm_messages=list(context.messages))
         pipeline_registry.unregister_task(session_id)
         await worker.cancel()
 

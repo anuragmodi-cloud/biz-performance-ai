@@ -111,10 +111,17 @@ export class VoiceClient {
       this.connectBtn.textContent = 'Connecting...';
       this.setOrb('idle', 'Connect ho raha hai...');
 
-      const startResp = await fetch(`${SERVER_URL}/start-session`, { method: 'POST' });
+      // this.sessionId survives a disconnect (onDisconnected() doesn't
+      // clear it) -- passing it here lets the server resume the SAME
+      // conversation if this disconnect-then-reconnect happened recently,
+      // instead of starting a brand new session that's lost everything said
+      // so far. The server decides whether the window's still open.
+      const resumeParam = this.sessionId ? `?resume_session_id=${encodeURIComponent(this.sessionId)}` : '';
+      const startResp = await fetch(`${SERVER_URL}/start-session${resumeParam}`, { method: 'POST' });
       if (!startResp.ok) throw new Error(`/start-session failed: ${startResp.status}`);
-      const { session_id } = await startResp.json();
+      const { session_id, resumed } = await startResp.json();
       this.sessionId = session_id;
+      if (resumed) console.info('Resumed previous session:', session_id);
 
       // Without this, SmallWebRTCTransport() defaults to iceServers: [] --
       // the browser could only ever offer bare host candidates (its raw

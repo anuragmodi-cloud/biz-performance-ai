@@ -42,6 +42,14 @@ class SessionData:
     # this is before treating silence as a dropped call/mic problem -- the
     # user is just composing, not gone.
     last_typing_at: float | None = None
+    # Snapshot of the LLMContext's full message list (system prompt +
+    # conversation so far), saved by bot.py's on_client_disconnected. A
+    # reconnect within RESUME_WINDOW_SECS (see server.py's /start-session)
+    # reuses this same session_id and restores these messages into the new
+    # pipeline's LLMContext, so a brief disconnect doesn't reset the
+    # conversation -- the bot picks up where it left off instead of
+    # re-greeting as if it were a brand new call.
+    saved_llm_messages: list | None = None
 
 
 _sessions: dict[str, SessionData] = {}
@@ -49,6 +57,10 @@ _sessions: dict[str, SessionData] = {}
 
 def list_sessions() -> dict[str, SessionData]:
     return _sessions
+
+
+def session_exists(session_id: str) -> bool:
+    return session_id in _sessions
 
 
 def get_session(session_id: str) -> SessionData:

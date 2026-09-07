@@ -29,7 +29,12 @@ from pydantic import BaseModel  # noqa: E402
 import admin  # noqa: E402
 import query_log  # noqa: E402
 from dev_llm_client import ask as llm_ask  # noqa: E402
-from session_store import SessionData, get_session, set_session, update_session  # noqa: E402
+from session_store import SessionData, get_session, session_exists, set_session, update_session  # noqa: E402
+
+# A disconnect-then-reconnect within this window is treated as the SAME
+# session (same session_id, same conversation history) rather than a new
+# call -- see /start-session below and bot.py's on_client_disconnected.
+RESUME_WINDOW_SECS = 120
 
 app = FastAPI(title="biz-performance-voice-agent")
 
@@ -81,15 +86,31 @@ if _VOICE_AVAILABLE:
             _webrtc_handler.update_ice_servers(ice_servers)
 
     @app.post("/start-session")
-    async def start_session():
+    async def start_session(resume_session_id: str | None = None):
         """Mint a session_id ahead of the WebRTC connect call -- same
         reasoning as kyc-voice-agent's /start-session: a plain REST call the
         frontend controls directly is a safer way to hand back a session_id
         than relying on undocumented extra fields in the SDP-answer payload.
+
+        resume_session_id (optional): the client's own previous session_id,
+        sent when this connect() follows a disconnect in the same page load
+        (see voiceClient.js). Reused as-is -- instead of minting a fresh
+        one -- only if that session genuinely disconnected within the last
+        RESUME_WINDOW_SECS; bot.py's run_bot() then restores its saved
+        conversation history into the new pipeline. A session that's still
+        marked connected (disconnected_at is None -- e.g. a stale/forged id,
+        or a second tab) is never resumed, to avoid two live pipelines
+        fighting over one session_id.
         """
+        if resume_session_id and session_exists(resume_session_id):
+            existing = get_session(resume_session_id)
+            if existing.disconnected_at is not None and (time.time() - existing.disconnected_at) <= RESUME_WINDOW_SECS:
+                update_session(resume_session_id, disconnected_at=None)
+                return {"session_id": resume_session_id, "resumed": True}
+
         session_id = str(uuid.uuid4())
         set_session(session_id, SessionData())
-        return {"session_id": session_id}
+        return {"session_id": session_id, "resumed": False}
 
     @app.get("/ice-servers")
     async def ice_servers():
