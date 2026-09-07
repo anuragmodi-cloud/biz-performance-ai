@@ -25,6 +25,24 @@ from session_store import CachedAnswer, get_session, update_session
 
 TOOL_NAME = "ask_calculation_engine"
 
+# Rupee field names that are unambiguously currency across every sub_metric
+# they appear in.
+_CURRENCY_FIELD_NAMES = {
+    "revenue", "cogs", "gross_profit", "cash_inflow", "cash_outflow", "net_cash_flow",
+    "spend", "outstanding", "net_amount", "early_avg_price", "late_avg_price", "collections",
+    "current_revenue", "previous_revenue", "current_receivables", "previous_receivables",
+    "total_outstanding", "total_outstanding_top_n", "amount_paid", "amount_outstanding",
+    "invoice_total", "taxable_value",
+}
+# "value" is ambiguous -- depending on sub_metric it can be a rupee amount, a
+# unit count, a percentage, a day count, or a ratio -- so it's only ever
+# treated as currency for the specific metrics where it actually is one.
+_CURRENCY_VALUE_METRICS = {
+    "total_revenue", "average_order_value", "total_payables", "cash_inflow", "cash_outflow",
+    "net_cash_flow", "ending_bank_balance", "total_receivables", "overdue_receivables",
+    "gross_profit", "inventory_value",
+}
+
 # Full-series sub_metrics are exempt from the >5-entity truncation policy --
 # showing every period IS the point (seasonality needs the whole shape), not
 # a ranking of many entities being narrowed down.
@@ -83,7 +101,12 @@ TOOL_DESCRIPTION = (
     "far enough) -- ALWAYS relay this honestly in the narration (e.g. 'yeh sirf ab tak ka data hai, poora saal "
     "nahi'). Never state a partial-period figure as if it were the complete period. "
     "After calling this, narrate the answer using ONLY the numbers returned in "
-    "`result` -- do not introduce, round unusually, or infer any additional figures."
+    "`result` -- do not introduce, round unusually, or infer any additional figures. "
+    "Every rupee amount that has a lakh/crore-scale sibling field named '<field>_inr_words' (e.g. "
+    "result.value_inr_words = '5.5 crore rupees') MUST be spoken using that EXACT phrase -- never convert the raw "
+    "number to lakh/crore yourself. Manual lakh-vs-crore conversion is exactly the kind of mental arithmetic that's "
+    "easy to get wrong (e.g. stating a real 5.5 crore figure as '55 lakh', which is actually 10x smaller) -- the "
+    "correct phrase is already computed for you, just read it back."
 )
 
 TOOL_PARAMETERS = {
@@ -138,6 +161,49 @@ def _track(session_id: str, session, log_id: str) -> None:
     known, regardless of whether that's dev_llm_client.py's text path or
     bot.py's voice path."""
     update_session(session_id, pending_log_ids=session.pending_log_ids + [log_id])
+
+
+def _format_inr_words(amount: float) -> str:
+    """Renders a raw rupee amount as the exact Indian lakh/crore phrase --
+    computed here in code, not left to the LLM's own mental arithmetic.
+    That arithmetic has repeatedly and consistently mis-converted
+    crore-scale figures down to a 10x-too-small lakh figure when speaking
+    the amount out loud (e.g. a real Rs 5.5 crore value stated as "55
+    lakh", which is actually what Rs 55 lakh would be -- 10x smaller). The
+    narration is instructed (see TOOL_DESCRIPTION) to read this string
+    verbatim instead of converting the raw number itself."""
+    sign = "-" if amount < 0 else ""
+    a = abs(amount)
+    if a >= 1_00_00_000:
+        n, unit = a / 1_00_00_000, "crore"
+    elif a >= 1_00_000:
+        n, unit = a / 1_00_000, "lakh"
+    else:
+        return f"{sign}{a:,.2f} rupees"
+    n_str = f"{n:.2f}".rstrip("0").rstrip(".")
+    return f"{sign}{n_str} {unit} rupees"
+
+
+def _annotate_currency(obj, metric: str | None = None):
+    """Recursively walks a result dict/list and, for every numeric field
+    that's unambiguously (or, for "value", contextually via the enclosing
+    dict's own "metric") a rupee amount, adds a sibling "<field>_inr_words"
+    string alongside it -- see _format_inr_words for why."""
+    if isinstance(obj, dict):
+        inner_metric = obj.get("metric", metric)
+        out = {}
+        for k, v in obj.items():
+            out[k] = _annotate_currency(v, inner_metric)
+            is_currency = (
+                isinstance(v, (int, float)) and not isinstance(v, bool) and v is not None
+                and (k in _CURRENCY_FIELD_NAMES or (k == "value" and inner_metric in _CURRENCY_VALUE_METRICS))
+            )
+            if is_currency:
+                out[f"{k}_inr_words"] = _format_inr_words(v)
+        return out
+    if isinstance(obj, list):
+        return [_annotate_currency(x, metric) for x in obj]
+    return obj
 
 
 def _apply_display_truncation(result: dict, intent) -> dict:
@@ -197,7 +263,9 @@ async def handle(session_id: str, arguments: dict) -> dict:
     cache_key = intent.cache_key()
     cached = session.query_cache.get(cache_key)
     if cached is not None:
-        display_result = cached.result if confirmed_full_list else _apply_display_truncation(cached.result, intent)
+        display_result = _annotate_currency(
+            cached.result if confirmed_full_list else _apply_display_truncation(cached.result, intent)
+        )
         entry = append(QueryLogEntry(
             session_id=session_id, question_text=question_text, resolved_intent=vars(intent),
             cache_hit=True, trace=cached.trace, result=display_result, status=STATUS_ANSWERED,
@@ -221,7 +289,7 @@ async def handle(session_id: str, arguments: dict) -> dict:
     session.query_cache[cache_key] = CachedAnswer(result=result, trace=trace_dict)
     update_session(session_id, query_cache=session.query_cache)
 
-    display_result = result if confirmed_full_list else _apply_display_truncation(result, intent)
+    display_result = _annotate_currency(result if confirmed_full_list else _apply_display_truncation(result, intent))
 
     # The engine refused to silently guess among several plausible entity
     # matches (engine/formulas.py's resolve_entity) -- log this distinctly
