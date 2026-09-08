@@ -89,6 +89,7 @@ from pipecat.frames.frames import (
 from pipecat.observers.base_observer import BaseObserver, FramePushed
 
 import grounding
+import transcripts
 from session_store import get_session, update_session
 
 FLUSH_DEBOUNCE_SECONDS = 2.5
@@ -188,6 +189,11 @@ class VoiceTurnObserver(BaseObserver):
         self._any_tool_result_seen = False
         logger.debug(f"session_id={self._session_id}: flushing turn narration: {narration!r}")
         grounding.finalize_turn(self._session_id, narration)
+        # Fire-and-forget, off-thread: persist_new_entries() does a blocking
+        # Postgres write, which must never sit in this frame-processing hot
+        # path (the exact kind of added latency that caused the choppy-audio
+        # bug fixed earlier this session, just from a different source).
+        asyncio.create_task(asyncio.to_thread(transcripts.persist_new_entries, self._session_id))
 
     def _append_transcript(self, role: str, text: str) -> None:
         if not text:

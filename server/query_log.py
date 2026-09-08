@@ -2,21 +2,24 @@
 scoring tab is built from.
 
 Every single ask (cache hit or miss, successful or not) appends exactly one
-QueryLogEntry here. Backed by a local SQLite file (query_log.db, next to this
-module, gitignored) rather than an in-memory list -- the whole point of the
-admin eval-trace UI is to look back at what happened, and losing every entry
-on each `uvicorn --reload` / restart defeated that. Same get/append/list
-function signatures as before, so no caller (admin.py, grounding.py,
-tools/ask_calculation_engine.py, dev_llm_client.py) needed to change.
+QueryLogEntry here. Backed by Supabase/Postgres (db.py's shared connection
+pool) rather than local SQLite -- the whole point of the admin eval-trace
+UI is to look back at what happened, and a container with no persistent
+disk (Render's free tier) was wiping SQLite on every restart/redeploy,
+which defeated that. Same get/append/list function signatures as before, so
+no caller (admin.py, grounding.py, tools/ask_calculation_engine.py,
+dev_llm_client.py) needed to change.
 """
 from __future__ import annotations
 
 import json
-import sqlite3
 import time
 import uuid
 from dataclasses import asdict, dataclass, field
-from pathlib import Path
+
+from psycopg.rows import dict_row
+
+from db import get_pool
 
 STATUS_ANSWERED = "answered"
 STATUS_HALLUCINATION = "possible_hallucination"
@@ -45,10 +48,8 @@ STATUS_AMBIGUOUS_ENTITY = "ambiguous_entity"
 # LLM was left waiting on a tool result that would never arrive.
 STATUS_TOOL_CRASH = "tool_crash"
 
-DB_PATH = Path(__file__).resolve().parent / "query_log.db"
-
 # Columns that hold a dict/list in QueryLogEntry and need JSON en/decoding
-# to round-trip through a SQLite TEXT column.
+# to round-trip through a Postgres TEXT column.
 _JSON_FIELDS = {"resolved_intent", "trace", "result"}
 
 
@@ -90,37 +91,29 @@ class QueryLogEntry:
 
 
 # ---------------------------------------------------------------------
-# SQLite plumbing -- a fresh connection per call. This app's write volume
-# (one row per ask, occasional judge/review updates) is far below where
-# connection-per-call overhead or SQLite's single-writer lock would matter;
-# simplicity and not having to reason about a shared connection across
-# FastAPI's async handlers wins here.
+# Postgres plumbing -- one shared pool (db.py), a fresh connection borrowed
+# per call. This app's write volume (one row per ask, occasional judge/
+# review updates) is far below where pool contention would matter.
 # ---------------------------------------------------------------------
 
-def _connect() -> sqlite3.Connection:
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
-
-
 def _init_db() -> None:
-    with _connect() as conn:
+    with get_pool().connection() as conn:
         conn.execute(
             """
             CREATE TABLE IF NOT EXISTS query_log (
                 log_id TEXT PRIMARY KEY,
                 session_id TEXT NOT NULL DEFAULT '',
-                ts REAL NOT NULL,
+                ts DOUBLE PRECISION NOT NULL,
                 question_text TEXT NOT NULL DEFAULT '',
                 resolved_intent TEXT,
-                cache_hit INTEGER NOT NULL DEFAULT 0,
+                cache_hit BOOLEAN NOT NULL DEFAULT FALSE,
                 trace TEXT,
                 result TEXT,
                 narrated_text TEXT NOT NULL DEFAULT '',
                 status TEXT NOT NULL DEFAULT 'unfulfilled',
                 error TEXT,
-                latency_ms REAL NOT NULL DEFAULT 0,
-                admin_reviewed INTEGER NOT NULL DEFAULT 0,
+                latency_ms DOUBLE PRECISION NOT NULL DEFAULT 0,
+                admin_reviewed BOOLEAN NOT NULL DEFAULT FALSE,
                 admin_verdict TEXT,
                 admin_note TEXT,
                 judge_verdict TEXT,
@@ -128,7 +121,7 @@ def _init_db() -> None:
                 judge_reason TEXT,
                 judge_downstream_impact TEXT,
                 judge_model TEXT,
-                judge_ran_at REAL,
+                judge_ran_at DOUBLE PRECISION,
                 judge_error TEXT
             )
             """
@@ -144,27 +137,23 @@ def _entry_to_row(entry: QueryLogEntry) -> dict:
     row = asdict(entry)
     for field_name in _JSON_FIELDS:
         row[field_name] = json.dumps(row[field_name]) if row[field_name] is not None else None
-    row["cache_hit"] = int(row["cache_hit"])
-    row["admin_reviewed"] = int(row["admin_reviewed"])
     return row
 
 
-def _row_to_entry(row: sqlite3.Row) -> QueryLogEntry:
+def _row_to_entry(row: dict) -> QueryLogEntry:
     kwargs = dict(row)
     for field_name in _JSON_FIELDS:
         kwargs[field_name] = json.loads(kwargs[field_name]) if kwargs[field_name] is not None else (
             {} if field_name == "trace" else None
         )
-    kwargs["cache_hit"] = bool(kwargs["cache_hit"])
-    kwargs["admin_reviewed"] = bool(kwargs["admin_reviewed"])
     return QueryLogEntry(**kwargs)
 
 
 def append(entry: QueryLogEntry) -> QueryLogEntry:
     row = _entry_to_row(entry)
     columns = list(row.keys())
-    placeholders = ", ".join(f":{c}" for c in columns)
-    with _connect() as conn:
+    placeholders = ", ".join(f"%({c})s" for c in columns)
+    with get_pool().connection() as conn:
         conn.execute(f"INSERT INTO query_log ({', '.join(columns)}) VALUES ({placeholders})", row)
     return entry
 
@@ -173,20 +162,24 @@ def list_entries(session_id: str | None = None, status: str | None = None) -> li
     query = "SELECT * FROM query_log WHERE 1=1"
     params: list = []
     if session_id is not None:
-        query += " AND session_id = ?"
+        query += " AND session_id = %s"
         params.append(session_id)
     if status is not None:
-        query += " AND status = ?"
+        query += " AND status = %s"
         params.append(status)
     query += " ORDER BY ts DESC"
-    with _connect() as conn:
-        rows = conn.execute(query, params).fetchall()
+    with get_pool().connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute(query, params)
+            rows = cur.fetchall()
     return [_row_to_entry(r) for r in rows]
 
 
 def get_entry(log_id: str) -> QueryLogEntry | None:
-    with _connect() as conn:
-        row = conn.execute("SELECT * FROM query_log WHERE log_id = ?", (log_id,)).fetchone()
+    with get_pool().connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute("SELECT * FROM query_log WHERE log_id = %s", (log_id,))
+            row = cur.fetchone()
     return _row_to_entry(row) if row else None
 
 
@@ -194,12 +187,10 @@ def _update(log_id: str, **fields) -> QueryLogEntry:
     row = {}
     for key, value in fields.items():
         row[key] = json.dumps(value) if key in _JSON_FIELDS and value is not None else value
-        if key in ("cache_hit", "admin_reviewed") and value is not None:
-            row[key] = int(value)
-    set_clause = ", ".join(f"{k} = :{k}" for k in row)
+    set_clause = ", ".join(f"{k} = %({k})s" for k in row)
     row["log_id"] = log_id
-    with _connect() as conn:
-        conn.execute(f"UPDATE query_log SET {set_clause} WHERE log_id = :log_id", row)
+    with get_pool().connection() as conn:
+        conn.execute(f"UPDATE query_log SET {set_clause} WHERE log_id = %(log_id)s", row)
     entry = get_entry(log_id)
     if entry is None:
         raise KeyError(f"No query log entry {log_id!r}")
@@ -257,11 +248,12 @@ def finalize_log_entries(log_ids: list[str], narrated_text: str) -> list[QueryLo
 
 
 def _update_narrated_text_only(log_ids: list[str], narrated_text: str) -> None:
-    with _connect() as conn:
-        conn.executemany(
-            "UPDATE query_log SET narrated_text = ? WHERE log_id = ?",
-            [(narrated_text, log_id) for log_id in log_ids],
-        )
+    with get_pool().connection() as conn:
+        with conn.cursor() as cur:
+            cur.executemany(
+                "UPDATE query_log SET narrated_text = %s WHERE log_id = %s",
+                [(narrated_text, log_id) for log_id in log_ids],
+            )
 
 
 def apply_judge_verdict(log_id: str, verdict: dict) -> QueryLogEntry:

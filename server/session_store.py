@@ -63,6 +63,11 @@ class SessionData:
     # initial ask, then an explicit "yes, month by month" follow-up), so a
     # per-turn-only or single-sub_metric-only check would miss it.
     non_trend_profit_calls_made: set = field(default_factory=set)
+    # How many of `transcript`'s entries have already been written to
+    # Supabase (transcripts.py's persist_new_entries) -- lets that function
+    # send only the NEW entries on each call instead of re-sending (and
+    # re-inserting duplicates of) the whole growing list every time.
+    transcript_persisted_count: int = 0
 
 
 _sessions: dict[str, SessionData] = {}

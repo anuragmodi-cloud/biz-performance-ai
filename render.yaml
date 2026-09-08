@@ -21,6 +21,8 @@ services:
         value: deepseek
       - key: JUDGE_AUTO_RUN
         value: all
+      - key: DATABASE_URL
+        sync: false
       - key: DEEPSEEK_API_KEY
         sync: false
       - key: DEEPSEEK_BASE_URL

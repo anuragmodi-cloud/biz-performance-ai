@@ -24,6 +24,7 @@ import time
 from loguru import logger
 
 import grounding
+import transcripts
 from prompts.system_prompt_hi import SYSTEM_PROMPT
 from query_log import QueryLogEntry, STATUS_NO_ENGINE_CALL, append as log_append
 from session_store import get_session, update_session
@@ -81,6 +82,7 @@ async def ask(session_id: str, question: str) -> dict:
         ],
     )
     grounding.finalize_turn(session_id, narration)
+    transcripts.persist_new_entries(session_id)
 
     return {"narration": narration, "log_ids": log_ids}
 
