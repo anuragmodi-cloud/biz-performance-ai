@@ -227,6 +227,28 @@ async def run_bot(transport: BaseTransport, runner_args: RunnerArguments) -> Non
             logger.debug(f"session_id={session_id}: idle timeout fired but user is typing -- skipping check-in")
             return
 
+        if session.pending_log_ids:
+            # A tool call for this turn has already started (tracked in our
+            # own session state by ask_calculation_engine.py's _track(),
+            # cleared only once grounding.finalize_turn() runs after the
+            # bot's ENTIRE reply is narrated) but hasn't finished yet --
+            # confirmed happening live: the bot said its filler line ("let
+            # me calculate"), went quiet while the tool call was still
+            # running, and the idle timer fired anyway mid-calculation.
+            # Pipecat's own UserIdleController is supposed to suppress this
+            # via FunctionCallsStartedFrame (see user_idle_controller.py),
+            # but its own source comments document a real race window where
+            # BotStoppedSpeakingFrame (the filler line ending) can arrive
+            # before that frame does. This is an independent second line of
+            # defense using our own server-side state instead of relying
+            # solely on Pipecat's internal frame ordering.
+            idle_check_count = 0
+            logger.debug(
+                f"session_id={session_id}: idle timeout fired but a tool call is still in flight "
+                f"(pending_log_ids={session.pending_log_ids}) -- skipping check-in"
+            )
+            return
+
         idle_check_count += 1
         logger.info(
             f"session_id={session_id}: user idle for {USER_IDLE_TIMEOUT_SECS:.0f}s "
