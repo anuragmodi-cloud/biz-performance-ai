@@ -1,6 +1,8 @@
 """Profitability-category compute functions."""
 from __future__ import annotations
 
+import pandas as pd
+
 from .. import data_loader as dl
 from ..formulas import cogs, filter_date_range, gross_margin, revenue
 from ..trace import StepTrace
@@ -30,6 +32,63 @@ def gross_margin_metric(start, end, **_) -> tuple[dict, StepTrace]:
     margin = gross_margin(trace, rev, cost)
     return {"metric": "gross_margin", "value": round(margin * 100, 2), "unit": "percent",
             "revenue": round(rev, 2), "cogs": round(cost, 2)}, trace
+
+
+def profit_by_month(start, end, **_) -> tuple[dict, StepTrace]:
+    """Month-by-month revenue/cogs/gross_profit/gross_margin_pct, plus a
+    trend signal -- the profitability-category equivalent of
+    sales.revenue_by_month. Before this existed, "how has profit/margin
+    trended over the last N months" had no direct sub_metric: gross_profit
+    and gross_margin only ever return ONE total for the whole requested
+    window, not a month-by-month breakdown, which left a "trend" question
+    with no tool that actually answered it. Needs a wide period
+    (last_90_days or wider) to span more than one month; a single-month
+    window just returns one data point and no trend signal.
+    """
+    trace = StepTrace()
+    window = _window(trace, start, end)
+    window = window.copy()
+    window["month"] = window["transaction_date"].dt.to_period("M").astype(str)
+
+    def _month_financials(g):
+        rev = float(g["taxable_value"].sum())
+        cost = float((g["quantity"] * g["unit_purchase_cost_ref"]).sum())
+        margin_pct = ((rev - cost) / rev * 100) if rev else 0.0
+        return pd.Series({"revenue": rev, "cogs": cost, "gross_profit": rev - cost, "gross_margin_pct": margin_pct})
+
+    by_month = window.groupby("month").apply(_month_financials, include_groups=False).sort_index()
+    trace.aggregate(
+        "profit_by_month",
+        "grouped by calendar month: revenue, cogs, gross_profit, gross_margin_pct",
+        {m: {"gross_profit": round(row["gross_profit"], 2), "gross_margin_pct": round(row["gross_margin_pct"], 2)}
+         for m, row in by_month.iterrows()},
+    )
+    items = [
+        {"month": m, "revenue": round(row["revenue"], 2), "cogs": round(row["cogs"], 2),
+         "gross_profit": round(row["gross_profit"], 2), "gross_margin_pct": round(row["gross_margin_pct"], 2)}
+        for m, row in by_month.iterrows()
+    ]
+
+    trend_direction = None
+    margin_change_pts = None
+    if len(by_month) >= 2:
+        mid = max(len(by_month) // 2, 1)
+        early_avg_margin = float(by_month["gross_margin_pct"].iloc[:mid].mean())
+        late_avg_margin = float(by_month["gross_margin_pct"].iloc[mid:].mean())
+        margin_change_pts = round(late_avg_margin - early_avg_margin, 2)
+        trend_direction = "improving" if margin_change_pts > 0.5 else "declining" if margin_change_pts < -0.5 else "flat"
+        trace.formula(
+            "profit_trend_signal",
+            f"margin_change_pts = later-half average gross_margin_pct ({late_avg_margin:.2f}%) - earlier-half "
+            f"average gross_margin_pct ({early_avg_margin:.2f}%) = {margin_change_pts} percentage points "
+            f"(trend_direction: improving if >0.5pts, declining if <-0.5pts, else flat)",
+            {"margin_change_pts": margin_change_pts, "trend_direction": trend_direction},
+        )
+
+    return {
+        "metric": "profit_by_month", "items": items,
+        "trend_direction": trend_direction, "margin_change_pts": margin_change_pts,
+    }, trace
 
 
 def margin_by_category(start, end, top_n=10, **_) -> tuple[dict, StepTrace]:

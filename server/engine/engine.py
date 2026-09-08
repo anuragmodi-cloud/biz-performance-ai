@@ -25,6 +25,7 @@ _DISPATCH = {
     ("profitability", "top_margin_products"): profitability.top_margin_products,
     ("profitability", "lowest_margin_products"): profitability.lowest_margin_products,
     ("profitability", "negative_margin_products"): profitability.negative_margin_products,
+    ("profitability", "profit_by_month"): profitability.profit_by_month,
     ("cash_flow", "cash_inflow"): cashflow.cash_inflow,
     ("cash_flow", "cash_outflow"): cashflow.cash_outflow,
     ("cash_flow", "net_cash_flow"): cashflow.net_cash_flow,

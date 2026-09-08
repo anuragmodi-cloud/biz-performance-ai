@@ -24,7 +24,7 @@ from loguru import logger
 from engine.engine import EngineError, dispatch
 from engine.schema import METRIC_CATEGORIES, IntentValidationError, validate_intent
 from query_log import (
-    QueryLogEntry, STATUS_AMBIGUOUS_ENTITY, STATUS_ANSWERED, STATUS_TOOL_CRASH, STATUS_UNFULFILLED, append,
+    QueryLogEntry, STATUS_AMBIGUOUS_ENTITY, STATUS_ANSWERED, STATUS_TOOL_CRASH, STATUS_UNFULFILLED, append, get_entry,
 )
 from session_store import CachedAnswer, get_session, update_session
 
@@ -51,12 +51,29 @@ _CURRENCY_VALUE_METRICS = {
 # Full-series sub_metrics are exempt from the >5-entity truncation policy --
 # showing every period IS the point (seasonality needs the whole shape), not
 # a ranking of many entities being narrowed down.
-FULL_SERIES_SUB_METRICS = {"revenue_by_month"}
+FULL_SERIES_SUB_METRICS = {"revenue_by_month", "profit_by_month"}
 MAX_NARRATED_ITEMS = 5
 # Comfortably exceeds any real group size in this dataset (max ~1000
 # customers) -- used only internally when confirmed_full_list=true, never
 # actor-facing, so it bypasses validate_intent's normal 1-50 top_n cap.
 FULL_LIST_TOP_N = 2000
+
+# Each of these gives SOME profit/margin signal but never a month-by-month
+# breakdown -- calling a SECOND one of these in the same session (whether a
+# repeat of the same sub_metric with a different period, or a switch to a
+# different sub_metric entirely) after already trying one is the signature
+# of casting around for a way to answer a profit/margin TREND question
+# instead of calling profitability.profit_by_month once, which is what
+# actually answers it. Confirmed happening in practice multiple ways: the
+# same sub_metric called repeatedly with different periods (ran all the way
+# to MAX_TOOL_ROUNDS doing this), and a switch to a wholly different
+# sub_metric on a later turn (gross_profit, then revenue_vs_profit) --
+# despite explicit prompt instructions pointing at profit_by_month for
+# trend questions. Prompting alone wasn't reliable enough, so this pattern
+# is now detected here and corrected with a hint injected directly into the
+# tool result, which an LLM acts on far more reliably than prose in a long
+# system prompt.
+_NON_TREND_PROFIT_SUBMETRICS = {"gross_profit", "gross_margin", "revenue_vs_profit", "margin_by_category"}
 
 TOOL_DESCRIPTION = (
     "Answer a business-performance question by running it through the real-time "
@@ -66,6 +83,16 @@ TOOL_DESCRIPTION = (
     "Translate the caller's question into the structured arguments below "
     f"(valid metric_category -> sub_metric combinations: "
     f"{ {k: sorted(v) for k, v in METRIC_CATEGORIES.items()} }). "
+    "A profit/margin TREND question (e.g. 'how has profit trended over the last 3 months', 'is my margin "
+    "improving or declining') gets EXACTLY ONE call: metric_category='profitability', "
+    "sub_metric='profit_by_month', period sized to match how many months were asked about (e.g. 'last 3 months' "
+    "-> period='last_90_days'). profit_by_month returns per-month revenue/cogs/gross_profit/gross_margin_pct "
+    "plus a ready-made trend_direction ('improving'/'declining'/'flat') and margin_change_pts -- narrate those "
+    "directly. WRONG patterns to avoid, both seen causing this exact confusion before profit_by_month existed: "
+    "(1) calling gross_profit/gross_margin alone, which only returns ONE total for the whole period, not a "
+    "trend; (2) calling gross_profit AND revenue_by_month together to manually assemble an approximation -- "
+    "that's strictly worse than the one correct call (extra latency, and revenue_by_month has no profit/margin "
+    "figures at all, only revenue). "
     "receivables.customer_payment_delay also answers TWO different questions depending on entity_name: "
     "entity_name omitted = 'which customers delay payment the most' (a top_n ranking across all customers); "
     "entity_name=<customer name> = one specific customer's own average payment delay. "
@@ -241,6 +268,39 @@ def _apply_display_truncation(result: dict, intent) -> dict:
     }
 
 
+def _maybe_add_trend_hint(session_id: str, session, intent, display_result: dict) -> dict:
+    """See _NON_TREND_PROFIT_SUBMETRICS above for why this exists. Tracked
+    on session.non_trend_profit_calls_made -- a SESSION-wide set, not
+    scoped to the current turn (unlike pending_log_ids, which clears every
+    turn) -- because the pattern this catches was observed spanning
+    separate turns: an initial ask that returned one sub_metric's total,
+    then an explicit "yes, month by month" follow-up turns later that
+    called a DIFFERENT single-total sub_metric instead of discovering
+    profit_by_month. A per-turn-only or single-sub_metric-only check would
+    have missed that."""
+    if intent.sub_metric not in _NON_TREND_PROFIT_SUBMETRICS:
+        return display_result
+    prior_calls = session.non_trend_profit_calls_made
+    current_call = f"{intent.sub_metric}:{intent.period}"
+    other_prior_calls = prior_calls - {current_call}
+    update_session(session_id, non_trend_profit_calls_made=prior_calls | {current_call})
+    if not other_prior_calls:
+        return display_result
+    return {
+        **display_result,
+        "hint": (
+            "You've now called more than one of gross_profit/gross_margin/revenue_vs_profit/margin_by_category "
+            "for this conversation (this call or an earlier one, possibly a different sub_metric each time, "
+            "possibly in an earlier turn) -- that's an attempt to answer a profit/margin TREND question by "
+            "casting around among single-total tools instead of using the one that actually answers it. STOP "
+            "making further calls to any of those four. Call profitability.profit_by_month ONCE instead, with "
+            "a period wide enough to cover every month of interest, and narrate its result directly -- it "
+            "already includes trend_direction and margin_change_pts, computed correctly, per month. Do NOT "
+            "tell the caller a month-by-month breakdown isn't available -- it is, via profit_by_month."
+        ),
+    }
+
+
 async def handle(session_id: str, arguments: dict) -> dict:
     """Never raises -- every branch inside _handle_inner() already returns a
     graceful {"error": ...} for the two ANTICIPATED failure shapes (a bad
@@ -303,6 +363,7 @@ async def _handle_inner(session_id: str, arguments: dict, start_t: float) -> dic
         display_result = _annotate_currency(
             cached.result if confirmed_full_list else _apply_display_truncation(cached.result, intent)
         )
+        display_result = _maybe_add_trend_hint(session_id, session, intent, display_result)
         entry = append(QueryLogEntry(
             session_id=session_id, question_text=question_text, resolved_intent=vars(intent),
             cache_hit=True, trace=cached.trace, result=display_result, status=STATUS_ANSWERED,
@@ -327,6 +388,7 @@ async def _handle_inner(session_id: str, arguments: dict, start_t: float) -> dic
     update_session(session_id, query_cache=session.query_cache)
 
     display_result = _annotate_currency(result if confirmed_full_list else _apply_display_truncation(result, intent))
+    display_result = _maybe_add_trend_hint(session_id, session, intent, display_result)
 
     # The engine refused to silently guess among several plausible entity
     # matches (engine/formulas.py's resolve_entity) -- log this distinctly

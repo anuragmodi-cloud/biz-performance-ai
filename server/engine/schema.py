@@ -18,7 +18,7 @@ import pandas as pd
 
 METRIC_CATEGORIES = {
     "sales": {"total_revenue", "units_sold", "top_products_by_revenue", "top_customers_by_revenue", "average_order_value", "revenue_by_month", "product_mix_change"},
-    "profitability": {"gross_profit", "gross_margin", "margin_by_category", "top_margin_products", "lowest_margin_products", "negative_margin_products"},
+    "profitability": {"gross_profit", "gross_margin", "margin_by_category", "top_margin_products", "lowest_margin_products", "negative_margin_products", "profit_by_month"},
     "cash_flow": {"cash_inflow", "cash_outflow", "net_cash_flow", "ending_bank_balance", "cash_by_type", "negative_cash_flow_months"},
     "receivables": {"total_receivables", "overdue_receivables", "top_debtors", "customer_payment_delay", "overdue_invoices"},
     "suppliers": {"total_payables", "top_suppliers_by_spend", "supplier_price_trend", "supplier_concentration", "supplier_delivery_delay"},

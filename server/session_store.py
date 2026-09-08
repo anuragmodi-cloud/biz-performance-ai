@@ -50,6 +50,19 @@ class SessionData:
     # conversation -- the bot picks up where it left off instead of
     # re-greeting as if it were a brand new call.
     saved_llm_messages: list | None = None
+    # "<sub_metric>:<period>" for every gross_profit/gross_margin/
+    # revenue_vs_profit/margin_by_category call made THIS SESSION (not just
+    # this turn -- unlike pending_log_ids, which clears every turn).
+    # ask_calculation_engine.py's _maybe_add_trend_hint reads this to detect
+    # a profit/margin TREND question being answered by casting around among
+    # these single-total tools instead of calling profit_by_month -- a
+    # pattern confirmed spanning both repeats of the SAME sub_metric with a
+    # different period, and switches to a DIFFERENT sub_metric entirely
+    # (gross_profit, then two turns later revenue_vs_profit, still never
+    # profit_by_month) -- and confirmed spanning separate turns too (an
+    # initial ask, then an explicit "yes, month by month" follow-up), so a
+    # per-turn-only or single-sub_metric-only check would miss it.
+    non_trend_profit_calls_made: set = field(default_factory=set)
 
 
 _sessions: dict[str, SessionData] = {}
