@@ -34,6 +34,16 @@ STATUS_NO_ENGINE_CALL = "answered_without_engine"
 # so the admin dashboard and judge can tell "ambiguous, asked for
 # clarification" apart from "couldn't answer at all."
 STATUS_AMBIGUOUS_ENTITY = "ambiguous_entity"
+# An unexpected exception inside ask_calculation_engine.handle() -- NOT one
+# of the two anticipated failure shapes above (a bad question / no matching
+# data), but a genuine bug the engine hit. Distinguished so it's trivial to
+# filter admin's Query Log for "the tool actually crashed" specifically,
+# with the full traceback in `error`. Before this existed, an exception here
+# had nowhere safe to go: bot.py's voice tool-call adapter had no try/except
+# of its own, so it silently killed the whole turn -- the bot said its
+# "let me calculate" filler line and then never responded again, since the
+# LLM was left waiting on a tool result that would never arrive.
+STATUS_TOOL_CRASH = "tool_crash"
 
 DB_PATH = Path(__file__).resolve().parent / "query_log.db"
 

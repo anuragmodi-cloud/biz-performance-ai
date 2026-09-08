@@ -17,10 +17,15 @@ itself, not just via prompt instructions.
 from __future__ import annotations
 
 import time
+import traceback
+
+from loguru import logger
 
 from engine.engine import EngineError, dispatch
 from engine.schema import METRIC_CATEGORIES, IntentValidationError, validate_intent
-from query_log import QueryLogEntry, STATUS_AMBIGUOUS_ENTITY, STATUS_ANSWERED, STATUS_UNFULFILLED, append
+from query_log import (
+    QueryLogEntry, STATUS_AMBIGUOUS_ENTITY, STATUS_ANSWERED, STATUS_TOOL_CRASH, STATUS_UNFULFILLED, append,
+)
 from session_store import CachedAnswer, get_session, update_session
 
 TOOL_NAME = "ask_calculation_engine"
@@ -237,7 +242,39 @@ def _apply_display_truncation(result: dict, intent) -> dict:
 
 
 async def handle(session_id: str, arguments: dict) -> dict:
+    """Never raises -- every branch inside _handle_inner() already returns a
+    graceful {"error": ...} for the two ANTICIPATED failure shapes (a bad
+    question / no matching data). This outer wrapper catches anything else:
+    a genuine, unexpected bug in the engine or this tool. That distinction
+    matters specifically for the voice path -- bot.py's Pipecat tool adapter
+    has no error handling of its own, so an exception escaping this function
+    previously left the LLM waiting forever on a tool result that would
+    never arrive: the bot said its "let me calculate" filler line, then
+    silence, permanently, even across later turns. Logged with the full
+    traceback (not just str(e)) and status=STATUS_TOOL_CRASH specifically so
+    a report like "it went silent" can be root-caused from the admin
+    dashboard's Query Log alone, filtered to that status.
+    """
     start_t = time.perf_counter()
+    try:
+        return await _handle_inner(session_id, arguments, start_t)
+    except Exception as e:  # noqa: BLE001 -- see docstring: this must never propagate
+        tb = traceback.format_exc()
+        logger.error(f"session_id={session_id}: ask_calculation_engine crashed on {arguments!r}\n{tb}")
+        session = get_session(session_id)
+        entry = append(QueryLogEntry(
+            session_id=session_id, question_text=arguments.get("original_question", ""),
+            resolved_intent=arguments, status=STATUS_TOOL_CRASH, error=f"{type(e).__name__}: {e}\n\n{tb}",
+            latency_ms=round((time.perf_counter() - start_t) * 1000, 2),
+        ))
+        _track(session_id, session, entry.log_id)
+        return {
+            "log_id": entry.log_id,
+            "error": "Internal error while calculating this -- please ask the question again, possibly rephrased.",
+        }
+
+
+async def _handle_inner(session_id: str, arguments: dict, start_t: float) -> dict:
     session = get_session(session_id)
     question_text = arguments.get("original_question", "")
     confirmed_full_list = bool(arguments.get("confirmed_full_list", False))

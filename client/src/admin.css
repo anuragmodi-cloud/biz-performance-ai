@@ -239,6 +239,11 @@
   color: var(--warn);
 }
 
+.badge-status-tool_crash {
+  background: var(--primary-tint);
+  color: var(--primary-dark);
+}
+
 .badge-judge-pass {
   background: var(--success-tint);
   color: var(--success);

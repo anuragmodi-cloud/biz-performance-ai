@@ -270,6 +270,17 @@ function renderLogRow(entry) {
     row.appendChild(preview);
   }
 
+  // Same idea for the tool-level error (entry.error) -- the first line only
+  // (a tool_crash's error is the exception message plus its full traceback;
+  // the traceback itself is in the expanded Error block below, this row is
+  // just "is there a root cause to look at").
+  if (entry.error) {
+    const errPreview = document.createElement('div');
+    errPreview.className = 'log-row-reason-preview';
+    errPreview.textContent = `Error: ${entry.error.split('\n')[0]}`;
+    row.appendChild(errPreview);
+  }
+
   row.appendChild(renderLogDetail(entry, judge));
   return row;
 }
@@ -296,9 +307,23 @@ function renderLogDetail(entry, judge) {
         ? `<div class="detail-block judge-reason-block"><h4>Judge Reason</h4><p class="detail-muted">Not judged yet -- click "Run Judge Now" below.</p></div>`
         : '';
 
+  // The tool-level error -- e.g. a genuine bug (status=tool_crash, `error`
+  // holds the exception plus its full traceback), or an anticipated
+  // unfulfilled/no-match case. Shown right after the judge block since it's
+  // the other place a root cause lives; a tool_crash gets no result/trace
+  // at all (the crash happened before either existed), so this is often the
+  // ONLY useful block on that kind of entry.
+  const errorHtml = entry.error
+    ? `<div class="detail-block judge-reason-block">
+        <h4>Error ${copyBtn('error')}</h4>
+        <pre>${escapeHtml(entry.error)}</pre>
+      </div>`
+    : '';
+
   detail.innerHTML = `
     <div class="detail-grid">
       ${judgeReasonHtml}
+      ${errorHtml}
       <div class="detail-block">
         <h4>Resolved Intent ${copyBtn('resolved_intent')}</h4>
         <pre>${escapeHtml(pretty(entry.resolved_intent))}</pre>
@@ -339,6 +364,7 @@ function renderLogDetail(entry, judge) {
     if (field === '__full_entry') return JSON.stringify(entry, null, 2);
     if (field === 'narrated_text') return entry.narrated_text || '';
     if (field === 'judge_reason') return entry.judge_reason || '';
+    if (field === 'error') return entry.error || '';
     return pretty(entry[field]);
   };
   detail.querySelectorAll('.copy-btn').forEach((btn) => {
